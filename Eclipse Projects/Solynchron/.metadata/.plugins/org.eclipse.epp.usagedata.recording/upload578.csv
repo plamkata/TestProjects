@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255253600676
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253600690
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253601830
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253606955
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253647961
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253648426
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253791404
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255253796918
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253800535
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253802455
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253804262
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253805884
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255253807307
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255253808206
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255253809979
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255253813073
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253814837
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253830246
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253832310
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255253911661
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255253913159
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255253920914
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255253923900
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255253927457
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255253929158

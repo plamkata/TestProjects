@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.rcpforms.emfadapter" modificationStamp="1" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EMFConverterRegistry.java[EMFConverterRegistry" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{ObservableListEObjectContentProvider.java[ObservableListEObjectContentProvider" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{Activator.java[Activator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EMFFormFactory.java[EMFFormFactory" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EMFDefaultConverterUpdateStrategy.java[EMFDefaultConverterUpdateStrategy" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EMFModelAdapter.java[EMFModelAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EEnumRangeAdapter.java[EEnumRangeAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.emfadapter/src&lt;net.sf.rcpforms.emf{EReferenceRangeAdapter.java[EReferenceRangeAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+</component>

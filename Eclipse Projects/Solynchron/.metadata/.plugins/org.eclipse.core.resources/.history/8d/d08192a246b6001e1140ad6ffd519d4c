@@ -1,0 +1,186 @@
+/**
+ * 
+ */
+package com.startup.solynchron.obj.problem;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+import javax.persistence.Transient;
+
+import org.apache.solr.analysis.LowerCaseFilterFactory;
+import org.apache.solr.analysis.SnowballPorterFilterFactory;
+import org.apache.solr.analysis.StandardTokenizerFactory;
+import org.hibernate.search.annotations.Analyzer;
+import org.hibernate.search.annotations.AnalyzerDef;
+import org.hibernate.search.annotations.Parameter;
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Index;
+import org.hibernate.search.annotations.Indexed;
+import org.hibernate.search.annotations.IndexedEmbedded;
+import org.hibernate.search.annotations.Store;
+import org.hibernate.search.annotations.TokenFilterDef;
+import org.hibernate.search.annotations.TokenizerDef;
+
+import com.damnhandy.aspects.bean.Nested;
+import com.damnhandy.aspects.bean.Observable;
+import com.startup.solynchron.obj.ModelObject;
+import com.startup.solynchron.obj.MyUser;
+import com.startup.solynchron.obj.domain.Domain;
+import com.startup.solynchron.obj.event.CompareManager;
+import com.startup.solynchron.obj.solution.Solution;
+
+/**
+ * @author plamKaTa
+ *
+ */
+@Observable
+@Indexed 
+@Entity 
+@AnalyzerDef(name = "LowerSnowball",
+		  tokenizer = @TokenizerDef(factory = StandardTokenizerFactory.class), 
+		  filters = {
+		    @TokenFilterDef(factory = LowerCaseFilterFactory.class),
+		    @TokenFilterDef(factory = SnowballPorterFilterFactory.class, params = {
+		      @Parameter(name = "language", value = "English")
+		    })
+	})
+@Analyzer(definition = "LowerSnowball")
+public class Problem extends ModelObject {
+	
+	public static final String DESCRIPTION = "description";
+	
+	public static final String TYPE = "type";
+	
+	public static final String DOMAIN = "domain";
+	
+	public static final String SOLUTIONS = "solutions";
+	
+	public static final String ARTIFACTS = "artifacts";
+	
+	public static final String OWNER = "owner";
+	
+
+	private String description;
+	
+	private ProblemType type;
+	
+	private Domain domain;
+	
+	private List<Solution> solutions;
+	
+	private List<ProblemArtifact> artifacts;
+	
+	/**
+	 * 
+	 */
+	public Problem() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Field(index = Index.TOKENIZED, store = Store.NO)
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@IndexedEmbedded
+	@ManyToOne
+	public ProblemType getType() {
+		return type;
+	}
+
+	@Nested
+	public void setType(ProblemType type) {
+		this.type = type;
+	}
+
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	public Domain getDomain() {
+		return domain;
+	}
+
+	public void setDomain(Domain domain) {
+		this.domain = domain;
+	}
+
+	@OneToMany(mappedBy = "problem", 
+			cascade = {CascadeType.PERSIST, CascadeType.MERGE}, 
+			fetch = FetchType.LAZY)
+	@OrderBy("method")
+	public List<Solution> getSolutions() {
+		return solutions;
+	}
+
+	public void setSolutions(List<Solution> solutions) {
+		this.solutions = solutions;
+	}
+
+	@OneToMany(mappedBy = "problem", 
+			cascade = {CascadeType.MERGE, CascadeType.PERSIST}, 
+			fetch = FetchType.EAGER)
+	public List<ProblemArtifact> getArtifacts() {
+		return artifacts;
+	}
+
+	public void setArtifacts(List<ProblemArtifact> artifacts) {
+		this.artifacts = artifacts;
+	}
+	
+	@Transient
+	public MyUser getOwner() {
+		return getCreatedBy();
+	}
+	
+	public void setOwner(MyUser user) {
+		setCreatedBy(user);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Problem) {
+			Problem other = (Problem) obj;
+			return CompareManager.equals(this.getDescription(), other.getDescription()) &&
+				CompareManager.equals(this.getType(), other.getType()) && 
+				CompareManager.equals(this.getDomain(), other.getDomain()); 
+		} else {
+			return false;
+		}
+	}
+	
+	@Override
+	public int hashCode() {
+		int descrHash = 11;
+		if (description != null) {
+			descrHash = 11 ^ description.hashCode();
+		}
+		
+		int typeHash = 29;
+		if (type != null) {
+			if (type.isNew()) {
+				typeHash = type.hashCode();
+			} else {
+				typeHash = 29 ^ type.getId().hashCode();
+			}
+		}
+		
+		int domainHash = 13;
+		if (domain != null) {
+			if (domain.isNew()) {
+				domainHash = domain.hashCode();
+			} else {
+				domainHash = 13 ^ domain.getId().hashCode();
+			}
+		}
+		return descrHash ^ typeHash ^ domainHash;
+	}
+
+}

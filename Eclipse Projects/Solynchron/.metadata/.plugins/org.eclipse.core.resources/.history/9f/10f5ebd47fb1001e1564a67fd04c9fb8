@@ -1,0 +1,264 @@
+package com.damnhandy.aspects.bean.test;
+import junit.framework.TestCase;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+public class JavaBeanTest extends TestCase {
+
+	public static void main(String[] args) {
+		junit.textui.TestRunner.run(JavaBeanTest.class);
+	}
+
+	public JavaBeanTest(String name) {
+		super(name);
+	}
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
+	protected void tearDown() throws Exception {
+		super.tearDown();
+	}
+	
+	/**
+	 * No Event should fire when the ValueObject is created. 
+	 * The constructor of ValueObject with a listener param is used
+	 * in order to add the listener first and then modify the property.
+	 * 
+	 * @throws Exception
+	 */
+	public void testCreation() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		assertFalse(listener.hasChanged());
+	}
+	
+	/**
+	 * Tests that change events are properly being fired for simple properties.
+	 * 
+	 * @throws Exception - If the Aspect is not applied properly, 
+	 * a variety of Exceptions may be thrown
+	 */
+	public void testSimplePropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		vo.setName("New Name");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		vo.setValue(20);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+	}
+	
+	/**
+	 * Tests if the listener is added for a specific property, that 
+	 * all only changes of this property will be detected.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSpecificPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener("name", listener);
+		
+		vo.setName("New Name");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// only 'name' property changes should be fired
+		vo.setValue(20);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+	}
+	
+	/**
+	 * Tests if property fields or accessor of property field 
+	 * marked with @Silent will fire property changes.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSilentPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		// this is a non-silent property
+		vo.setValue(20);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// this is a silent property setter - no changes
+		vo.setType("Test Type");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// this is a silent property - no changes
+		vo.setType1("Test Type");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+	}
+	
+	/**
+	 * Test if collection property mutators fire appropriate events 
+	 * when called or when marked as @Silent.
+	 * 
+	 * @throws Exception
+	 */
+	public void testCollectionPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		vo.addValue("Test 1");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// add new value is @Silent - no change
+		vo.addNewValue("Test 2");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		vo.addValue("Test 3");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		vo.removeValue("Test 2");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+	}
+	
+	/**
+	 * Test if list property mutators fire appropriate indexed events
+	 * with correct indexes when called or when marked as @Silent.
+	 * 
+	 * @throws Exception
+	 */
+	public void testListIndexedPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		vo.addValue("Test 1");
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(0, listener.getIndex());
+		listener.reset();
+		
+		// add new value is @Silent - no change
+		vo.addNewValue("Test 2");
+		assertFalse(listener.hasChanged());
+		assertEquals(listener.getIndex(), -1);
+		listener.reset();
+		
+		vo.addValue("Test 3");
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 2);
+		listener.reset();
+		
+		vo.removeValue("Test 2");
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(1, listener.getIndex());
+		listener.reset();
+		
+		// value was added and removed in the same method
+		// and this should fire two separate events
+		vo.addRemoveValue("Test");
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 2);
+		listener.reset();
+	}
+	
+	public void testSetIndexedPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject();
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		vo.addValue1("Test 1");
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNewValue(), "Test 1");
+		assertEquals(listener.getOldValue(), null);
+		listener.reset();
+		
+		// add new value is @Silent - no change
+		vo.addNewValue1("Test 2");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		vo.addValue1("Test 3");
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 2);
+		assertEquals(listener.getNewValue(), "Test 3");
+		assertEquals(listener.getOldValue(), null);
+		listener.reset();
+		
+		vo.removeValue1("Test 2");
+		assertTrue(listener.hasChangedOnce());
+		// remove from set cannot determine index
+		assertEquals(listener.getIndex(), -1); 
+		assertEquals(listener.getNewValue(), null);
+		assertEquals(listener.getOldValue(), "Test 2");
+		listener.reset();
+		
+		vo.addRemoveValue1("Test");
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), -1); 
+		assertEquals(listener.getNewValue(), null);
+		assertEquals(listener.getOldValue(), "Test");
+		listener.reset();
+	}
+	
+	/**
+	 * Test if a listener is properly added/removed from the bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testPropertyChangeListener() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener(listener);
+		
+		vo.setName("Name 1");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		((JavaBean) vo).removePropertyChangeListener(listener);
+		
+		vo.setName("Name 2");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+	}
+	
+	/**
+	 * Test if a specific listener is properly added/removed from the bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSpecificPropertyChangeListener() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", new Integer(17));
+		((JavaBean) vo).addPropertyChangeListener("name", listener);
+		
+		vo.setName("Name 1");
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		vo.setValue(new Integer(67));
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		((JavaBean) vo).removePropertyChangeListener("name", listener);
+		
+		vo.setName("Name 2");
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		vo.setValue(new Integer(67));
+		assertFalse(listener.hasChanged());
+		listener.reset();
+	}
+
+}

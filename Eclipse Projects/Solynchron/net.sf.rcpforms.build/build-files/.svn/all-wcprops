@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/rcpforms/!svn/ver/481/trunk/net.sf.rcpforms.build/build-files
+END
+customTargets.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/customTargets.xml
+END
+allElements.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/rcpforms/!svn/ver/481/trunk/net.sf.rcpforms.build/build-files/allElements.xml
+END
+build_shared.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/build_shared.xml
+END
+postBuild.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/postBuild.xml
+END
+pluginbuilder-anttasks.jar
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/pluginbuilder-anttasks.jar
+END
+fetchSvnAll.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/rcpforms/!svn/ver/481/trunk/net.sf.rcpforms.build/build-files/fetchSvnAll.xml
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/build.properties
+END
+ant-contrib.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/ant-contrib.jar
+END
+subversionSupport.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/subversionSupport.xml
+END
+ant-contrib-LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/ant-contrib-LICENSE.txt
+END
+build_rcp.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/build_rcp.properties
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/rcpforms/!svn/ver/492/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets
+END
+RCPDatePicker.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/RCPDatePicker.java
+END
+RCPDatePickerDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/RCPDatePickerDialog.java
+END
+ComboAutoComplete.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/rcpforms/!svn/ver/328/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/ComboAutoComplete.java
+END
+RCPPicker.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/492/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/RCPPicker.java
+END
+ICompositeImageHyperLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/ICompositeImageHyperLink.java
+END
+HyperlinkLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/rcpforms/!svn/ver/328/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/HyperlinkLabel.java
+END
+CustomButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/CustomButton.java
+END
+IconText.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/IconText.java
+END
+IHyperlinkLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/customwidgets/IHyperlinkLabel.java
+END

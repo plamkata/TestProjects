@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1255032084794
+error,log,,,"Bad type signature: ;\n",1255032084795
+error,log,,,"Bad type signature: ;\n",1255032084796
+error,log,,,"Bad type signature: ;\n",1255032084798
+error,log,,,"Bad type signature: ;\n",1255032084799
+error,log,,,"Bad type signature: ;\n",1255032084800
+error,log,,,"Bad type signature: ;\n",1255032084801
+error,log,,,"Bad type signature: ;\n",1255032084805
+error,log,,,"Bad type signature: ;\n",1255032084806
+error,log,,,"Bad type signature: ;\n",1255032084807
+error,log,,,"Bad type signature: ;\n",1255032084809
+error,log,,,"Bad type signature: ;\n",1255032084810
+error,log,,,"Bad type signature: ;\n",1255032084811
+error,log,,,"Bad type signature: ;\n",1255032084812
+error,log,,,"Bad type signature: ;\n",1255032084813
+error,log,,,"Bad type signature: ;\n",1255032084814
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255032088450
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255032119333
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1255032137303
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255032138343
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255032138944
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1255032139295
+activated,perspective,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui.DebugPerspective",1255032142181
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.perspectives.showPerspective",1255032142208
+executed,command,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui.DebugPerspective",1255032142208

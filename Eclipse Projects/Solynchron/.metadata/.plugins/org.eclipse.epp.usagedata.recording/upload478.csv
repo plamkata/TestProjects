@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255165850421
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255165850629
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165850695
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165851784
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165854917
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165857209
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255165861995
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255165866022
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255165866209
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165866237
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165867313
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165869913
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165878146
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165953887
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.showInformation",1255165953897
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165955104
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255165961541
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255165961617
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255165965242
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255165965243
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255165966328
+opened,editor,org.eclipse.ant.ui,3.4.1.v20090901_r351,"org.eclipse.ant.ui.internal.editor.AntEditor",1255165980646
+activated,editor,org.eclipse.ant.ui,3.4.1.v20090901_r351,"org.eclipse.ant.ui.internal.editor.AntEditor",1255165980770
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255165983577
+activated,editor,org.eclipse.ant.ui,3.4.1.v20090901_r351,"org.eclipse.ant.ui.internal.editor.AntEditor",1255165984939

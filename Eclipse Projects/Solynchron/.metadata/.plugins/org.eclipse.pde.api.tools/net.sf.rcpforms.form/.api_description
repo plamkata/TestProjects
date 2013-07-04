@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.rcpforms.form" modificationStamp="1" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form"/>
+        <type handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{RCPFormWizardPage.java[RCPFormWizardPage" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{RCPFormDialog.java[RCPFormDialog" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{RCPForm.java[RCPForm" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{IMessageDisplay.java[IMessageDisplay" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+</component>

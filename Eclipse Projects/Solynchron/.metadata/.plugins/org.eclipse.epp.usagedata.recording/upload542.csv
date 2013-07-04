@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255198040912
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198054178
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198058902
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255198061414
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198181702
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255198184760
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198185677
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255198187578
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198190492
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198335273
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198336661
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198338364
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255198339154
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198342739
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198726062
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198728594
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198729482
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198731753
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255198736900
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198739028
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198740084
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198741311
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255198743917
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255198789040
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255198789414

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032714536
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255032714800
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255032722758
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032730681
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032731947
+error,log,,,"Internal Error",1255032732068
+error,log,,,"Problems encountered while deleting resources.",1255032732069
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032732083
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032739612
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032739644
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032739684
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255032739689
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255032742895
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032748247
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032750395
+error,log,,,"Internal Error",1255032750445
+error,log,,,"Problems encountered while deleting resources.",1255032750446
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032750457
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032751955
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032751979
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032752013
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255032752017
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032759989
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255032761570
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255032761718

@@ -1,0 +1,6 @@
+#Written from Plug-in Builder Editor
+#Thu Jun 04 20:56:41 CEST 2009
+buildType=N
+version=1.1.0
+fetchTag=HEAD
+buildTypePresentation=NGT

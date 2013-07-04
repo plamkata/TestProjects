@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.rcpforms.widgetwrapper" modificationStamp="1" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper.wrapper.radio"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper.util"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper.builder"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper.customwidgets"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.widgetwrapper/src&lt;net.sf.rcpforms.widgetwrapper.wrapper"/>
+    </package>
+</component>

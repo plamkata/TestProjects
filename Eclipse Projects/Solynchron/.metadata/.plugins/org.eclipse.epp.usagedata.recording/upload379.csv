@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255075942956
+error,log,,,"Bad type signature: ;\n",1255075944400
+error,log,,,"Bad type signature: ;\n",1255075944425
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255075978053
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255075979396
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255075984604
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255075988452
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1255075999729
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255076010161
+activated,view,org.eclipse.ui.ide,3.5.1.M20090826-0800,"org.eclipse.ui.views.ProblemView",1255076014809
+opened,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076025659
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076025786
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255076053552
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.navigate.linkWithEditor",1255076053791
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.navigate.linkWithEditor",1255076054611
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076057430
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255076057529
+closed,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076057529
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255076059275
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255076060260
+opened,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076061846
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076061971
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255076088504
+closed,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255076088504
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255076089915

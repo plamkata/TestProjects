@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/rcpforms/!svn/ver/518/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter
+END
+DateToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/DateToStringConverter.java
+END
+StringToDateConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/StringToDateConverter.java
+END
+IPropertyChain.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/IPropertyChain.java
+END
+ConverterRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/472/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/ConverterRegistry.java
+END
+RegExpValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/RegExpValidator.java
+END
+ValidatorConverterStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/rcpforms/!svn/ver/313/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/ValidatorConverterStrategy.java
+END
+DateConv.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/DateConv.java
+END
+SymmetricMultilineValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/rcpforms/!svn/ver/302/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/SymmetricMultilineValidator.java
+END
+AsymmetricMultilineValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/AsymmetricMultilineValidator.java
+END
+IValidatorConverterStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/rcpforms/!svn/ver/313/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/IValidatorConverterStrategy.java
+END
+AccessibleConverterUpdateStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/AccessibleConverterUpdateStrategy.java
+END
+ObjectToObjectWithNullValueConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svnroot/rcpforms/!svn/ver/510/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/ObjectToObjectWithNullValueConverter.java
+END
+ObjectWithNullValueToObjectConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svnroot/rcpforms/!svn/ver/510/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/ObjectWithNullValueToObjectConverter.java
+END
+DateToStringValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/DateToStringValidator.java
+END
+IModelValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/288/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/IModelValidator.java
+END
+BooleanNullTobooleanFalseConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svnroot/rcpforms/!svn/ver/118/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/BooleanNullTobooleanFalseConverter.java
+END
+MethodValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/MethodValidator.java
+END
+BeanConverterRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/BeanConverterRegistry.java
+END
+RequiredValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/RequiredValidator.java
+END
+StringToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/StringToStringConverter.java
+END
+AbstractModelValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/rcpforms/!svn/ver/288/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/AbstractModelValidator.java
+END
+CalendarToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/CalendarToStringConverter.java
+END
+StringToCalendarConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/StringToCalendarConverter.java
+END
+ObservableStatusToBooleanAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/ObservableStatusToBooleanAdapter.java
+END
+IdentityConverterWithPrimitiveNullSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svnroot/rcpforms/!svn/ver/518/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/converter/IdentityConverterWithPrimitiveNullSupport.java
+END

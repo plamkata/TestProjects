@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Resources Indexer Plug-in
+Bundle-SymbolicName: resources_indexer; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: resources_indexer.ResourcesIndexerPlugin
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.apache.derby.core,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.ide
+Eclipse-AutoStart: true
+Bundle-ClassPath: resources-indexer.jar,
+ lib/commons-dbcp-1.2.1.jar,
+ lib/commons-pool-1.3.jar

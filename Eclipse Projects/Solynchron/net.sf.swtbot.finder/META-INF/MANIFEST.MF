@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-Name: SWTBot SWT Control Finder plugin
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-Vendor: http://swtbot.sourceforge.net/
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: net.sf.swtbot.finder;singleton:=true
+Export-Package: net.sf.swtbot,net.sf.swtbot.finder,net.sf.swtbot.match
+ er,net.sf.swtbot.resolvers,net.sf.swtbot.utils,net.sf.swtbot.wait,net
+ .sf.swtbot.widgets
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.junit,org.
+ apache.commons.collections,org.apache.log4j
+Bundle-Version: 1.2.0.921
+Eclipse-LazyStart: true
+

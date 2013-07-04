@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255189891506
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255189895295
+error,log,,,"Could not retrieve declared fields",1255189897107
+error,log,,,"Could not retrieve declared methods",1255189897108
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255189898284
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255189906166
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255189907741
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255189908155
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255189924695
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189926073
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189927997
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189928606
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189930989
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255189931028
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189931089
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189932273
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189936727
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189939286
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255189939295
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255193212193
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255193218327
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255193220532
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255193223883
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255193234257
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255193236226

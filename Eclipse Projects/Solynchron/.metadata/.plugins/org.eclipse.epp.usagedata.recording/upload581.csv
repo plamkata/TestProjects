@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254599675
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254599784
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255254601479
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255254603127
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255254608854
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254619208
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254625082
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255254626539
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255254674966
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255254676215
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255254678817
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254679454
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254725725
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255254727825
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255254733749
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255254754259
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254755405
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254755589
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255254758620
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255254758991
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254759008
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254760386
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255254761349
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255255077646
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255255077715

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/rcpforms/!svn/ver/270/trunk/net.sf.rcpforms.build/build-files/automatedTests
+END
+org.pluginbuilder.autotestsuite.feature-0.4.0.200805101600PRD.zip
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/automatedTests/org.pluginbuilder.autotestsuite.feature-0.4.0.200805101600PRD.zip
+END
+run-tests.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/rcpforms/!svn/ver/270/trunk/net.sf.rcpforms.build/build-files/automatedTests/run-tests.properties
+END
+run-tests.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/automatedTests/run-tests.xml
+END
+emma.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/rcpforms/!svn/ver/269/trunk/net.sf.rcpforms.build/build-files/automatedTests/emma.jar
+END
+emma_ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/automatedTests/emma_ant.jar
+END
+eclipse-test-framework-3.3.2.zip
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build-files/automatedTests/eclipse-test-framework-3.3.2.zip
+END

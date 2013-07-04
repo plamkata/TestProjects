@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Generated-from: 1240915148000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Derby Ui Plug-in for Eclipse
+Bundle-SymbolicName: org.apache.derby.ui; singleton:=true
+Bundle-Version: 1.1.2
+Bundle-ClassPath: ui.jar
+Bundle-Activator: org.apache.derby.ui.DerbyPlugin
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Localization: plugin
+Export-Package: org.apache.derby.ui,
+ org.apache.derby.ui.actions,
+ org.apache.derby.ui.common,
+ org.apache.derby.ui.container,
+ org.apache.derby.ui.decorate,
+ org.apache.derby.ui.launch,
+ org.apache.derby.ui.nature,
+ org.apache.derby.ui.popup.actions,
+ org.apache.derby.ui.properties,
+ org.apache.derby.ui.util
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.ui,
+ org.apache.derby.core,
+ org.eclipse.jdt.launching,
+ org.eclipse.debug.ui,
+ org.eclipse.debug.core,
+ org.eclipse.jdt.core,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console
+Eclipse-LazyStart: true

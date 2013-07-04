@@ -1,0 +1,141 @@
+<project default="build" name="Aspect Library" basedir=".">
+	<property name="build.root" value="./build" />
+	<property name="dist.root" value="./dist" />
+	<property name="build.classes" value="${build.root}/classes" />
+	<property name="project.version" value="0.1" />
+	<property name="jar.dist.name" value="handy-aspects-${project.version}.jar" />
+	<property name="jar.demo.name" value="handy-aspects-demo-${project.version}.jar" />
+	
+	
+	<path id="aspectj.classpath">
+		<fileset dir="./lib/aspectj">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<path id="jgoodies.classpath">
+		<fileset dir="./lib/jgoodies">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<delete dir="${build.root}"/>
+		<delete dir="${dist.root}"/>
+		<delete dir="${build.classes}"/>
+		<mkdir dir="${build.root}"/>
+		<mkdir dir="${dist.root}"/>
+		<mkdir dir="${dist.root}/lib"/>
+		<mkdir dir="${build.classes}"/>
+		<taskdef resource="org/aspectj/tools/ant/taskdefs/aspectjTaskdefs.properties"
+		 		 classpathref="aspectj.classpath"/>
+	</target>
+
+	<target name="build" depends="init">
+		<antcall target="jar"/>
+	</target>
+
+	<target name="build-dist" depends="init">
+		<antcall target="jar"/>
+		<antcall target="javadoc"/>
+		<antcall target="package"/>
+	</target>
+	
+	<target name="build-and-sign-dist" depends="init">
+		<antcall target="build-dist"/>
+		<antcall target="sign"/>
+	</target>
+
+	<target name="javadoc">
+		<javadoc destdir="docs/api" 
+				 source="1.5" 
+				 author="true" 
+				 version="true" 
+				 classpathref="aspectj.classpath" 
+				 use="true" 
+				 windowtitle="DamnHandy Handy Aspect Library 0.1">
+			<fileset dir="src/java" defaultexcludes="yes">
+				<include name="**/*.java" />
+			</fileset>
+			<doctitle><![CDATA[<h1>DamnHandy Handy Aspect Library 0.1</h1>]]></doctitle>
+			<bottom><![CDATA[<i>Copyright &#169; 2005 Ryan J. McDonough All Rights Reserved.</i>]]></bottom>
+			<link offline="true" href="http://java.sun.com/j2se/1.5.0/docs/api" packagelistLoc="C:\tmp" />
+		</javadoc>
+	</target>
+	
+	<target name="package">
+		<zip destfile="${dist.root}/handy-aspects-${project.version}.zip">
+			<zipfileset file="${build.root}/${jar.dist.name}"/>
+			<zipfileset file="${build.root}/${jar.demo.name}"/>
+			<zipfileset file="build.xml"/>
+			<zipfileset dir="./lib/aspectj" prefix="lib/aspectj">
+				<include name="aspectjrt.jar" />
+			</zipfileset>
+			<zipfileset dir="./webstart" prefix="./webstart">
+				<include name="*.jnlp" />
+			</zipfileset>
+			<zipfileset dir="./lib/jgoodies" prefix="lib/jgoodies">
+				<include name="*.jar" />
+			</zipfileset>
+			<zipfileset dir="./src" prefix="./src">
+				<include name="**/*.java" />
+				<include name="**/*.aj" />
+			</zipfileset>
+			<zipfileset dir="./docs/api" prefix="./docs/api">
+				<include name="**/*.html" />
+				<include name="**/*.css" />
+			</zipfileset>
+		</zip>
+		<copy file="./webstart/AspectDemo.jnlp" tofile="${dist.root}/AspectDemo.jnlp"/>
+		<copy todir="${dist.root}/lib/">
+			<fileset dir="./lib/aspectj">
+				<include name="aspectjrt.jar" />
+			</fileset>
+			<fileset dir="./lib/jgoodies">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+	</target>
+	
+	
+	<target name="jar" depends="ajc-compile">
+		<jar destfile="${build.root}/${jar.dist.name}">
+			<fileset dir="${build.classes}">
+				<include name="com/damnhandy/aspects/bean/**/*.class" />
+				<include name="com/damnhandy/aspects/syncmodel/**/*.class" />
+			</fileset>
+		</jar>
+		<jar destfile="${build.root}/${jar.demo.name}">
+			<fileset dir="${build.classes}">
+				<include name="com/damnhandy/aspects/demo/**/*.class" />
+				<include name="com/damnhandy/swing/**/*.class" />
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="sign">
+		<signjar alias="${key.alias}" 
+				 keystore="${key.store}" 
+				 storepass="${key.pass}">
+			<fileset dir="${dist.root}/lib/">
+				<include name="*.jar" />
+			</fileset>
+		</signjar>
+	</target>
+
+
+	<target name="ajc-compile">
+		<iajc source="1.5" destdir="${build.classes}">
+			<sourceroots>
+				<pathelement location="./src/java"/>
+				<pathelement location="./src/demo"/>
+			</sourceroots>
+			<classpath>
+				<path refid="aspectj.classpath"/>
+				<path refid="jgoodies.classpath"/>
+			</classpath>
+		</iajc>
+	</target>
+	
+
+</project>

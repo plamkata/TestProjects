@@ -1,0 +1,5 @@
+#Wed Oct 07 13:25:00 EEST 2009
+DependenciesView.show.callers=false
+eclipse.preferences.version=1
+Preferences.MainPage.overwriteBuildFilesOnExport=prompt
+DependenciesView.show.list=false

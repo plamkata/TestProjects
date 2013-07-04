@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1255257510927
+error,log,,,"Bad type signature: ;\n",1255257510929
+error,log,,,"Bad type signature: ;\n",1255257510931
+error,log,,,"Bad type signature: ;\n",1255257510933
+error,log,,,"Bad type signature: ;\n",1255257510935
+error,log,,,"Bad type signature: ;\n",1255257510936
+error,log,,,"Bad type signature: ;\n",1255257510938
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255257515079
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255257515805
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255257516630
+started,bundle,org.eclipse.help.base,3.4.0.v200909170800,"org.eclipse.help.base",1255257522500
+started,bundle,org.eclipse.help.ui,3.4.1.v20090819_35x,"org.eclipse.help.ui",1255257522532
+started,bundle,org.eclipse.equinox.http.jetty,2.0.0.v20090520-1800,"org.eclipse.equinox.http.jetty",1255257522820
+started,bundle,org.eclipse.equinox.http.servlet,1.0.200.v20090520-1800,"org.eclipse.equinox.http.servlet",1255257523004
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257532756
+started,bundle,org.eclipse.equinox.http.registry,1.0.200.v20090520-1800,"org.eclipse.equinox.http.registry",1255257534406
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257535391
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255257541710
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257544273
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.edit.text.java.open.hierarchy",1255257544377
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257557000
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255257563546
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255257567070
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257568055
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257568240

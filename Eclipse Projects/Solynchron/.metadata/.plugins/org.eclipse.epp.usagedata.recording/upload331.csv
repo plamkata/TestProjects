@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033109557
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033111217
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.edit.text.java.rename.element",1255033121898
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033129582
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033130347
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255033138953
+opened,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255033140177
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255033140308
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255033142110
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255033143461
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033152991
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033155209
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033160121
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033161557
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033167737
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033173375
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1255033179922
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033189174
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033190024
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255033200038
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255033201612
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033205901
+error,log,,,"Problems occurred when invoking code from plug-in: ""org.eclipse.jdt.ui"".",1255033212980
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033214413
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255033223790

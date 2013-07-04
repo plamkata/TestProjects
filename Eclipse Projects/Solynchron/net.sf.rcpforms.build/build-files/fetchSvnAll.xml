@@ -1,0 +1,238 @@
+<project name="Generated">
+  <target name="fetch.svn.all">
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.bindingvalidation"/>
+      <param name="project.name" value="/net.sf.rcpforms.bindingvalidation"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.modeladapter"/>
+      <param name="project.name" value="/net.sf.rcpforms.modeladapter"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.tablesupport"/>
+      <param name="project.name" value="/net.sf.rcpforms.tablesupport"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.widgetwrapper"/>
+      <param name="project.name" value="/net.sf.rcpforms.widgetwrapper"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.form"/>
+      <param name="project.name" value="/net.sf.rcpforms.form"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.common"/>
+      <param name="project.name" value="/net.sf.rcpforms.common"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.examplestests.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.examplestests.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.examples"/>
+      <param name="project.name" value="/net.sf.rcpforms.examples"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.test"/>
+      <param name="project.name" value="/net.sf.rcpforms.test"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.simplesample"/>
+      <param name="project.name" value="/net.sf.rcpforms.simplesample"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.sdk.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.sdk.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.bindingvalidation"/>
+      <param name="project.name" value="/net.sf.rcpforms.bindingvalidation"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.modeladapter"/>
+      <param name="project.name" value="/net.sf.rcpforms.modeladapter"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.tablesupport"/>
+      <param name="project.name" value="/net.sf.rcpforms.tablesupport"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.widgetwrapper"/>
+      <param name="project.name" value="/net.sf.rcpforms.widgetwrapper"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.form"/>
+      <param name="project.name" value="/net.sf.rcpforms.form"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.common"/>
+      <param name="project.name" value="/net.sf.rcpforms.common"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.examplestests.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.examplestests.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.examples"/>
+      <param name="project.name" value="/net.sf.rcpforms.examples"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.test"/>
+      <param name="project.name" value="/net.sf.rcpforms.test"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.simplesample"/>
+      <param name="project.name" value="/net.sf.rcpforms.simplesample"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.emf.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.emf.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.emfadapter"/>
+      <param name="project.name" value="/net.sf.rcpforms.emfadapter"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.emf.examplestests.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.emf.examplestests.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.emfadapter.test"/>
+      <param name="project.name" value="/net.sf.rcpforms.emfadapter.test"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.examples.emf"/>
+      <param name="project.name" value="/net.sf.rcpforms.examples.emf"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.emf.sdk.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.emf.sdk.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.emf.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.emf.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.emfadapter"/>
+      <param name="project.name" value="/net.sf.rcpforms.emfadapter"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.emf.examplestests.feature"/>
+      <param name="project.name" value="/net.sf.rcpforms.emf.examplestests.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.emfadapter.test"/>
+      <param name="project.name" value="/net.sf.rcpforms.emfadapter.test"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.examples.emf"/>
+      <param name="project.name" value="/net.sf.rcpforms.examples.emf"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="features"/>
+      <param name="element.id" value="net.sf.rcpforms.nl1"/>
+      <param name="project.name" value="/net.sf.rcpforms.nl1.feature"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.bindingvalidation.nl1"/>
+      <param name="project.name" value="/net.sf.rcpforms.bindingvalidation.nl1"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.modeladapter.nl1"/>
+      <param name="project.name" value="/net.sf.rcpforms.modeladapter.nl1"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.tablesupport.nl1"/>
+      <param name="project.name" value="/net.sf.rcpforms.tablesupport.nl1"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+    <antcall target="svn.co">
+      <param name="target" value="plugins"/>
+      <param name="element.id" value="net.sf.rcpforms.widgetwrapper.nl1"/>
+      <param name="project.name" value="/net.sf.rcpforms.widgetwrapper.nl1"/>
+      <param name="url" value="https://rcpforms.svn.sourceforge.net/svnroot/rcpforms/trunk"/>
+    </antcall>
+  </target>
+</project>

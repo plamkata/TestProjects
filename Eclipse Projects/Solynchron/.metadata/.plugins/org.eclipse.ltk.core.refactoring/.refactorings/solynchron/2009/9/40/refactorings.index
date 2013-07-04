@@ -1,0 +1,22 @@
+1254049152945	Extract local variable 'strKey'
+1254083015042	Delete element
+1254106274569	Extract constant 'PAGE_ID'
+1254124334004	Rename type 'HelloAction'
+1254124908291	Rename type 'OpenFormAction'
+1254125076450	Rename type 'OpenFormAction'
+1254125189939	Move compilation unit
+1254126722392	Copy file
+1254126768543	Rename resource 'SolynchronResources.en-US.properties'
+1254129471758	Rename resource 'SolynchronResources.en_US.properties'
+1254130708462	Rename type 'DBInitializer'
+1254131489956	Move member 'executeInSession'
+1254131497084	Move member 'executeInTransaction'
+1254131503354	Move member 'executeInTransaction'
+1254131538233	Rename type 'DBManager'
+1254135341157	Extract local variable 'size'
+1254135506874	Extract local variable 'status'
+1254136980199	Extract local variable 'result'
+1254137239367	Extract method 'incrementRecord'
+1254139961104	Rename resource 'SolynchronResources_en_US.properties'
+1254140957305	Delete element
+1254142728681	Rename method 'incrementRecord'

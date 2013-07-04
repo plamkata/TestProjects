@@ -1,0 +1,18 @@
+1254394802708	Extract local variable 'value'
+1254394920029	Extract local variable 'expected'
+1254395029527	Extract local variable 'value'
+1254406515287	Copy file
+1254411477173	Delete element
+1254414299893	Rename field 'm_Gender'
+1254414313331	Rename field 'm_Name'
+1254414324867	Rename field 'm_BirthDate'
+1254414335572	Rename field 'm_OverdrawAccount'
+1254414345097	Rename field 'm_ChildCount'
+1254414359481	Rename field 'm_AccountBalance'
+1254414390330	Rename field 'm_Address'
+1254414670355	Rename field 'm_ZipCode'
+1254414680882	Rename field 'm_ValidFrom'
+1254414689601	Rename field 'm_ValidTo'
+1254414699086	Rename field 'm_DifferentPostAddress'
+1254414707215	Rename field 'm_Street'
+1254414716612	Rename field 'm_HouseNumber'

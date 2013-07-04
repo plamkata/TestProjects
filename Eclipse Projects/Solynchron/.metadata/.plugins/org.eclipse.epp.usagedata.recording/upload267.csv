@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020561356
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020563707
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020563707
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020564818
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020564818
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020566209
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020566209
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020567904
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020567904
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255020577346
+error,log,,,"Bad type signature: ;\n",1255020578934
+error,log,,,"Bad type signature: ;\n",1255020578935
+error,log,,,"Bad type signature: ;\n",1255020578938
+error,log,,,"Bad type signature: ;\n",1255020578939
+error,log,,,"Bad type signature: ;\n",1255020578967
+error,log,,,"Bad type signature: ;\n",1255020578968
+error,log,,,"Bad type signature: ;\n",1255020578969
+error,log,,,"Bad type signature: ;\n",1255020578970
+error,log,,,"Bad type signature: ;\n",1255020578971
+error,log,,,"Bad type signature: ;\n",1255020578972
+error,log,,,"Bad type signature: ;\n",1255020578998
+error,log,,,"Bad type signature: ;\n",1255020578999
+error,log,,,"Bad type signature: ;\n",1255020579000
+error,log,,,"Bad type signature: ;\n",1255020579001
+error,log,,,"Bad type signature: ;\n",1255020579002

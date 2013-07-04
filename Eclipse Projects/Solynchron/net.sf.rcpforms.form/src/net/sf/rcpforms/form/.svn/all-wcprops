@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/rcpforms/!svn/ver/477/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form
+END
+IMessageDisplay.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/IMessageDisplay.java
+END
+RCPFormEditorPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/rcpforms/!svn/ver/477/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/RCPFormEditorPart.java
+END
+RCPFormWizardPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/RCPFormWizardPage.java
+END
+IRCPFormEditorInput.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/IRCPFormEditorInput.java
+END
+RCPForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/rcpforms/!svn/ver/435/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/RCPForm.java
+END
+RCPFormDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/rcpforms/!svn/ver/295/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/RCPFormDialog.java
+END
+RCPFormViewPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/RCPFormViewPart.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.form/src/net/sf/rcpforms/form/Activator.java
+END

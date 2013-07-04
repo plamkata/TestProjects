@@ -1,0 +1,647 @@
+package com.damnhandy.aspects.bean.impl;
+
+
+import java.beans.PropertyChangeListener;
+import java.lang.reflect.Field;
+import java.util.Collection;
+import java.util.List;
+
+import org.aspectj.lang.Signature;
+import org.aspectj.lang.reflect.FieldSignature;
+
+import com.damnhandy.aspects.bean.*;
+
+/**
+ * An aspect which listens for property changes on classes marked with the 
+ * {@link Observable} annotation. By default, all properties of an 
+ * advised class are bound unless marked with the {@link Slient} annotation. 
+ * This specific implementation aspect of the AbstractJavaBeanAspect provides
+ * functionality for (indexed) nested property change support. 
+ * 
+ * <p>
+ * Nested property change support is applied to a {@link JavaBean} property or a 
+ * {@link JavaBean} collection property (i.e. whose type has been marked as 
+ * {@link Observable} or {@link Collection}<{@link Observable}>), which has been 
+ * explicitly marked as {@link Nested}, either at field or accessor(mutator) level. 
+ * Once, nested property change support is enabled for a property it will fire any 
+ * property changes in it's value element/elements to the base {@link Observable} 
+ * instance.
+ * <p> 
+ * Such property change events will be registered with the nested property: 
+ * {basePropertyName}.{subPropertyName}. This functionality is implemented with a 
+ * NestedPropertyChangeListener which is appropriately registered/unregistered on 
+ * the nested @Observable instances.
+ * 
+ * @author Ryan J. McDonough
+ * @since 1.0
+ * @version $Revision: 1.2 $
+ */
+public aspect JavaBeanAspect extends AbstractJavaBeanAspect {
+	
+	/**
+	 * Makes any class marked with @Observable implement the JavaBean interface and
+	 * backs it with the implementation defined by this aspect.
+	 */
+	declare parents : (@Observable *) implements JavaBean;
+
+	/**
+	 * Determines if the target modifies a @Silent property field of an 
+	 * @Observable or the target is a @Silent accessor of an @Observable. 
+	 * Silent fields or their accessors should not fire any property 
+	 * change events.
+	 */
+	pointcut silent() : 
+		withincode(@Silent * (@Observable *).*(..)) 
+		|| set(@Silent * (@Observable *).*);
+	
+	/**
+	 * Determines if the target modifies a @Nested property field of an 
+	 * @Observable or the target is a @Nested accessor of an @Observable. 
+	 * Nested fields or accessors should fire property change events for 
+	 * any modified nested properties.
+	 */
+	pointcut nested() : 
+		withincode(@Nested * (@Observable *).*(..)) 
+		|| set(@Nested * (@Observable *).*);
+
+	/**
+	 * Picks out activity which happens within a constructor invocation of a
+	 * type marked with an @Observable annotation. Generally, we don't want
+	 * fields set within a constructor to fire events.
+	 */
+	pointcut withinNewObservable() : 
+		cflow(call((@Observable *).new(..)));
+	
+	/**
+	 * Fire a property change event on any method within a class with an
+	 * @Obserbable annotation which sets a property value. An event will not be 
+	 * fired if the field is marked @Slient or if the field values are set within a
+	 * constructor.
+	 * 
+	 * @param bean - the JavaBean instance
+	 */
+	pointcut setters(JavaBean bean): 
+		target(bean) && set(* (@Observable *).*) 
+		&& withincode(* (@Observable *).*(..)) 
+		&& !silent() && !withinNewObservable();
+	
+	/**
+	 * Find all setters for properties from an @Observable type 
+	 * which are marked with @Nested. This pointcut filters 
+	 * nested properties in order to add nested property change support.
+	 */
+	pointcut nestedSetters(JavaBean bean):
+		target(bean) 
+		&& (set((@Observable *) (@Observable *).*) || 
+			set((Collection<@Observable *>+) (@Observable *).*)) 
+		&& withincode(* (@Observable *).*(..)) 
+		&& nested()	&& !silent();
+	
+	/**
+	 * A basic list add pointcut is a call to {@link List#add(int, Object)} 
+	 * or {@link List#addAll(int, Collection)} within the code of an 
+	 * {@link Observable} method which is not called in a constructor. 
+	 */
+	pointcut basicListAdd() :
+		(call(public * List+.add*(int, Object)) || 
+		 call(public * List+.set(int, Object)))
+		&& withincode(* (@Observable *).*(..))
+		&& !withinNewObservable();
+	
+	/**
+	 * A list add pointcut is a basic list add pointcut which is not 
+	 * marked as {@link Silent}: neither at property field level, nor at 
+	 * property accessor level.
+	 * 
+	 * TODO: ensure that the runtime list is actually the one that is not
+	 * marked as @Silent (not any accessed list).
+	 * 
+	 * @param bean - the JavaBean instance which contains the list (i.e. this)
+	 * @param list - the list which is changed by the add method
+	 * @param index - the index at which the change occurs
+	 */
+	pointcut listAdd(JavaBean bean, List list, int index) :
+		target(list) && this(bean) && args(index, Object) 
+		&& basicListAdd() && !silent();
+
+	/**
+	 * A basic list remove pointcut is a call to {@link List#remove(int)} within 
+	 * the code of an {@link Observable} method which is not called 
+	 * in a constructor. 
+	 */
+	pointcut basicListRemove() :
+		call(public Object List+.remove(int))
+		&& withincode(* (@Observable *).*(..))
+		&& !withinNewObservable();
+	
+	/**
+	 * A list remove pointcut is a basic list remove pointcut which is not 
+	 * marked as {@link Silent}: neither at property field level, nor at 
+	 * property accessor level.
+	 * 
+	 * TODO: ensure that the runtime list is actually the one that is not
+	 * marked as @Silent (not any accessed list).
+	 * 
+	 * @param bean - the JavaBean instance which contains the list (i.e. this)
+	 * @param list - the list which is changed by the remove method
+	 * @param index - the index at which the change occurs
+	 */
+	pointcut listRemove(JavaBean bean, List list, int index) :
+		target(list) && args(index) && this(bean) 
+		&& basicListRemove()
+		&& !silent();
+	
+	/**
+	 * A basic collection mutator pointcut is a call to {@link Collection#add(Object)}, 
+	 * {@link Collection#addAll(Collection)}, {@link Collection#remove(Object)}, 
+	 * {@link Collection#removeAll(Collection)} within the code of an 
+	 * {@link Observable} method which is not called in a constructor. 
+	 */
+	pointcut basicCollectionMutator(): 
+		(call(public boolean Collection+.add*(..)) || 
+		 call(public boolean Collection+.remove*(..)))
+		&& withincode(* (@Observable *).*(..))
+		&& !withinNewObservable();
+	
+	/**
+	 * A collection mutator pointcut is a basic collection mutator pointcut 
+	 * which is not marked as {@link Silent}: neither at property field level, 
+	 * nor at property accessor level.
+	 * 
+	 * TODO: ensure that the runtime collection is actually the one that is not
+	 * marked as @Silent (not any accessed collection).
+	 * 
+	 * @param bean - the JavaBean instance which contains the collection (i.e. this)
+	 * @param collection - the underlying collection which is mutated
+	 */
+	pointcut collectionMutator(JavaBean bean, Collection collection): 
+		target(collection) && this(bean)  
+		&& basicCollectionMutator()
+		&& !silent();
+	
+	/**
+	 * The old value is extracted before executing the setter and the new value
+	 * is extracted after executing the setter. First, nested property change 
+	 * support is removed from the oldValue and then nested property change support 
+	 * is added to the newValue bean.
+	 * 
+	 * @param bean the JavaBean instance which contains the called method
+	 */
+	void around(JavaBean bean) : nestedSetters(bean) {
+		FieldSignature fieldSig = (FieldSignature) thisJoinPoint.getSignature();
+		final Field field = fieldSig.getField();
+		try {
+			Object oldValue = field.get(bean);
+			proceed(bean);
+			Object newValue = field.get(bean);
+			addNestedSupport(bean, field.getName(), oldValue, newValue);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	/**
+	 * When the collection mutator called is addAll/removeAll nested 
+	 * support is attached/detached from all JavaBeans that were added/removed.
+	 * When the collection mutator called is add/remove indexed nested
+	 * support is attached/detached from the JavaBean that was added/removed for 
+	 * a last/-1 index.
+	 * 
+	 * @param bean the parent JavaBean whose collection is being modified
+	 * @param collection the collection that was modified
+	 * @return true if the operation was successfully performed by the collection
+	 */
+	boolean around(JavaBean bean, Collection collection) : 
+			collectionMutator(bean, collection) {
+		Signature sig = thisJoinPoint.getSignature(); 
+		Object[] args = thisJoinPoint.getArgs();
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		try {
+			String fieldName = bean.getFieldName(collection);
+			// If the name is found, fire an event
+			if (fieldName != null && !isSilent(enclSig, fieldName) && 
+					isNested(enclSig, fieldName)) {
+				boolean result = proceed(bean, collection);
+				if (result) {
+					if (sig.getName().equals("addAll")) {
+						// the whole collection changed
+						addNestedSupport(bean, fieldName, null, args[0]);
+					} else if (sig.getName().equals("removeAll")) {
+						// the whole collection changed
+						addNestedSupport(bean, fieldName, args[0], null);
+					} else if (sig.getName().equals("add")) {
+						// most probably added at the end
+						int index = collection.size() - 1;
+						addNestedSupport(bean, fieldName, index, null, args[0]);
+					} else if (sig.getName().equals("remove")) {
+						// index cannot be identified for general collections
+						addNestedSupport(bean, fieldName, -1, args[0], null);
+					}
+				}
+				return result;
+			} else {
+				// otherwise, proceed as usual
+				return proceed(bean, collection);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	/**
+	 * When a list add/set/addAll method is called at a particular index, 
+	 * indexed nested support is attached to all new JavaBeans that were 
+	 * added to the list. When a list set method is called indexed nested 
+	 * support is also detached from the old object. When a list add/addAll 
+	 * method have actually performed an insert in the list, indices of 
+	 * indexed nested listeners of subsequent JavaBean objects in the list are
+	 * updated accordingly.
+	 * 
+	 * @param bean the parent JavaBean, whose list property is being modified
+	 * @param list the list which is being modified (i.e. actual value of 
+	 * the list property)
+	 * @param index the index at which the change has occurred 
+	 * @return the result of the list operation
+	 */
+	Object around(JavaBean bean, List list, int index) : 
+			listAdd(bean, list, index) {
+		Signature sig = thisJoinPoint.getSignature(); 
+		Object[] args = thisJoinPoint.getArgs();
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		Object result = null;
+		try {
+			String fieldName = bean.getFieldName(list);
+			if (fieldName != null && !isSilent(enclSig, fieldName) && 
+					isNested(enclSig, fieldName)) {
+				// If the name is found, fire an event
+				Object oldValue = (index >= 0 && index < list.size()) ? 
+						list.get(index) : null;
+				result = proceed(bean, list, index);
+				if (sig.getName().equals("add")) {
+					addNestedSupport(bean, fieldName, index, null, args[1]);
+					fixListNestedListenerIndices(bean, fieldName, list, index, 1);
+				} else if (sig.getName().equals("addAll")) {
+					addNestedSupport(bean, fieldName, index, null, args[1]);
+					Collection<JavaBean> added = (Collection<JavaBean>) args[1];
+					fixListNestedListenerIndices(bean, fieldName, list, index, added.size());
+				} else if (sig.getName().equals("set")) {
+					addNestedSupport(bean, fieldName, index, oldValue, args[1]);
+				}
+			} else {
+				// otherwise, proceed as usual
+				result = proceed(bean, list, index);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	/**
+	 * When a list remove method is called at a particular index, 
+	 * indexed nested support is detached from the JavaBean that was 
+	 * removed from the list. When the list remove method has actually changed
+	 * indices of the other elements of the list, indices of indexed nested 
+	 * listeners of subsequent JavaBean objects in the list are updated accordingly.
+	 * 
+	 * @param bean the parent JavaBean, whose list property is being modified
+	 * @param list the list which is being modified (i.e. actual value of 
+	 * the list property)
+	 * @param index the index at which the change has occurred 
+	 * @return the result of the list operation
+	 */
+	Object around(JavaBean bean, List list, int index) : 
+			listRemove(bean, list, index) {
+		Signature sig = thisJoinPoint.getSignature(); 
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		
+		Object oldValue = null;
+		try {
+			String fieldName = bean.getFieldName(list);
+			// If the name is found, fire an event
+			if (fieldName != null && !isSilent(enclSig, fieldName) && 
+					isNested(enclSig, fieldName)) {
+				oldValue = proceed(bean, list, index);
+				if (sig.getName().equals("remove")) {
+					addNestedSupport(bean, fieldName, index, oldValue, null);
+					fixListNestedListenerIndices(bean, fieldName, list, index, -1);
+				}
+			} else {
+				// otherwise, proceed as usual
+				oldValue = proceed(bean, list, index);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return oldValue;
+	}
+	
+	/**
+	 * Check whether the specified signature is a method signature annotated with @Nested
+	 * or whether the specified field of the declaring type of the signature is annotated
+	 * with @Nested.
+	 * 
+	 * @param sig the declaring signature to be checked
+	 * @param fieldName the field of the declaring signature to be checked
+	 * @return true if, either the accessor method, or the field has been annotated with @Nested
+	 */
+	protected boolean isNested(Signature sig, String fieldName) {
+		return isAnnotated(sig, fieldName, Nested.class);
+	}
+	
+	/**
+	 * A change was performed to a list of JavaBeans at the specified index: 
+	 * fix number of beans were added or removed. The list is a property of 
+	 * the parent bean, named fieldName. This method will try to fix all 
+	 * indices of nested listeners attached to subsequent beans in the list 
+	 * so that indices of the listeners correspond to actual indices in the list. 
+	 * 
+	 * @param parent the parent JavaBean
+	 * @param fieldName the list property of the parent JavaBean
+	 * @param list the actual list (i.e. the value of the list property)
+	 * @param index the index at which a modification has occured
+	 * @param fix the range of the modification (i.e. number of beans that 
+	 * were added/removed from the list)
+	 */
+	private void fixListNestedListenerIndices(JavaBean parent, 
+			String fieldName, List list, int index, int fix) {
+		if ((fix > 0 && index < list.size() - fix) || 
+				(fix < 0 && index < list.size() - 1 - fix)) {
+			//perform the fix starting from the index of change +/- the number of added/removed objects
+			int listIndex = fix > 0 ? index + fix : index;
+			for ( ; listIndex < list.size(); listIndex++) {
+				JavaBean bean = (JavaBean)list.get(listIndex);
+				PropertyChangeListener[] listeners = bean.getPropertyChangeListeners();
+				for (int j = 0; j < listeners.length; j++) {
+					if (listeners[j] instanceof NestedIndexedPropertyChangeListener) {
+						NestedIndexedPropertyChangeListener nestedListener = 
+							(NestedIndexedPropertyChangeListener) listeners[j];
+						if (nestedListener.getParent() == parent && 
+								fieldName.startsWith(nestedListener.getBasePropertyName())) {
+							int baseIndex = nestedListener.getBaseIndex();
+							nestedListener.setBaseIndex(baseIndex + fix);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Registers/unregisters nested property change support for a JavaBean's 
+	 * fieldName property on any newValue/oldValue JavaBean or a collection 
+	 * of JavaBeans.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param oldValue the old value/values of the parent property for which 
+	 * nested property change support should be unregistered
+	 * @param newValue the new value/values of the parent property for which 
+	 * nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName,
+			Object oldValue, Object newValue) {
+		if (oldValue instanceof Collection || newValue instanceof Collection) {
+			addNestedSupport(bean, fieldName, 
+					(Collection<JavaBean>) oldValue, 
+					(Collection<JavaBean>) newValue);
+		} else if (oldValue instanceof JavaBean || newValue instanceof JavaBean) {
+			addNestedSupport(bean, fieldName, (JavaBean)oldValue, (JavaBean)newValue);
+		}
+	}
+	
+	/**
+	 * Registers/unregisters nested property change support for a JavaBean's 
+	 * fieldName property on any newValue/oldValue collection of JavaBeans.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param oldValue the old values of the parent property for which 
+	 * nested property change support should be unregistered
+	 * @param newValue the new values of the parent property for which 
+	 * nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName, 
+			Collection<JavaBean> oldValue, Collection<JavaBean> newValue) {
+		if (oldValue instanceof List || newValue instanceof List) {
+			addNestedSupport(bean, fieldName, 
+					(List<JavaBean>) oldValue, (List<JavaBean>) newValue);
+		} else {
+			if (oldValue == null && newValue == null) {
+				// nothing changed 
+			} else if (oldValue != newValue) {
+				// remove nested beans from the old collection
+				if (oldValue != null) {
+					for (JavaBean nested : oldValue) {
+						addNestedSupport(bean, fieldName, nested, null);
+					}
+				}
+				// add nested property change support for nested beans 
+				// from the new collection
+				if (newValue != null) {
+					for (JavaBean nested : newValue) {
+						addNestedSupport(bean, fieldName, null, nested);
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Registers/unregisters indexed nested property change support for a JavaBean's 
+	 * fieldName property on any newValue/oldValue list of JavaBeans. Since, lists
+	 * are indexed by default, the index can be determined by the position in the list.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param oldValue the old values of the parent property for which 
+	 * indexed nested property change support should be unregistered
+	 * @param newValue the new values of the parent property for which 
+	 * indexed nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName, 
+			List<JavaBean> oldValue, List<JavaBean> newValue) {
+		if (oldValue == null && newValue == null) {
+			// nothing changed 
+		} else if (oldValue != newValue) {
+			// remove nested beans from the old collection
+			if (oldValue != null) {
+				for (int index = 0; index < oldValue.size(); index++) {
+					JavaBean nested = oldValue.get(index);
+					addNestedSupport(bean, fieldName, index, nested, null);
+				}
+			}
+			// add nested property change support for nested beans 
+			// from the new collection
+			if (newValue != null) {
+				for (int index = 0; index < newValue.size(); index++) {
+					JavaBean nested = newValue.get(index);
+					addNestedSupport(bean, fieldName, index, null, nested);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Adds nested support for a JavaBean property of a base JavaBean with the 
+	 * specified field name. If the old value had a nested listener assigned to it 
+	 * will be removed; appropriate nested listener will be added for the new value.
+	 * 
+	 * @param bean the base JavaBean instance
+	 * @param fieldName the field to add nested support value for
+	 * @param oldValue the old JavaBean value of the field 
+	 * @param newValue the new JavaBean value of the field
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName,
+			JavaBean oldValue, JavaBean newValue) {
+		if (oldValue == null && newValue == null) {
+			// nothing changed
+		} else if (oldValue != newValue) {
+			NestedPropertyChangeListener listener = 
+				new NestedPropertyChangeListener(bean, fieldName);
+			if (oldValue != null) {
+				// remove any previously attached listeners
+				oldValue.removePropertyChangeListener(listener);
+			}
+			if (newValue != null) {
+				// attach a special property change listener that will propagate
+				// changes of nested properties to the parent bean
+				newValue.addPropertyChangeListener(listener);
+			}
+		}
+	}
+	
+	/**
+	 * Registers/unregisters indexed nested property change support for a 
+	 * JavaBean's fieldName property on any newValue/oldValue JavaBean or 
+	 * a collection of JavaBeans.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param index the index to add indexed property change support for
+	 * @param oldValue the old value/values of the parent property for which 
+	 * nested property change support should be unregistered
+	 * @param newValue the new value/values of the parent property for which 
+	 * nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName, int index, 
+			Object oldValue, Object newValue) {
+		if (oldValue instanceof Collection || newValue instanceof Collection) {
+			addNestedSupport(bean, fieldName, index,
+					(Collection<JavaBean>) oldValue, 
+					(Collection<JavaBean>) newValue);
+		} else if (oldValue instanceof JavaBean || newValue instanceof JavaBean) {
+			addNestedSupport(bean, fieldName, index, 
+					(JavaBean) oldValue, (JavaBean) newValue);
+		}
+	}
+	
+	/**
+	 * Registers/unregisters indexed nested property change support for a JavaBean's 
+	 * fieldName property on any newValue/oldValue collection of JavaBeans.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param index the index to add indexed property change support for
+	 * @param oldValue the old values of the parent property for which 
+	 * nested property change support should be unregistered
+	 * @param newValue the new values of the parent property for which 
+	 * nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName, int index, 
+			Collection<JavaBean> oldValue, Collection<JavaBean> newValue) {
+		if (oldValue instanceof List || newValue instanceof List) {
+			addNestedSupport(bean, fieldName, index,
+					(List<JavaBean>) oldValue, (List<JavaBean>) newValue);
+		} else {
+			if (oldValue == null && newValue == null) {
+				// nothing changed 
+			} else if (oldValue != newValue) {
+				if (oldValue != null) {
+					for (JavaBean nested : oldValue) {
+						// imitate remove with -1 index
+						addNestedSupport(bean, fieldName, -1, nested, null);
+					}
+				}
+				if (newValue != null) {
+					for (JavaBean nested : newValue) {
+						// imitate add with the current position in the collection
+						addNestedSupport(bean, fieldName, index, null, nested);
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Registers/unregisters indexed nested property change support for a JavaBean's 
+	 * fieldName property on any newValue/oldValue list of JavaBeans. Since, lists
+	 * are indexed by default, the index can be determined by the index of the 
+	 * modification and by the position in the list.
+	 *  
+	 * @param bean the parent JavaBean
+	 * @param fieldName the property name of the parent JavaBean
+	 * @param index the index in the list where the modification occurred
+	 * @param oldValue the old values of the parent property for which 
+	 * indexed nested property change support should be unregistered
+	 * @param newValue the new values of the parent property for which 
+	 * indexed nested property change support should be registered
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName, int index, 
+			List<JavaBean> oldValue, List<JavaBean> newValue) {
+		if (oldValue == null && newValue == null) {
+			// nothing changed 
+		} else if (oldValue != newValue) {
+			// remove nested beans from the old collection
+			if (oldValue != null) {
+				for (int i = 0; i < oldValue.size(); i++) {
+					JavaBean nested = oldValue.get(index);
+					addNestedSupport(bean, fieldName, index + i, nested, null);
+				}
+			}
+			// add nested property change support for nested beans 
+			// from the new collection
+			if (newValue != null) {
+				for (int i = 0; i < newValue.size(); i++) {
+					JavaBean nested = newValue.get(index);
+					addNestedSupport(bean, fieldName, index + i, null, nested);
+				}
+			}
+		} else {
+			// cannot determine what was changed
+		}
+	}
+	
+	/**
+	 * Adds indexed nested property change support for a JavaBean property of a base 
+	 * JavaBean with the specified field name. If the old value had a nested listener 
+	 * assigned to it, it will be removed; appropriate nested listener will be added 
+	 * for the new value.
+	 * 
+	 * @param bean the base JavaBean instance
+	 * @param fieldName the field to add nested support value for
+	 * @param index the index of the change in the list
+	 * @param oldValue the old JavaBean value of the field 
+	 * @param newValue the new JavaBean value of the field
+	 */
+	private void addNestedSupport(JavaBean bean, String fieldName,
+			int index, JavaBean oldValue, JavaBean newValue) {
+		if (oldValue == null && newValue == null) {
+			// nothing changed
+		} else if (oldValue != newValue) {
+			NestedIndexedPropertyChangeListener listener = 
+				new NestedIndexedPropertyChangeListener(bean, fieldName, index);
+			if (oldValue != null) {
+				// remove any previously attached listeners
+				oldValue.removePropertyChangeListener(listener);
+			}
+			if (newValue != null) {
+				// attach a special property change listener that will propagate
+				// changes of nested properties to the parent bean
+				newValue.addPropertyChangeListener(listener);
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,20 @@
+###############################################################################
+# TODO Copyright (c) 2003, 2004 IBM Corporation and others.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Common Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/cpl-v10.html
+# 
+# Contributors:
+#     IBM Corporation - initial API and implementation
+###############################################################################
+ProblemView.title=Solynchron Problem Definition
+ProblemPage.title=Solynchron Problem Definition
+ProblemPage.label=Problem
+ProblemPage.Domain.title=Domain Definition
+ProblemPage.Domain.description=Specify which tools/frameworks/platforms dose your problem apply to.
+ProblemPage.Problem.title=Problem Definition
+ProblemPage.Problem.lblType=Problem Type
+ProblemPage.Problem.lblDescription=Problem Definition
+ProblemPage.Domain.description=Specify your problem
+OpenProblemFormAction.name=New Problem

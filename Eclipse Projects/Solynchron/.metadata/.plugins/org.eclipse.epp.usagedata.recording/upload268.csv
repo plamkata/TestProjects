@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1255020579003
+error,log,,,"Bad type signature: ;\n",1255020579004
+error,log,,,"Bad type signature: ;\n",1255020579005
+error,log,,,"Bad type signature: ;\n",1255020579006
+error,log,,,"Bad type signature: ;\n",1255020579008
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255020647690
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255020650403
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.edit.text.java.open.hierarchy",1255020650478
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255020671887
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020671973
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020672069
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255020735887
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.edit.text.java.open.hierarchy",1255020735985
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255020767150
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255020768901
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255020768902
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255020774191
+error,log,,,"Bad type signature: ;\n",1255020798775
+error,log,,,"Bad type signature: ;\n",1255020798776
+error,log,,,"Bad type signature: ;\n",1255020798777
+error,log,,,"Bad type signature: ;\n",1255020798778
+error,log,,,"Bad type signature: ;\n",1255020798779
+error,log,,,"Bad type signature: ;\n",1255020798858
+error,log,,,"Bad type signature: ;\n",1255020798859
+error,log,,,"Bad type signature: ;\n",1255020798860

@@ -1,0 +1,84 @@
+/*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *
+ ******************************************************************************
+ */
+
+package net.sf.rcpforms.examples.complete;
+
+/**
+ * data model for sandbox3. Contains ui state info: SeparateKorrespondenzAdresse.
+ * 
+ * @author vanmeegenm
+ */
+public class NestedAddressModel extends JavaBean
+{
+    public static final String P_ZipCode = "zipCode";
+
+    public static final String P_City = "city";
+
+    public static final String P_NestedCountry = "country";
+
+    private Integer m_ZipCode;
+
+    private String m_City;
+
+    private NestedCountryModel m_Country = new NestedCountryModel();
+
+    public String getCity()
+    {
+        return (String) m_City;
+    }
+
+    public void setCity(String value)
+    {
+        Object oldValue = m_City;
+        m_City = value;
+        propertyChangeSupport.firePropertyChange(P_City, oldValue, value);
+    }
+
+    public Integer getZipCode()
+    {
+        return (Integer) m_ZipCode;
+    }
+
+    public void setZipCode(Integer value)
+    {
+        Object oldValue = m_ZipCode;
+        m_ZipCode = value;
+        propertyChangeSupport.firePropertyChange(P_ZipCode, oldValue, value);
+    }
+
+    public NestedCountryModel getCountry()
+    {
+        return (NestedCountryModel) m_Country;
+    }
+
+    public void setCountry(NestedCountryModel value)
+    {
+        Object oldValue = m_Country;
+        m_Country = value;
+        propertyChangeSupport.firePropertyChange(P_NestedCountry, oldValue, value);
+    }
+
+    public String toString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.append("NestedAddressModel[");
+        sb.append(getCountry().toString());
+        sb.append(", City: ");
+        sb.append(getCity());
+        sb.append(", ZipCode: ");
+        sb.append(getZipCode());
+        sb.append("]");
+
+        return sb.toString();
+    }
+
+}

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255247965177
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248261223
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255248263426
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248266194
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248956264
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255248958408
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255248965590
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255248966897
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248985063
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248987591
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255248991242
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255248999734
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249006623
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255249009414
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249013084
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255249014906
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255249019844
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255249022872
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249024196
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255249024536
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249024555
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249025777
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255249033610
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255249035453
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249036537

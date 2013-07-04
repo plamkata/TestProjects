@@ -1,0 +1,115 @@
+/*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *
+ ******************************************************************************
+ */
+
+package net.sf.rcpforms.test.adapter;
+
+import java.util.Date;
+
+public class AddressModel extends JavaBean
+{
+    public static final String P_ZipCode = "zipCode";
+
+    public static final String P_ValidFrom = "validFrom";
+
+    public static final String P_ValidTo = "validTo";
+
+    public static final String P_DifferentPostAddress = "differentPostAddress";
+
+    public static final String P_Street = "street";
+
+    public static final String P_HouseNumber = "houseNumber";
+
+    private Integer m_ZipCode;
+
+    private Date m_ValidFrom;
+
+    private Date m_ValidTo;
+
+    private boolean m_DifferentPostAddress;
+
+    private String m_Street;
+
+    private Integer m_HouseNumber;
+
+    public Integer getHouseNumber()
+    {
+        return m_HouseNumber;
+    }
+
+    public void setHouseNumber(Integer value)
+    {
+        Object oldValue = m_HouseNumber;
+        m_HouseNumber = value;
+        propertyChangeSupport.firePropertyChange(P_HouseNumber, oldValue, value);
+        m_HouseNumber = value;
+    }
+
+    public Date getValidTo()
+    {
+        return m_ValidTo;
+    }
+
+    public void setValidTo(Date value)
+    {
+        Object oldValue = m_ValidTo;
+        m_ValidTo = value;
+        propertyChangeSupport.firePropertyChange(P_ValidTo, oldValue, value);
+    }
+
+    public String getStreet()
+    {
+        return m_Street;
+    }
+
+    public void setStreet(String value)
+    {
+        Object oldValue = m_Street;
+        m_Street = value;
+        propertyChangeSupport.firePropertyChange(P_Street, oldValue, value);
+    }
+
+    public boolean getDifferentPostAddress()
+    {
+        return m_DifferentPostAddress;
+    }
+
+    public void setDifferentPostAddress(boolean value)
+    {
+        boolean oldValue = m_DifferentPostAddress;
+        m_DifferentPostAddress = value;
+        propertyChangeSupport.firePropertyChange(P_DifferentPostAddress, oldValue, value);
+    }
+
+    public Date getValidFrom()
+    {
+        return m_ValidFrom;
+    }
+
+    public void setValidFrom(Date value)
+    {
+        Object oldValue = m_ValidFrom;
+        m_ValidFrom = value;
+        propertyChangeSupport.firePropertyChange(P_ValidFrom, oldValue, value);
+    }
+
+    public Integer getZipCode()
+    {
+        return m_ZipCode;
+    }
+
+    public void setZipCode(Integer value)
+    {
+        Object oldValue = m_ZipCode;
+        m_ZipCode = value;
+        propertyChangeSupport.firePropertyChange(P_ZipCode, oldValue, value);
+    }
+}

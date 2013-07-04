@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package com.startup.solynchron.forms;
+
+import net.sf.rcpforms.bindingvalidation.ValidationManager;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormPart;
+import net.sf.rcpforms.form.RCPForm;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class SearchForm extends RCPForm {
+
+	/**
+	 * @param title
+	 * @param validationManager
+	 * @param parts
+	 */
+	public SearchForm(String title, ValidationManager validationManager,
+			RCPFormPart... parts) {
+		super(title, validationManager, parts);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param title
+	 * @param parts
+	 */
+	public SearchForm(String title, RCPFormPart... parts) {
+		super(title, parts);
+		// TODO Auto-generated constructor stub
+	}
+
+}

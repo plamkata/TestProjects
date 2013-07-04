@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255076997748
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255077003764
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255077019795
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255077026087
+error,log,,,"Bad type signature: ;\n",1255077027575
+error,log,,,"Bad type signature: ;\n",1255077027600
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255077037698
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255077048815
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077051216
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077072534
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077072545
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255077073036
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255077073119
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077076694
+activated,perspective,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui.DebugPerspective",1255077076790
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1255077082350
+activated,view,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui.DebugView",1255077084236
+executed,command,org.eclipse.debug.ui,3.5.1.v20090811_r351,"org.eclipse.debug.ui.commands.Resume",1255077084305
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077086828
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077092564
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077096298
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077097269
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077098275
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077099795
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255077103153

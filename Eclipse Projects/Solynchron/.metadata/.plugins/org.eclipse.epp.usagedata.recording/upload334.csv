@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255033397222
+closed,editor,org.eclipse.ant.ui,3.4.1.v20090901_r351,"org.eclipse.ant.ui.internal.editor.AntEditor",1255033397222
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255033400790
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033403061
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033410279
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255033415676
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033418136
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033419345
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255033419480
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255033426482
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033434416
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033435648
+error,log,,,"Internal Error",1255033435683
+error,log,,,"Problems encountered while deleting resources.",1255033435684
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033435696
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033437832
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255033437842
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033442813
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033445839
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033446955
+error,log,,,"Internal Error",1255033446988
+error,log,,,"Problems encountered while deleting resources.",1255033446989
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033447000
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033452761
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255033452775

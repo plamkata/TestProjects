@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.navigate.open.type",1255165487497
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255165502525
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255165503658
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255165503977
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165504005
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165506522
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255165509905
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255165512425
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255165513014
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255165513207
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165513232
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165515177
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255165517230
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165517316
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165518223
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255165518619
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165523167
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165718270
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165718978
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165726791
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255165743176
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255165748077
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255165752144
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165757298
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255165759828

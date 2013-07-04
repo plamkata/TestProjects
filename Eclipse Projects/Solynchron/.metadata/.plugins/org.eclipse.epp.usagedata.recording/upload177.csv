@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1254998056222
+error,log,,,"Bad type signature: ;\n",1254998056223
+error,log,,,"Bad type signature: ;\n",1254998056225
+error,log,,,"Bad type signature: ;\n",1254998056226
+error,log,,,"Bad type signature: ;\n",1254998056228
+error,log,,,"Bad type signature: ;\n",1254998056229
+error,log,,,"Bad type signature: ;\n",1254998056230
+error,log,,,"Bad type signature: ;\n",1254998056231
+error,log,,,"Bad type signature: ;\n",1254998056232
+error,log,,,"Bad type signature: ;\n",1254998056237
+error,log,,,"Bad type signature: ;\n",1254998056238
+error,log,,,"Bad type signature: ;\n",1254998056239
+error,log,,,"Bad type signature: ;\n",1254998056241
+error,log,,,"Bad type signature: ;\n",1254998056242
+error,log,,,"Bad type signature: ;\n",1254998056243
+error,log,,,"Bad type signature: ;\n",1254998056244
+error,log,,,"Bad type signature: ;\n",1254998056245
+error,log,,,"Bad type signature: ;\n",1254998056246
+error,log,,,"Bad type signature: ;\n",1254998056247
+error,log,,,"Bad type signature: ;\n",1254998056249
+error,log,,,"Bad type signature: ;\n",1254998056250
+error,log,,,"Bad type signature: ;\n",1254998056251
+error,log,,,"Bad type signature: ;\n",1254998056253
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254998058662
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1254998063883

@@ -1,0 +1,115 @@
+package net.sf.rcpforms.examples.complete;
+
+import net.sf.rcpforms.bindingvalidation.ValidationManager;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormFactory;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormPart;
+import net.sf.rcpforms.widgetwrapper.builder.GridBuilder;
+import net.sf.rcpforms.widgetwrapper.wrapper.EControlState;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPControl;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPGroup;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSection;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleButton;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleLabel;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPText;
+
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+
+public class SandboxMasterDetailFormPart extends RCPFormPart
+{
+    private IObservableValue masterValue = null;
+    private AddressModel model;
+    private RCPSection mainSection;
+    private RCPText masterValueLabel = new RCPText("MasterValue: ");
+    private RCPText newZipCode = new RCPText("New Zip: "), newCity = new RCPText("New City: ");
+    private RCPSimpleButton addNewNestedAddress = new RCPSimpleButton("add new address", SWT.PUSH);
+    private RCPText currentZipCode = new RCPText("Current Zip: "), currentCity = new RCPText("Current City: ");
+
+    @Override
+    public void bind(ValidationManager bm, Object modelBean)
+    {
+        this.model = (AddressModel) modelBean;
+        masterValue = bm.bindDetailValue(modelBean, AddressModel.P_NestedAddress, new RCPControl[]{currentZipCode, currentCity}, new String[]{NestedAddressModel.P_ZipCode, NestedAddressModel.P_City});
+        bm.bindValue(masterValueLabel, modelBean, AddressModel.P_NestedAddress);
+    }
+
+    @Override
+    public void createUI(FormToolkit toolkit, Composite parent)
+    {
+        GridBuilder mainBuilder = new GridBuilder(toolkit, parent, 2);
+        mainSection = new RCPSection("MasterDetail binding");
+        GridBuilder section = mainBuilder.addContainer(mainSection, 2);
+        
+        section.addLineGrabAndFill(masterValueLabel, 1);
+        masterValueLabel.setState(EControlState.READONLY, true);
+        section.newLine();
+        section.addLine(newZipCode);
+        section.addLine(newCity);
+        section.newLine();
+        section.addLine(addNewNestedAddress);
+        section.newLine();
+        addNewNestedAddress.getSWTButton().addSelectionListener(new SelectionAdapter(){
+
+            @Override
+            public void widgetSelected(SelectionEvent e)
+            {
+                Integer newZip = 0;
+                try{
+                    newZip = Integer.parseInt(newZipCode.getSWTText().getText());
+                }catch (NumberFormatException nfe)
+                {
+                    //do nothing here...
+                }
+                SandboxMasterDetailFormPart.this.createAndSetNewNestedModel(newZip, newCity.getSWTText().getText());
+                newZipCode.getSWTText().setText("");
+                newCity.getSWTText().setText("");
+            }
+            
+        });
+        
+        RCPGroup group = new RCPGroup("Current values");
+        GridBuilder groupBuilder = section.addContainerSpan(group, 2, 2, 1, false);
+        groupBuilder.addLineSpan(currentZipCode, 5);
+        currentZipCode.setState(EControlState.READONLY, true);
+        groupBuilder.addLineSpan(currentCity, 30);
+        currentCity.setState(EControlState.READONLY, true);
+        
+        toolkit.paintBordersFor(parent);
+    }
+
+    protected void createAndSetNewNestedModel(Integer newZip, String newCity)
+    {
+        NestedAddressModel newModel = new NestedAddressModel();
+        newModel.setZipCode(newZip);
+        newModel.setCity(newCity);
+        
+//        if(masterValue != null)
+//        {
+//            masterValue.setValue(newModel);
+//        }
+        model.setAddress(newModel);
+    }
+
+    @Override
+    public void setState(EControlState state, boolean value)
+    {
+        // TODO Auto-generated method stub
+
+    }
+    
+    public static void main(String[] args)
+    {
+        final AddressModel model = new AddressModel();
+        final NestedAddressModel detailModel = new NestedAddressModel();
+        detailModel.setCity("SampleCity");
+        detailModel.setZipCode(1234);
+        model.setAddress(detailModel);
+        final RCPFormPart part = new SandboxMasterDetailFormPart();
+        RCPFormFactory.getInstance().startTestShell("SandboxMasterDetailPart", part, model);
+    }
+
+}

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf
+END
+EReferenceRangeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/rcpforms/!svn/ver/412/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EReferenceRangeAdapter.java
+END
+ObservableListEObjectContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/348/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/ObservableListEObjectContentProvider.java
+END
+EMFFormFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EMFFormFactory.java
+END
+EEnumRangeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EEnumRangeAdapter.java
+END
+EMFConverterRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EMFConverterRegistry.java
+END
+EMFModelAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EMFModelAdapter.java
+END
+EMFDefaultConverterUpdateStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/EMFDefaultConverterUpdateStrategy.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.emfadapter/src/net/sf/rcpforms/emf/Activator.java
+END

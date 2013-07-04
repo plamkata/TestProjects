@@ -1,0 +1,203 @@
+/**
+ * 
+ */
+package com.startup.solynchron.parts;
+
+import net.sf.rcpforms.bindingvalidation.ValidationManager;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormFactory;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormPart;
+import net.sf.rcpforms.common.util.Validate;
+import net.sf.rcpforms.tablesupport.tables.ColumnConfiguration;
+import net.sf.rcpforms.tablesupport.tables.ECellEditorType;
+import net.sf.rcpforms.tablesupport.tables.TableUtil;
+import net.sf.rcpforms.widgetwrapper.builder.GridBuilder;
+import net.sf.rcpforms.widgetwrapper.builder.GridLayoutFactory;
+import net.sf.rcpforms.widgetwrapper.wrapper.EControlState;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPPushButton;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSection;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleLabel;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleText;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPTable;
+
+import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.viewers.DoubleClickEvent;
+import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.StructuredSelection;
+import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.forms.editor.FormEditor;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+
+import com.startup.solynchron.Activator;
+import com.startup.solynchron.CodeExecutor;
+import com.startup.solynchron.ExecutionManager;
+import com.startup.solynchron.Resources;
+import com.startup.solynchron.dao.LogicManager;
+import com.startup.solynchron.dao.ProblemLogic;
+import com.startup.solynchron.forms.FormEditorInput;
+import com.startup.solynchron.forms.ProblemForm;
+import com.startup.solynchron.forms.ProblemFormEditorPart;
+import com.startup.solynchron.obj.ModelObject;
+import com.startup.solynchron.obj.MyUser;
+import com.startup.solynchron.obj.problem.Problem;
+import com.startup.solynchron.obj.problem.ProblemType;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class ProblemSearchPart extends RCPFormPart {
+	
+	private FormEditor editor;
+	
+	private RCPSection mainSection;
+	
+	private RCPSimpleText txtSearch;
+	
+	private RCPPushButton btnSearch;
+	
+	private RCPTable tblResults;
+	
+	private TableViewer tblResultsViewer;
+
+	/**
+	 * 
+	 */
+	public ProblemSearchPart(FormEditor editor) {
+		txtSearch = new RCPSimpleText();
+		btnSearch = new RCPPushButton(Resources.getResource("SearchPage.Search.lblSearch"));
+		tblResults = new RCPTable(Resources.getResource("SearchPage.Search.lblResults"));
+		this.editor = editor;
+	}
+
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#createUI(org.eclipse.ui.forms.widgets.FormToolkit, org.eclipse.swt.widgets.Composite)
+	 */
+	@Override
+	public void createUI(FormToolkit toolkit, Composite parent) {
+		GridBuilder builder = new GridBuilder(toolkit, parent, 1);
+		mainSection = new RCPSection(Resources.getResource("SearchPage.title"));
+		
+		GridBuilder sectionBuilder = builder.addContainer(mainSection, 3);
+		
+		RCPSimpleLabel lblSearch = new RCPSimpleLabel(
+				Resources.getResource("SearchPage.Search.lblSearch"));
+		sectionBuilder.add(lblSearch);
+		sectionBuilder.add(txtSearch, gdTxtSearch(sectionBuilder));
+		sectionBuilder.add(btnSearch);
+		btnSearch.getSWTButton().addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				// close the session to clear memory from previous searches
+				// all objects loaded until now get detached
+				Activator.closeSession();
+				ExecutionManager.executeInTransaction(new CodeExecutor(ProblemSearchPart.this) {
+					@Override
+					public Object execute(Object[] params) throws Exception {
+						ProblemLogic logic = (ProblemLogic) LogicManager.get(LogicManager.PROBLEM_LOGIC);
+						// we have already bound this list, it will be modified in the problem logic
+						return logic.findProblems(txtSearch.getSWTText().getText());
+					}
+				}, false, new Object[0]);
+			}
+		});
+		sectionBuilder.addLineGrabAndFill(tblResults, 3, 10);
+        tblResultsViewer = TableUtil.configureTableViewer((TableViewer) tblResults.getViewer(),
+                createColumnConfigurations(false), Problem.class, false, false);
+		tblResults.setState(EControlState.READONLY, true);
+		
+		tblResultsViewer.addDoubleClickListener(new IDoubleClickListener() {
+			@Override
+			public void doubleClick(DoubleClickEvent event) {
+				StructuredSelection selection = (StructuredSelection) event.getSelection();
+				if (!selection.isEmpty() && selection.getFirstElement() != null) {
+					Problem problem = (Problem) selection.getFirstElement();
+					// TODO: bind the problem form to the selected problem
+					String pageId = Resources.getResource("ProblemForm.title") + " " + problem.getId();
+					ProblemForm form = new ProblemForm(pageId, new ProblemFormPart()); 
+					FormEditorInput input = new FormEditorInput(
+							Resources.getResource("OpenProblemFormAction.name"), 
+							new Problem());
+					try {
+						int index = editor.addPage(new ProblemFormEditorPart(form), input);
+						//editor.setPageText(index, Resources.getResource("ProblemPage.title"));
+
+						// TODO: select the problem page
+						editor.setActivePage(pageId, input);
+					} catch (PartInitException e) {
+						Activator.log(e);
+					}
+				}
+			}
+		});
+	}
+	
+	/**
+	 * @param builder
+	 * @return
+	 */
+	private GridData gdTxtSearch(GridBuilder builder) {
+		GridData gd = GridLayoutFactory.createDefaultLayoutData();
+		gd.widthHint = builder.getWidthHint(40);
+		gd.horizontalSpan = 1;
+		gd.heightHint = builder.getHeightHint(1);
+		gd.verticalSpan = 1;
+		return gd;
+	}
+	
+	private static ColumnConfiguration[] createColumnConfigurations(boolean editable)
+    {
+        // automatic conversion will be applied using the standard data binding converters
+        // which are used in text fields too
+        ColumnConfiguration[] columnConfigurations = {
+                new ColumnConfiguration("id", ModelObject.ID, 40, SWT.LEFT, false,
+                        editable ? ECellEditorType.TEXT : null).setGrabHorizontal(true),
+                new ColumnConfiguration("Description", Problem.DESCRIPTION, 150, SWT.LEFT, 
+                		false, editable ? ECellEditorType.TEXT : null),
+                new ColumnConfiguration("Type", Problem.TYPE + "." + ProblemType.NAME, 50, SWT.LEFT, 
+                		false, editable ? ECellEditorType.TEXT : null),
+                new ColumnConfiguration("Created", ModelObject.CREATE_DATE, 50, SWT.RIGHT, 
+                		false, editable ? ECellEditorType.DATE : null),
+                new ColumnConfiguration("User", Problem.OWNER + "." + MyUser.NAME, 70, SWT.RIGHT,
+                        false, editable ? ECellEditorType.TEXT : null)};
+        Validate.noNullElements(columnConfigurations,
+                "ColumnConfigurations must not have null elements");
+        return columnConfigurations;
+    }
+
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#bind(net.sf.rcpforms.bindingvalidation.ValidationManager, java.lang.Object)
+	 */
+	@Override
+	public void bind(ValidationManager bm, Object modelBean) {
+		Validate.isTrue(modelBean instanceof WritableList);
+		
+		tblResultsViewer.setInput(modelBean);
+		// we can also bind selection
+	}
+
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#setState(net.sf.rcpforms.widgetwrapper.wrapper.EControlState, boolean)
+	 */
+	@Override
+	public void setState(EControlState state, boolean value) {
+		mainSection.setState(state, value);
+	}
+	
+	public static void main(String[] args)
+    {
+		Realm realm = SWTObservables.getRealm(Display.getDefault());
+        WritableList list = new WritableList(realm);
+        RCPFormPart part = new ProblemSearchPart();
+        RCPFormFactory.getInstance().startTestShell("ProblemSearchPart", part, list);
+    }
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.rcpforms.bindingvalidation" modificationStamp="1" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{ValidationManager.java[ValidationManager" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{ModifiableListToSetAdapter.java[ModifiableListToSetAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{Messages.java[Messages" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{RCPUpdateValueStrategy.java[RCPUpdateValueStrategy" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{RadioGroupObservableValue.java[RadioGroupObservableValue" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{InvertedStateObservableValue.java[InvertedStateObservableValue" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{Activator.java[Activator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation{StateObservableValue.java[StateObservableValue" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation.forms"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation.forms{RCPFormPart.java[RCPFormPart" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation.forms{RCPFormFactory.java[RCPFormFactory" modificationStamp="42" restrictions="0" visibility="0"/>
+    </package>
+</component>

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1254997972243
+error,log,,,"Bad type signature: ;\n",1254997972244
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1254997979857
+error,log,,,"Bad type signature: ;\n",1254997983404
+error,log,,,"Bad type signature: ;\n",1254997983406
+error,log,,,"Bad type signature: ;\n",1254997983407
+error,log,,,"Bad type signature: ;\n",1254997983411
+error,log,,,"Bad type signature: ;\n",1254997983412
+error,log,,,"Bad type signature: ;\n",1254997983413
+error,log,,,"Bad type signature: ;\n",1254997985222
+error,log,,,"Bad type signature: ;\n",1254997985223
+error,log,,,"Bad type signature: ;\n",1254997985225
+error,log,,,"Bad type signature: ;\n",1254997985229
+error,log,,,"Bad type signature: ;\n",1254997985230
+error,log,,,"Bad type signature: ;\n",1254997985232
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1254997985272
+error,log,,,"Bad type signature: ;\n",1254998009581
+error,log,,,"Bad type signature: ;\n",1254998009582
+error,log,,,"Bad type signature: ;\n",1254998009583
+error,log,,,"Bad type signature: ;\n",1254998009621
+error,log,,,"Bad type signature: ;\n",1254998009623
+error,log,,,"Bad type signature: ;\n",1254998009624
+error,log,,,"Bad type signature: ;\n",1254998019074
+error,log,,,"Bad type signature: ;\n",1254998019075
+error,log,,,"Bad type signature: ;\n",1254998019077

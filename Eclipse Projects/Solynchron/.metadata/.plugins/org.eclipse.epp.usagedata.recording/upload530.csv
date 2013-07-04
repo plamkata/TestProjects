@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193333936
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255193337510
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255193344426
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255193350175
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255193350497
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255193350785
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193350836
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193352057
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255193356803
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193361269
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193421905
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193422010
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193422095
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255193423077
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255193430579
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255193438311
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255193438557
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255193438860
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255193439510
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255193440093
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255193440968
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255193441157
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193441210
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193442869
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255193448160

@@ -1,0 +1,160 @@
+/**
+ * 
+ */
+package com.startup.solynchron;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceException;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.OperationCanceledException;
+import org.eclipse.core.runtime.Status;
+
+/**
+ * Execution manager allows for execution of custom code and handles
+ * any system exceptions. It provides functionality for execution
+ * @author plamKaTa
+ *
+ */
+public class ExecutionManager {
+	
+	private static List<Object[]> parameterQueue = new ArrayList<Object[]>();
+	
+	private static List<ICodeExecutor> executionQueue = new ArrayList<ICodeExecutor>();
+
+	/**
+	 * Add an executor and it's parameters to the execution queue. All the custom code
+	 * will be executed when the queue is flushed and any non system exceptions will be 
+	 * silently logged and ignored.
+	 * 
+	 * @param executor custom code to be added to execution queue
+	 * @param params parameters for the custom code
+	 */
+	public static void addExecutor(ICodeExecutor executor, Object params..) {
+		if (!executionQueue.contains(executor)) {
+			executionQueue.add(executor);
+			parameterQueue.add(params);
+		}
+	}
+	
+	/**
+	 * Execute all the custom code in the execution queue. Any non system 
+	 * exceptions will be silently logged and ignored.
+	 */
+	public static IStatus flushExecutionQueue(IProgressMonitor monitor) {
+		int size = executionQueue.size();
+		monitor.beginTask("Execute queued operations.", size);
+		try {
+			for (int i = 0; i < size; i++) {
+				ICodeExecutor code = executionQueue.remove(0);
+				Object[] params = parameterQueue.remove(0);
+				executeInTransaction(code, params);
+				monitor.worked(1);
+				if (monitor.isCanceled()) 
+					throw new OperationCanceledException();
+			}
+		} finally {
+			monitor.done();
+		}
+		return Status.OK_STATUS;
+	}
+
+	/**
+	 * Execute custom code without a hibernate transaction in the thread local session 
+	 * without having to handle exceptions and rollback the transaction. This method 
+	 * also handles any exceptions thrown by accessing the plug-in resources before 
+	 * they have been initialized.
+	 * 
+	 * @param code custom code to be executed
+	 * @param params parameters for the custom code
+	 * @param closeSession whether the thread local session should be closed at the end
+	 * @return result from execution of the custom code
+	 * @throws Exception any user exception thrown by the user in the custom code
+	 */
+	public static Object executeInSession(ICodeExecutor code, 
+			Object[] params, boolean closeSession) {               
+	    Object result = null;
+		
+	    try {
+			result = code.execute(params);
+		} catch (InitializationProgressException e) {
+			// store code in queue for execution after initialization completes
+			if (code instanceof CodeExecutor) {
+				CodeExecutor executor = (CodeExecutor) code;
+				code = executor.getRootExecutor();
+			}
+			addExecutor(code, params);
+			e.handle();
+		} catch (Exception e) {
+			// apply general handling techniques here
+			Activator.log(e);
+		} finally {
+			if (closeSession) Activator.closeSession();
+		}
+		
+	    return result;
+	}
+
+	/**
+	 * Execute custom code in a hibernate transaction without having to handle 
+	 * exceptions and rollback the transaction. This method also handles any 
+	 * exceptions thrown by accessing the plug-in resources before they have been 
+	 * initialized.
+	 * 
+	 * @param code custom code to be executed
+	 * @param params parameters for the custom code
+	 * @param closeSession whether the thread local session should be closed at the end
+	 * @return result from execution of the custom code or null if a system exception 
+	 * occurred and was handled by the execution manager
+	 * @throws Exception any user exception thrown by the user in the custom code
+	 */
+	public static Object executeInTransaction(final ICodeExecutor code, 
+			Object[] params, boolean closeSession) {               
+	    Object result = executeInSession(new CodeExecutor(code) {
+			
+			@Override
+			public Object execute(Object[] params) throws Exception {
+				Object result = null;
+				
+				EntityTransaction t = Activator.getSession().getTransaction();
+				try {
+					t.begin();
+					result = code.execute(params);
+				    t.commit();
+				    
+				} catch (PersistenceException e) {
+					if (t != null && t.isActive()) t.rollback();
+					Activator.log(e);
+				} catch (Exception e) {
+					if (t != null && t.isActive()) t.rollback();
+					// apply general error handling techniques here
+					Activator.log(e);
+				}
+				
+				return result;
+			}
+		}, params, closeSession);
+		
+	    return result;
+	}
+
+	/**
+	 * Execute custom code in a hibernate transaction without having to handle 
+	 * exceptions and rollback the transaction. This method also handles any 
+	 * exceptions thrown by accessing the plug-in resources before they have been 
+	 * initialized.
+	 * 
+	 * @param code custom code to be executed
+	 * @param params parameters for the custom code
+	 * @return result from execution of the custom code
+	 * @throws Exception any user exception thrown by the user in the custom code
+	 */
+	public static Object executeInTransaction(ICodeExecutor code, Object[] params) {     
+		return executeInTransaction(code, params, true);
+	}
+	
+}

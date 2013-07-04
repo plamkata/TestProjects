@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1255030920847
+error,log,,,"Bad type signature: ;\n",1255030920848
+error,log,,,"Bad type signature: ;\n",1255030920849
+error,log,,,"Bad type signature: ;\n",1255030920850
+error,log,,,"Bad type signature: ;\n",1255030920851
+error,log,,,"Bad type signature: ;\n",1255030920852
+error,log,,,"Bad type signature: ;\n",1255030920854
+error,log,,,"Bad type signature: ;\n",1255030920855
+error,log,,,"Bad type signature: ;\n",1255030920856
+error,log,,,"Bad type signature: ;\n",1255030920857
+error,log,,,"Bad type signature: ;\n",1255030920858
+error,log,,,"Bad type signature: ;\n",1255030920859
+error,log,,,"Bad type signature: ;\n",1255030920861
+error,log,,,"Bad type signature: ;\n",1255030920862
+error,log,,,"Bad type signature: ;\n",1255030920863
+error,log,,,"Bad type signature: ;\n",1255030920864
+error,log,,,"Bad type signature: ;\n",1255030920865
+error,log,,,"Bad type signature: ;\n",1255030920870
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255030922183
+activated,view,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit.ResultView",1255030925154
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255030925354
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255030948908
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255030950123
+activated,view,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit.ResultView",1255030952262
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255030953145

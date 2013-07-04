@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCPForms Form Integration Layer
+Bundle-SymbolicName: net.sf.rcpforms.form
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.form.Activator
+Bundle-Vendor: Marco van Meegen
+Require-Bundle: org.eclipse.core.runtime,
+ net.sf.rcpforms.bindingvalidation,
+ org.eclipse.ui.forms;bundle-version="3.3.0",
+ org.eclipse.jface;bundle-version="3.3.0",
+ org.eclipse.ui.workbench;bundle-version="3.3.0",
+ net.sf.rcpforms.widgetwrapper,
+ net.sf.rcpforms.modeladapter,
+ org.eclipse.core.databinding,
+ org.eclipse.jface.databinding;bundle-version="1.2.0",
+ net.sf.rcpforms.common
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.rcpforms.form

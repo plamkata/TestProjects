@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/rcpforms/!svn/ver/514/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter
+END
+ConverterRegistry_Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/ConverterRegistry_Test.java
+END
+MapObservableValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/MapObservableValue.java
+END
+TestModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svnroot/rcpforms/!svn/ver/514/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/TestModel.java
+END
+BeanAdapter_Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/BeanAdapter_Test.java
+END
+MapPropertyChain.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/MapPropertyChain.java
+END
+AddressModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/AddressModel.java
+END
+PropertyLabelProviderAndCellModifierBean_Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svnroot/rcpforms/!svn/ver/482/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/PropertyLabelProviderAndCellModifierBean_Test.java
+END
+JavaBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/JavaBean.java
+END
+RCPWidgetsManualModelAdapterExample.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/RCPWidgetsManualModelAdapterExample.java
+END
+ITestModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/ITestModel.java
+END
+MapAdapter_Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svnroot/rcpforms/!svn/ver/253/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/MapAdapter_Test.java
+END
+ValidatorRegistry_Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/ValidatorRegistry_Test.java
+END
+MapAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/test/adapter/MapAdapter.java
+END

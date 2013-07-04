@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=solynchron/C:\/Program Files\/Java\/jre6\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1225121123699"/>
+<typeInfo handle="=solynchron/lib\/hibernate-entitymanager.jar&lt;org.hibernate.ejb.event(EJB3PersistEventListener.class[EJB3PersistEventListener" modifiers="33" timestamp="1253185427602"/>
+<typeInfo handle="=solynchron/lib\/hibernate3.jar&lt;org.hibernate.event.def(DefaultPersistEventListener.class[DefaultPersistEventListener" modifiers="33" timestamp="1253182574521"/>
+<typeInfo handle="=solynchron/lib\/hibernate3.jar&lt;org.hibernate.event(PreInsertEventListener.class[PreInsertEventListener" modifiers="1537" timestamp="1253182574521"/>
+<typeInfo handle="=solynchron/lib\/hibernate-validator.jar&lt;org.hibernate.validator.event(ValidateEventListener.class[ValidateEventListener" modifiers="33" timestamp="1253184290155"/>
+<typeInfo handle="=org.eclipse.ui.forms.article/C:\/Program Files\/Java\/jdk1.6.0_10\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class[ArrayList" modifiers="33" timestamp="1225117812907"/>
+<typeInfo handle="=org.eclipse.ui.forms.article/C:\/Program Files\/Java\/jdk1.6.0_10\/jre\/lib\/rt.jar&lt;java.beans(PropertyChangeSupport.class[PropertyChangeSupport" modifiers="33" timestamp="1225117812907"/>
+<typeInfo handle="=net.sf.rcpforms.examples/src&lt;net.sf.rcpforms.examples.complete{IntegerRangeTestModel.java[IntegerRangeTestModel" modifiers="1" timestamp="1254916381745"/>
+<typeInfo handle="=net.sf.rcpforms.bindingvalidation/src&lt;net.sf.rcpforms.bindingvalidation.forms{RCPFormPart.java[RCPFormPart" modifiers="1025" timestamp="1254383735439"/>
+<typeInfo handle="=solynchron/src\/model&lt;com.startup.solynchron.obj.event{CompareManager.java[CompareManager" modifiers="1" timestamp="1254994130127"/>
+<typeInfo handle="=solynchron/src\/model&lt;com.startup.solynchron.obj{Record.java[Record" modifiers="1" timestamp="1253734005796"/>
+<typeInfo handle="=solynchron/src\/controller&lt;com.startup.solynchron.dao{ILogic.java[ILogic" modifiers="513" timestamp="1254997726607"/>
+<typeInfo handle="=solynchron/E:\/Java\/Eclipse\/eclipse-RCP\/plugins\/org.eclipse.jface_3.5.1.M20090826-0800.jar&lt;org.eclipse.jface.util(ILogger.class[ILogger" modifiers="1537" timestamp="1253428500000"/>
+<typeInfo handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{RCPFormEditorPart.java[RCPFormEditorPart" modifiers="1025" timestamp="1254385694662"/>
+<typeInfo handle="=net.sf.rcpforms.form/src&lt;net.sf.rcpforms.form{RCPForm.java[RCPForm" modifiers="1" timestamp="1254385694673"/>
+<typeInfo handle="=solynchron/src\/controller&lt;com.startup.solynchron.dao{ProblemLogic.java[ProblemLogic" modifiers="1" timestamp="1255257066284"/>
+<typeInfo handle="=solynchron/src\/model&lt;com.startup.solynchron.obj.problem{ProblemType.java[ProblemType" modifiers="1" timestamp="1255256656321"/>
+<typeInfo handle="=net.sf.rcpforms.bindingvalidation/E:\/Java\/Eclipse\/eclipse-RCP\/plugins\/org.eclipse.jface.databinding_1.3.1.M20090826-0800.jar&lt;org.eclipse.jface.internal.databinding.viewers(SelectionProviderSingleSelectionProperty.class[SelectionProviderSingleSelectionProperty" modifiers="33" timestamp="1253428500000"/>
+<typeInfo handle="=solynchron/src\/model&lt;com.startup.solynchron.obj.problem{Problem.java[Problem" modifiers="1" timestamp="1255257077832"/>
+</typeInfoHistroy>

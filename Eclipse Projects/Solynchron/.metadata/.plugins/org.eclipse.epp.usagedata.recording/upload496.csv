@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.navigate.backwardHistory",1255168365483
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255168368313
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255168369479
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255168369715
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255168369783
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168369812
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168371087
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168372827
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168373686
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255168374016
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255168432475
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255168432750
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255168432998
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168433030
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168434600
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255168435539
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168437312
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168438277
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255168469543
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255168473990
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255168486791
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168489098
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168490389
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168491273
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255168501205

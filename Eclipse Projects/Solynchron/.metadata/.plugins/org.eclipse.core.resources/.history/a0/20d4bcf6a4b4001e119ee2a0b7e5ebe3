@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.startup.solynchron.forms;
+
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormPart;
+import net.sf.rcpforms.form.RCPForm;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class ProblemForm extends RCPForm {
+
+	/**
+	 * @param title
+	 * @param parts
+	 */
+	public ProblemForm(String title, RCPFormPart... parts) {
+		super(title, parts);
+	}
+	
+	@Override
+	public void initializeUI() {
+		super.initializeUI();
+		
+		// handle any dependencies between the form parts
+		// by attaching appropriate listeners
+	}
+
+}

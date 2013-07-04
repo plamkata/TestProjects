@@ -1,0 +1,10 @@
+source.. = src/
+output.. = bin/
+bin.includes = META-INF/,\
+               .,\
+               icons/,\
+               plugin.xml,\
+               RCPForms Example Application.launch,\
+               RCPForms Example (SWT).launch
+                  
+

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255078777283
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255078787941
+error,log,,,"Bad type signature: ;\n",1255078798102
+error,log,,,"Bad type signature: ;\n",1255078798128
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078798171
+error,log,,,"Bad type signature: ;\n",1255078826534
+error,log,,,"Bad type signature: ;\n",1255078826571
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078826615
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078834023
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078838468
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078842743
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255078845970
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255078846853
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255078852544
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078853309
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078853618
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255078855665
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255078859425
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078859485
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078860417
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255078860987
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255078862342
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078864654
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078905158
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255078905194

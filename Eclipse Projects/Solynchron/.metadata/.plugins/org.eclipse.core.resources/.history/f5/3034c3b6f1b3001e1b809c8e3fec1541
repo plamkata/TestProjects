@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.startup.solynchron;
+
+import java.util.ResourceBundle;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class Resources {
+	
+	// resource bundle for multi-language support
+	private static ResourceBundle resourceBundle;
+
+	static {
+		try {
+			resourceBundle = ResourceBundle
+					.getBundle("com.startup.solynchron.SolynchronResources"); //$NON-NLS-1$
+		} catch (MissingResourceException ex) {
+			resourceBundle = null;
+			log(ex);
+		}
+	}
+
+}

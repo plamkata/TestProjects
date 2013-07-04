@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="net.sf.rcpforms.modeladapter" modificationStamp="4" version="1.2">
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration{EnumRangeAdapter.java[EnumRangeAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration{BeanAdapter.java[BeanAdapter" modificationStamp="217" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration{ModelAdapter.java[ModelAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration{IRangeAdapter.java[IRangeAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.configuration{IntegerRangeAdapter.java[IntegerRangeAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.tables"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.tables{ObservableListBeanContentProvider.java[ObservableListBeanContentProvider" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.tables{ObservableTreeListBeanContentProvider.java[ObservableTreeListBeanContentProvider" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.tables{ListenerSupport.java[ListenerSupport" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{IdentityConverterWithPrimitiveNullSupport.java[IdentityConverterWithPrimitiveNullSupport" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{StringToStringConverter.java[StringToStringConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{StringToCalendarConverter.java[StringToCalendarConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{IPropertyChain.java[IPropertyChain" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{AsymmetricMultilineValidator.java[AsymmetricMultilineValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{RegExpValidator.java[RegExpValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{BeanConverterRegistry.java[BeanConverterRegistry" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{AccessibleConverterUpdateStrategy.java[AccessibleConverterUpdateStrategy" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{RequiredValidator.java[RequiredValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{IModelValidator.java[IModelValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{CalendarToStringConverter.java[CalendarToStringConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{MethodValidator.java[MethodValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{ConverterRegistry.java[ConverterRegistry" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{ValidatorConverterStrategy.java[ValidatorConverterStrategy" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{DateToStringConverter.java[DateToStringConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{ObjectWithNullValueToObjectConverter.java[ObjectWithNullValueToObjectConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{AbstractModelValidator.java[AbstractModelValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{ObjectToObjectWithNullValueConverter.java[ObjectToObjectWithNullValueConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{IValidatorConverterStrategy.java[IValidatorConverterStrategy" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{DateConv.java[DateConv" modificationStamp="213" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{StringToDateConverter.java[StringToDateConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{SymmetricMultilineValidator.java[SymmetricMultilineValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{DateToStringValidator.java[DateToStringValidator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{ObservableStatusToBooleanAdapter.java[ObservableStatusToBooleanAdapter" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.converter{BooleanNullTobooleanFalseConverter.java[BooleanNullTobooleanFalseConverter" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.util"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.util{ClassLookupSupport.java[ClassLookupSupport" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.util{DateUtils.java[DateUtils" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter.util{Validate.java[Validate" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter{Activator.java[Activator" modificationStamp="1" restrictions="0" visibility="0"/>
+        <type handle="=net.sf.rcpforms.modeladapter/src&lt;net.sf.rcpforms.modeladapter{Messages.java[Messages" modificationStamp="1" restrictions="0" visibility="0"/>
+    </package>
+</component>

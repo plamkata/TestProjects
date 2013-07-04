@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/rcpforms/!svn/ver/494/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper
+END
+RCPRadioButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/109/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPRadioButton.java
+END
+RCPCheckboxTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPCheckboxTable.java
+END
+RCPSimpleTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleTable.java
+END
+RCPSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSection.java
+END
+RCPHyperlinkLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/494/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPHyperlinkLabel.java
+END
+RCPSimpleTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleTree.java
+END
+RCPSimpleCombo.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/328/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleCombo.java
+END
+RCPPushButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPPushButton.java
+END
+RCPToggleButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPToggleButton.java
+END
+RCPControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPControl.java
+END
+RCPComboViewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/328/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPComboViewer.java
+END
+StateListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/StateListener.java
+END
+RCPWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPWidget.java
+END
+RCPSimpleList.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/293/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleList.java
+END
+RCPTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPTable.java
+END
+RCPSimpleLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/rcpforms/!svn/ver/210/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleLabel.java
+END
+RCPGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPGroup.java
+END
+RCPIconText.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPIconText.java
+END
+RCPSimpleText.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleText.java
+END
+RCPTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPTree.java
+END
+RCPCombo.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPCombo.java
+END
+RCPHyperlinkButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPHyperlinkButton.java
+END
+RCPComposite.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/rcpforms/!svn/ver/278/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPComposite.java
+END
+IViewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/IViewer.java
+END
+IPresentationConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svnroot/rcpforms/!svn/ver/210/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/IPresentationConfiguration.java
+END
+RCPSimpleCheckboxTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleCheckboxTable.java
+END
+RCPRadioGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPRadioGroup.java
+END
+RCPList.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPList.java
+END
+EControlState.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/EControlState.java
+END
+StateChangeEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/StateChangeEvent.java
+END
+RCPCompound.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPCompound.java
+END
+RCPText.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPText.java
+END
+RCPSimpleButton.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/109/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPSimpleButton.java
+END
+RCPCheckbox.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svnroot/rcpforms/!svn/ver/287/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPCheckbox.java
+END
+RCPLabeledControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/488/trunk/net.sf.rcpforms.widgetwrapper/src/net/sf/rcpforms/widgetwrapper/wrapper/RCPLabeledControl.java
+END

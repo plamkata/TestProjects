@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080415078
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080415143
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080420464
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080429702
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080429756
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080429872
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080526227
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255080530664
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080530859
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080530947
+error,log,,,"Bad type signature: ;\n",1255080547488
+error,log,,,"Bad type signature: ;\n",1255080547505
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255080547553
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1255080551820
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255080554963
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255080558982
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080559178
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080559268
+activated,view,org.eclipse.search,3.5.1.r351_v20090708-0800,"org.eclipse.search.ui.views.SearchView",1255080577089
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.edit.text.java.search.references.in.workspace",1255080577105
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080577430
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255080577843
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080583244
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080583438
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255080587784

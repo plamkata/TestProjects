@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="feature_export" name="build">
+	<target name="feature_export">
+		<pde.exportFeatures destination="D:\projects\postfinance\release" exportSource="false" exportType="zip" features="net.sf.rcpforms.feature" filename="rcpforms_feature_0_7_2.zip" qualifier="200808141758" useJARFormat="false"/>
+	</target>
+</project>

@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.impl;
+
+import java.beans.IndexedPropertyChangeEvent;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class NestedIndexedPropertyChangeEvent extends IndexedPropertyChangeEvent {
+	
+	private Object nested;
+
+	/**
+	 * @param source
+	 * @param propertyName
+	 * @param oldValue
+	 * @param newValue
+	 * @param index
+	 */
+	public NestedIndexedPropertyChangeEvent(Object source, String baseProperty,
+			Object oldValue, Object newValue, int index) {
+		super(source, propertyName, oldValue, newValue, index);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Object getNested() {
+		return nested;
+	}
+
+	public void setNested(Object nested) {
+		this.nested = nested;
+	}
+
+}

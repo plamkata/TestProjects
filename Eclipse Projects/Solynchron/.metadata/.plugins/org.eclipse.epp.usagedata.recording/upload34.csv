@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+closed,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1254915002437
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1254915005025
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915009193
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915042357
+opened,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1254915044833
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1254915044895
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1254915052463
+activated,view,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.PluginsView",1254915066800
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1254915077922
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254915086227
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1254915094228
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915101943
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915156857
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915183633
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915189377
+activated,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1254915191655
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254915191725
+closed,editor,org.eclipse.ui.editors,3.5.0.v20090527-2000,"org.eclipse.ui.DefaultTextEditor",1254915191725
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915195713
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254915210572
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.navigate.open.type",1254915210586
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1254915214621
+opened,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1254915217216
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1254915217300
+no handler,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.rename",1254915225318

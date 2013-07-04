@@ -1,0 +1,139 @@
+/**
+ * 
+ */
+package com.startup.solynchron.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import org.eclipse.core.databinding.observable.Realm;
+import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.swt.widgets.Display;
+import org.hibernate.search.jpa.FullTextEntityManager;
+import org.hibernate.search.jpa.Search;
+
+import com.startup.solynchron.Activator;
+import com.startup.solynchron.InitializationProgressException;
+import com.startup.solynchron.obj.IModelObject;
+import com.startup.solynchron.obj.problem.Problem;
+import com.startup.solynchron.obj.problem.ProblemType;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class ProblemLogic implements ILogic {
+	
+	private WritableList foundProblems;
+	
+	private WritableList problemTypes;
+
+	/**
+	 * 
+	 */
+	public ProblemLogic() {
+	}
+
+	/* (non-Javadoc)
+	 * @see com.startup.solynchron.dao.ILogic#find(java.lang.Long)
+	 */
+	@Override
+	public IModelObject find(Long id) throws InitializationProgressException {
+		if (id == null) {
+			return new Problem();
+		} else {
+			return Activator.getSession().find(Problem.class, id);
+		}
+	}
+	
+	public WritableList findProblems(String searchString) {
+		List<Problem> problems = new ArrayList<Problem>();
+		
+		if (searchString != null && !searchString.trim().equals("")) {
+			searchString = searchString.trim();
+			try {
+				EntityManager em = Activator.getSession();
+				FullTextEntityManager txtEM = Search.getFullTextEntityManager(em);
+				
+				// create native Lucene query
+				String[] fields = new String[]{"description", "type.name", "type.description", "publicationDate"};
+				MultiFieldQueryParser parser = new MultiFieldQueryParser(fields, new StandardAnalyzer());
+				org.apache.lucene.search.Query query = parser.parse( "Java rocks!" );
+
+				// wrap Lucene query in a javax.persistence.Query
+				javax.persistence.Query persistenceQuery = fullTextEntityManager.createFullTextQuery(query, Book.class);
+
+				// execute search
+				List result = persistenceQuery.getResultList();
+				
+				Query q = Activator.getSession().createQuery("from Problem p where " +
+						"p.description like :search or " +
+						"p.type.name like :search or " +
+						"p.type.description like :search");
+				q.setParameter("search", "%" + searchString + "%");
+				problems = q.getResultList();
+			} catch (InitializationProgressException e) {
+				// ignore
+			}
+		}
+
+		Realm realm = SWTObservables.getRealm(Display.getDefault());
+		if (foundProblems == null) {
+			foundProblems = new WritableList(realm, problems, Problem.class);
+		} else {
+			foundProblems.clear();
+			for (Problem p : problems) {
+				foundProblems.add(p);
+			}
+		}
+		
+		return foundProblems;
+	}
+	
+	public void indexAllProblems() throws InitializationProgressException {
+		EntityManager em = Activator.getSession();
+		FullTextEntityManager txtEM = Search.getFullTextEntityManager(em);
+		
+		Query q = em.createQuery("from Problem p");
+		List<Problem> problems = q.getResultList();
+		for (Problem p : problems) {
+			txtEM.index(p);
+		}
+		
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<ProblemType> listProblemTypes() throws InitializationProgressException {
+		List<ProblemType> types = new ArrayList<ProblemType>();
+		
+		Query q = Activator.getSession().createQuery("from ProblemType t");
+		types = q.getResultList();
+		
+		if (problemTypes == null) {
+			Realm realm = SWTObservables.getRealm(Display.getDefault());
+			problemTypes = new WritableList(realm, types, ProblemType.class);
+		} else {
+			problemTypes.clear();
+			problemTypes.addAll(types);
+		}
+		
+		return types;
+	}
+	
+	public WritableList getProblemTypes(boolean refresh) throws InitializationProgressException {
+		if (problemTypes == null || refresh) listProblemTypes();
+		return problemTypes;
+	}
+
+	public void dispose() {
+		if (problemTypes != null) {
+			// problemTypes.clear();
+			problemTypes.dispose();
+		}
+	}
+
+}

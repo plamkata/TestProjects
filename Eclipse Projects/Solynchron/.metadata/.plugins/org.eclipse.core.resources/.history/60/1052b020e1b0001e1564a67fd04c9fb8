@@ -1,0 +1,26 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.impl;
+
+import java.beans.PropertyChangeEvent;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class NestedPropertyChangeEvent extends PropertyChangeEvent {
+
+	/**
+	 * @param source
+	 * @param propertyName
+	 * @param oldValue
+	 * @param newValue
+	 */
+	public NestedPropertyChangeEvent(Object source, String propertyName,
+			Object oldValue, Object newValue) {
+		super(source, propertyName, oldValue, newValue);
+		// TODO Auto-generated constructor stub
+	}
+
+}

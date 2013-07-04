@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255031798614
+opened,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255031804057
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255031804163
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255031831440
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255031835513
+activated,perspective,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.JavaPerspective",1255032027919
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032032793
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032035071
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1255032038513
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032040116
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032040116
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255032042744
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032042744
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032044484
+closed,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255032044485
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255032082453
+error,log,,,"Bad type signature: ;\n",1255032084726
+error,log,,,"Bad type signature: ;\n",1255032084727
+error,log,,,"Bad type signature: ;\n",1255032084729
+error,log,,,"Bad type signature: ;\n",1255032084730
+error,log,,,"Bad type signature: ;\n",1255032084731
+error,log,,,"Bad type signature: ;\n",1255032084732
+error,log,,,"Bad type signature: ;\n",1255032084733
+error,log,,,"Bad type signature: ;\n",1255032084735
+error,log,,,"Bad type signature: ;\n",1255032084736

@@ -1,0 +1,68 @@
+/**
+ * 
+ */
+package com.startup.solynchron.obj.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
+
+import com.damnhandy.aspects.bean.Observable;
+import com.startup.solynchron.obj.ModelObject;
+
+/**
+ * @author plamKaTa
+ *
+ */
+@Observable
+@Entity
+public class Domain extends ModelObject {
+
+	private String description;
+	
+	private DomainCategory category;
+	
+	private List<DomainTool> tools = new ArrayList<DomainTool>();
+	
+	/**
+	 * 
+	 */
+	public Domain() {
+		super();
+	}
+
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@ManyToOne
+	public DomainCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(DomainCategory category) {
+		this.category = category;
+	}
+
+
+	@OneToMany(mappedBy = "domain", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	@OrderBy("tool, toolVersion")
+	public List<DomainTool> getTools() {
+		return tools;
+	}
+
+	public void setTools(List<DomainTool> tools) {
+		this.tools = tools;
+	}
+
+}

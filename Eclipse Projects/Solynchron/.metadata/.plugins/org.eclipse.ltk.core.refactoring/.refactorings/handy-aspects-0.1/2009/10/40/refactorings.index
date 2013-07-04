@@ -1,0 +1,19 @@
+1254405852340	Copy file
+1254409357050	Copy file
+1254410369007	Copy file
+1254480453823	Rename resource 'build.xml'
+1254480586549	Delete element
+1254524512936	Extract local variable 'listener'
+1254554456417	Extract local variable 'evtString'
+1254557995087	Extract method 'print'
+1254561149261	Rename field 'propertyName'
+1254561161521	Rename local variable 'propertyName'
+1254561244541	Rename method 'getPropertyName'
+1254567056583	Rename field 'changed'
+1254567168858	Rename method 'hasChanged'
+1254576424688	Rename resource 'build-old.xml'
+1254583687841	Extract method 'filterListeners'
+1254584532985	Rename type 'SpecificPropertyChangeListener'
+1254585318910	Rename type 'WrappedPropertyChangeListener'
+1254600642146	Extract local variable 'fieldName'
+1254600952703	Extract method 'addNestedSupport'

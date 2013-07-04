@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033462203
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033466097
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.copy",1255033468359
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033474033
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033475327
+error,log,,,"Internal Error",1255033475380
+error,log,,,"Problems encountered while deleting resources.",1255033475381
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033475393
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033478351
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255033478361
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033484580
+error,log,,,"Internal Error",1255033495101
+error,log,,,"Problems encountered while deleting resources.",1255033495102
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033500610
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033500623
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255033508882
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255033511211
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255033518874
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255033537411
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255033539016
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033547761
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033557347
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033573506
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033597202
+error,log,,,"Internal Error",1255033597713

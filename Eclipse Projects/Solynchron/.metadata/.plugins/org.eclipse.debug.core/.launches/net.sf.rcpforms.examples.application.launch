@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="net.sf.rcpforms.examples.application"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearws" value="false"/>
+<booleanAttribute key="default" value="false"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-net.sf.rcpforms.examples.application"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<booleanAttribute key="pde.generated.config" value="true"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="selected_target_plugins" value="com.ibm.icu*4.0.1.v20090822,javax.servlet*2.5.0.v200806031605,org.aspectj.runtime*1.6.5.20090618034232,org.eclipse.ant.core*3.2.100.v20090817_r351,org.eclipse.core.commands*3.5.0.I20090525-2000,org.eclipse.core.contenttype*3.4.1.R35x_v20090826-0451,org.eclipse.core.databinding*1.2.0.M20090819-0800,org.eclipse.core.databinding.beans*1.2.0.I20090525-2000,org.eclipse.core.databinding.observable*1.2.0.M20090902-0800,org.eclipse.core.databinding.property*1.2.0.M20090819-0800,org.eclipse.core.expressions*3.4.100.v20090429-1800,org.eclipse.core.filesystem*1.2.0.v20090507,org.eclipse.core.filesystem.win32.x86*1.1.0.v20080604-1400,org.eclipse.core.jobs*3.4.100.v20090429-1800,org.eclipse.core.resources*3.5.1.R35x_v20090826-0451,org.eclipse.core.resources.compatibility*3.4.0.v20090505,org.eclipse.core.resources.win32.x86*3.5.0.v20081020,org.eclipse.core.runtime*3.5.0.v20090525,org.eclipse.core.runtime.compatibility.auth*3.2.100.v20090413,org.eclipse.core.runtime.compatibility.registry*3.2.200.v20090429-1800,org.eclipse.core.variables*3.2.200.v20090521,org.eclipse.equinox.app*1.2.0.v20090520-1800,org.eclipse.equinox.common*3.5.1.R35x_v20090807-1100,org.eclipse.equinox.preferences*3.2.300.v20090520-1800,org.eclipse.equinox.registry*3.4.100.v20090520-1800,org.eclipse.equinox.weaving.hook*1.0.0.200905261348,org.eclipse.help*3.4.1.v20090805_35x,org.eclipse.jface*3.5.1.M20090826-0800,org.eclipse.jface.databinding*1.3.1.M20090826-0800,org.eclipse.osgi*3.5.1.R35x_v20090827,org.eclipse.osgi.services*3.2.0.v20090520-1800,org.eclipse.swt*3.5.1.v3555a,org.eclipse.swt.win32.win32.x86*3.5.1.v3555a,org.eclipse.ui*3.5.1.M20090902-1000,org.eclipse.ui.forms*3.4.1.v20090714_35x,org.eclipse.ui.workbench*3.5.1.M20090826-0800a"/>
+<stringAttribute key="selected_workspace_plugins" value="net.sf.rcpforms.bindingvalidation*0.0.0,net.sf.rcpforms.common*0.0.0,net.sf.rcpforms.examples*0.0.0,net.sf.rcpforms.form*0.0.0,net.sf.rcpforms.modeladapter*0.0.0,net.sf.rcpforms.tablesupport*0.0.0,net.sf.rcpforms.widgetwrapper*0.0.0"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

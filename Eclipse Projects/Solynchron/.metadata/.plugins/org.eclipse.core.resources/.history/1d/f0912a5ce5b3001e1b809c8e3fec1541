@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.startup.solynchron.obj.event;
+
+import java.util.Date;
+
+import com.startup.solynchron.obj.IModelObject;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class CompareManager {
+
+	public static boolean equals(IModelObject left, IModelObject right) {
+		boolean equal = false;
+		if (left == null && right == null) {
+			equal = true;
+		} else if (left == null || right == null) {
+			equal = false;
+		} else {
+			equal = AuditEventListener.equals(left.getId(), right.getId());
+		}
+		return equal;
+	}
+
+	public static boolean equals(Date left, Date right) {
+		boolean equal = false;
+		if (left == null && right == null) {
+			equal = true;
+		} else if (left == null || right == null) {
+			equal = false;
+		} else {
+			equal = Math.abs(left.getTime() - right.getTime()) < 200;
+		}
+		return equal;
+	}
+
+}

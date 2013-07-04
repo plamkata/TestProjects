@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCPForms Emf Adapter
+Bundle-SymbolicName: net.sf.rcpforms.emfadapter;singleton:=true
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.emf.Activator
+Bundle-Vendor: Marco van Meegen
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.databinding,
+ org.eclipse.jface.databinding,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.databinding,
+ org.eclipse.ui.forms,
+ net.sf.rcpforms.modeladapter,
+ net.sf.rcpforms.widgetwrapper,
+ net.sf.rcpforms.bindingvalidation,
+ net.sf.rcpforms.common,
+ net.sf.rcpforms.tablesupport
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.rcpforms.emf

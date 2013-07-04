@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255255221729
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255255221747
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255255223053
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255255223777
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256204139
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255256210270
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255256212854
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255256213380
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255256213716
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256213732
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256215109
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255256217759
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255256217954
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256217970
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256219254
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256219945
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256467877
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256480411
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256485412
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255256489628
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256492993
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256497060
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256502146
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255256559549
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255256559569

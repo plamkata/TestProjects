@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255185647761
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255185647978
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185648009
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185649301
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255185704892
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185704978
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185705887
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255185706704
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185708139
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185718319
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255185730364
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185740896
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185744700
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255185747154
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185762024
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185765814
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255185765869
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.navigate.open.type",1255185765888
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255185768593
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255185771489
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1255185813083
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255186134938
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255186138707
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255186139873
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255186139980

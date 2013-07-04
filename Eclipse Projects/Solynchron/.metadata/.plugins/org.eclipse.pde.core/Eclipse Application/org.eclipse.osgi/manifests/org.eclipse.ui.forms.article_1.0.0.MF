@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Generated-from: 1253978141548;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.ui.forms.article; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: examples.jar
+Bundle-Activator: org.eclipse.ui.forms.article.FormArticlePlugin
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: org.eclipse.ui.forms.article,
+ org.eclipse.ui.forms.article.rcp,
+ org.eclipse.ui.forms.article.views
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui.forms,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.views,
+ org.eclipse.core.resources
+Eclipse-LazyStart: true

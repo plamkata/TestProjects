@@ -1,0 +1,556 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.test;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+import junit.framework.TestCase;
+
+/**
+ * 
+ * 
+ * @author plamKaTa
+ *
+ */
+public class JavaBeanCollectionNestedTest extends TestCase {
+
+
+	public static void main(String[] args) {
+		junit.textui.TestRunner.run(JavaBeanCollectionNestedTest.class);
+	}
+
+	/**
+	 * @param name
+	 */
+	public JavaBeanCollectionNestedTest(String name) {
+		super(name);
+	}
+	
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+	
+	@Override
+	protected void tearDown() throws Exception {
+		super.tearDown();
+	}
+	
+	/**
+	 * Test if a @Nested List/Set property is appropriately modified by 
+	 * it's mutator/setter methods.
+	 * 
+	 * @throws Exception
+	 */
+	public void testParentPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		assertFalse(listener.hasChanged());
+		
+		// add some objects to make them different
+		// check java.util.AbstractList#equals(Object o) to see the criteria
+		List<NestedObject> nestedList = new ArrayList<NestedObject>();
+		nestedList.add(new NestedObject()); 
+		
+		List<NestedObject> nestedList1 = new ArrayList<NestedObject>();
+		nestedList1.add(new NestedObject()); 
+		nestedList1.add(new NestedObject()); 
+		
+		Set<NestedObject> nestedSet = new HashSet<NestedObject>();
+		nestedSet.add(new NestedObject()); 
+		
+		vo.setNestedList(nestedList);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 1 + 4 * nestedList.size());
+		//assertEquals(listener.getNewValue(), nestedList);
+		listener.reset();
+		
+		// nestedList1 is silent - no change 
+		vo.setNestedList1(nestedList1);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// change nested list again
+		vo.setNestedList(nestedList1);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 1 + 4 * nestedList1.size());
+		//assertEquals(listener.getOldValue(), nestedList);
+		//assertEquals(listener.getNewValue(), nestedList1);
+		listener.reset();
+		
+		// change nested Set
+		vo.setNestedSet(nestedSet);
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getNewValue(), nestedSet);
+		listener.reset();
+	}
+	
+	/**
+	 * Test if a nested list property registers appropriate indexed nested 
+	 * property change listeners when the property is modified by it's 
+	 * collection mutator/setter with a non-empty list.
+	 *  
+	 * @throws Exception
+	 */
+	public void testCollectionPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		List<NestedObject> nestedList = new ArrayList<NestedObject>();
+		nestedList.add(nested);
+		
+		// set a non-empty nested list
+		vo.setNestedList(nestedList);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 5);
+		// assertEquals(listener.getNewValue(), nestedList);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object - i.e. remove nested support
+		List<NestedObject> newNestedList = new ArrayList<NestedObject>();
+		vo.setNestedList(newNestedList);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 5);
+		//assertEquals(listener.getOldValue(), nestedList);
+		//assertEquals(listener.getNewValue(), newNestedList);
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurre 
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if indexed property change listeners are appropriately registered/unregistered
+	 * when a list property add/remove mutator methods are invoked.
+	 * 
+	 * @throws Exception
+	 */
+	public void testListNestedPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.addNested(nested);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 5);
+		assertEquals(listener.getIndex(), 0);
+		//assertEquals(listener.getOldValue(), null);
+		//assertEquals(listener.getNewValue(), nested);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object - i.e. remove nested support
+		vo.removeNested(nested);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 5);
+		assertEquals(listener.getIndex(), 0);
+		//assertEquals(listener.getOldValue(), nested);
+		//assertEquals(listener.getNewValue(), null);
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurre 
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if indexed property change listeners are appropriately registered/unregistered
+	 * when a list property add/remove mutator methods are invoked. Explicitly test with 
+	 * listeners that are registered for a specific nested property.
+	 * 
+	 * @throws Exception
+	 */
+	public void testListNestedSpecificPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject();
+		((JavaBean) vo).addPropertyChangeListener("nestedList1.name", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener("name", nestedListener);
+		
+		IndexedObjectListener nestedListener1 = new IndexedObjectListener();
+		NestedObject nested1 = new NestedObject();
+		((JavaBean) nested1).addPropertyChangeListener("name", nestedListener1);
+		
+		vo.addNested1(nested);
+		// nested1 should not have nested property change support, since
+		// the method is not marked as @Nested
+		vo.addNewNested1(nested1);
+		// no change since listener is hooked to nested property "nestedList1.name"
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		nested1.setName("My Nested Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener1.reset();
+		listener.reset();
+		
+		// remove the nested object - i.e. remove nested support
+		vo.removeNested1(nested);
+		// no change since listener is hooked to nested property "nestedList1.name"
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurre 
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+		
+		vo.removeNested1(nested1);
+		// no change since listener is hooked to nested property "nestedList1.name"
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		nested1.setName("Old Nested Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener1.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * 
+	 * Test if indexed property change listeners are appropriately registered/unregistered
+	 * when a collection property add/remove mutator methods are invoked.
+	 * 
+	 * @throws Exception
+	 */
+	public void testCollectionNestedPropertyChange() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.addSetNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getOldValue(), null);
+		assertEquals(listener.getNewValue(), nested);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object - i.e. remove nested support
+		vo.removeSetNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), -1);
+		assertEquals(listener.getOldValue(), nested);
+		assertEquals(listener.getNewValue(), null);
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurre 
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+
+	/**
+	 * Test if indexed nested property change listeners are appropriately updated
+	 * and fire events with correct indices when the list property has been reversed.
+	 * 
+	 * @throws Exception
+	 */
+	public void testReorderedNestedPropertyChange() throws Exception {
+		// if correct indices are propagated after reordering
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		IndexedObjectListener nestedListener1 = new IndexedObjectListener();
+		NestedObject nested1 = new NestedObject();
+		((JavaBean) nested1).addPropertyChangeListener(nestedListener1);
+		
+		vo.addNested(nested);
+		vo.addNested(nested1);
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getOldValue(), null);
+		assertEquals(listener.getNewValue(), nested1);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My First Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My First Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		nested1.setName("My Second Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getNested(), nested1);
+		assertEquals(listener.getNewValue(), "My Second Name");
+		nestedListener1.reset();
+		listener.reset();
+		
+		// change the order of nested objects in the list
+		vo.reverseNestedList();
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getOldValue(), nested1);
+		assertEquals(listener.getNewValue(), nested);
+		listener.reset();
+		
+		// after reverse
+		nested.setName("My Second Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Second Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		nested1.setName("My Third Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested1);
+		assertEquals(listener.getNewValue(), "My Third Name");
+		nestedListener1.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if indexed nested property change listeners are appropriately updated
+	 * and fire events with correct indices when a particular list remove operation
+	 * has changed indices of the list elements.
+	 * 
+	 * @throws Exception
+	 */
+	public void testRemovalNestedPropertyChange() throws Exception {
+		// if correct indices are propagated after reordering
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		IndexedObjectListener nestedListener = new IndexedObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		IndexedObjectListener nestedListener1 = new IndexedObjectListener();
+		NestedObject nested1 = new NestedObject();
+		((JavaBean) nested1).addPropertyChangeListener(nestedListener1);
+		
+		vo.addNested(nested);
+		vo.addNested(nested1);
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getOldValue(), null);
+		assertEquals(listener.getNewValue(), nested1);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My First Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My First Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		nested1.setName("My Second Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getNested(), nested1);
+		assertEquals(listener.getNewValue(), "My Second Name");
+		nestedListener1.reset();
+		listener.reset();
+		
+		// change the order of nested objects in the list by removal/insertion
+		vo.removeNested(nested);
+		vo.addNested(nested);
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getOldValue(), null);
+		assertEquals(listener.getNewValue(), nested);
+		listener.reset();
+		
+		// after change order
+		nested.setName("My Second Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 1);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Second Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		nested1.setName("My Third Name");
+		assertTrue(nestedListener1.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested1);
+		assertEquals(listener.getNewValue(), "My Third Name");
+		nestedListener1.reset();
+		listener.reset();
+		
+		vo.removeNested(nested);
+		vo.removeNested(nested1);
+		assertEquals(listener.getChangeCount(), 2);
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getOldValue(), nested1);
+		assertEquals(listener.getNewValue(), null);
+		listener.reset();
+	}
+	
+	/**
+	 * Test if bean add/remove listener methods correctly registers/unregisters 
+	 * listeners from a bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testNestedPropertyChangeListener() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.addNested(nested);
+		// 1 base + 4 nested property changes
+		assertEquals(listener.getChangeCount(), 5);
+		assertEquals(listener.getIndex(), 0);
+		//assertEquals(listener.getOldValue(), null);
+		//assertEquals(listener.getNewValue(), nested);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		//assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested listener
+		((JavaBean) vo).removePropertyChangeListener(listener);
+		
+		// once a listener is removed it should not fire any changes
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if bean add/remove listener methods correctly registers/unregisters 
+	 * specific listeners from a bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSpecificNestedPropertyChangeListener() throws Exception {
+		IndexedObjectListener listener = new IndexedObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener("nestedList.name", listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener("name", nestedListener);
+		
+		vo.addNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		assertEquals(listener.getIndex(), 0);
+		assertEquals(listener.getNested(), nested);
+		assertEquals(listener.getNewValue(), "My Nested Name");
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested listener
+		((JavaBean) vo).removePropertyChangeListener("nestedList.name", listener);
+		
+		// once a listener is removed it should not fire any changes
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+
+}

@@ -1,0 +1,20 @@
+#Thu Oct 01 10:15:53 EEST 2009
+target_platform_realization=true
+org.eclipse.pde.ui.os=win32
+additional_locations=
+program_args=
+platform_path=E\:\\Java\\Eclipse\\eclipse-RCP
+eclipse.preferences.version=1
+target_mode=useThis
+target.profile=
+pooled_bundles=
+checkedPlugins=[savedAll]
+org.eclipse.pde.ui.arch=x86
+saved_platform3=
+saved_platform2=
+saved_platform1=
+saved_platform0=E\:\\Java\\Eclipse\\eclipse-rcp\\eclipse
+workspace_target_handle=local\:1252851953525.target
+org.eclipse.pde.ui.ws=win32
+org.eclipse.pde.ui.nl=en_US
+vm_args=

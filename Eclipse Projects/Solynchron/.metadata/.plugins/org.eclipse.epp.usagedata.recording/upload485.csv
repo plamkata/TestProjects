@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1255167236353
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineStart",1255167250964
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255167252565
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1255167253361
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167285478
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167291239
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255167297269
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1255167298210
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167300907
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167303959
+error,log,,,"Bad type signature: ;\n",1255167305341
+error,log,,,"Bad type signature: ;\n",1255167305342
+error,log,,,"Bad type signature: ;\n",1255167305344
+error,log,,,"Bad type signature: ;\n",1255167305345
+error,log,,,"Bad type signature: ;\n",1255167305346
+error,log,,,"Bad type signature: ;\n",1255167305348
+error,log,,,"Bad type signature: ;\n",1255167305349
+error,log,,,"Bad type signature: ;\n",1255167305350
+error,log,,,"Bad type signature: ;\n",1255167305352
+error,log,,,"Bad type signature: ;\n",1255167305353
+error,log,,,"Bad type signature: ;\n",1255167305355
+error,log,,,"Bad type signature: ;\n",1255167305356
+error,log,,,"Bad type signature: ;\n",1255167305357
+error,log,,,"Bad type signature: ;\n",1255167305359
+error,log,,,"Bad type signature: ;\n",1255167305360

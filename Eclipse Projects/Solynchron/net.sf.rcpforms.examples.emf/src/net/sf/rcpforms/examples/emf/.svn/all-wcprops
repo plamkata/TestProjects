@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/rcpforms/!svn/ver/473/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf
+END
+Application.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/Application.java
+END
+ApplicationWorkbenchWindowAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/ApplicationWorkbenchWindowAdvisor.java
+END
+Perspective.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/Perspective.java
+END
+View.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/View.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/Activator.java
+END
+ApplicationActionBarAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/ApplicationActionBarAdvisor.java
+END
+ApplicationWorkbenchAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/346/trunk/net.sf.rcpforms.examples.emf/src/net/sf/rcpforms/examples/emf/ApplicationWorkbenchAdvisor.java
+END

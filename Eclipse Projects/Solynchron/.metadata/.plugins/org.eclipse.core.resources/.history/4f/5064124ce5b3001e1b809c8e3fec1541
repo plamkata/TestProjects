@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.startup.solynchron.obj.event;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class CompareManager {
+
+}

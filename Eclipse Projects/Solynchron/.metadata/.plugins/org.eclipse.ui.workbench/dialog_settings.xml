@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="workingset_selection_history">
+		<item value="Solynhron Working Set"/>
+	</list>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="140" key="DIALOG_Y_ORIGIN"/>
+		<item value="329" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="311" key="DIALOG_WIDTH"/>
+		<item value="org.eclipse.pde.ui.DependenciesView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="153" key="DIALOG_Y_ORIGIN"/>
+		<item value="573" key="DIALOG_X_ORIGIN"/>
+		<item value="436" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.pde.ui"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.tigris.subversion.subclipse.ui.wizards.import.CheckoutWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.jdt.internal.ui.jarpackager.JarPackageWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.pde.ui.PluginDevelopment"/>
+			<item value="org.tigris.subversion.subclipse.ui.svn"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.jdt.ui.Java"/>
+		</list>
+	</section>
+</section>

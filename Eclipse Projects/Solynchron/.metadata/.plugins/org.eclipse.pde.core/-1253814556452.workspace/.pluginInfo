@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="615" class="net.sf.rcpforms.widgetwrapper.Activator" localization="OSGI-INF/l10n/bundle" name="Rcp Forms Widget Wrapper" project="net.sf.rcpforms.widgetwrapper" provider="Marco van Meegen">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="616" class="net.sf.rcpforms.modeladapter.Activator" localization="OSGI-INF/l10n/bundle" name="RCPForms Modeladapter" project="net.sf.rcpforms.modeladapter" provider="Marco van Meegen">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="617" localization="OSGI-INF/l10n/bundle" name="SWTBot SWT Control Finder plugin" project="net.sf.swtbot.finder" provider="http://swtbot.sourceforge.net/">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="618" class="com.startup.solynchron.Activator" localization="OSGI-INF/l10n/bundle" name="Solynchron" project="solynchron" provider="STARTUP">
+		<library name="."/>
+		<library name="lib/antlr-2.7.6.jar"/>
+		<library name="lib/c3p0-0.9.1.jar"/>
+		<library name="lib/cglib-2.2.jar"/>
+		<library name="lib/commons-collections-3.1.jar"/>
+		<library name="lib/dom4j-1.6.1.jar"/>
+		<library name="lib/ehcache-1.2.3.jar"/>
+		<library name="lib/ejb3-persistence-1.0.2.GA.jar"/>
+		<library name="lib/hibernate-annotations-3.4.0.GA.jar"/>
+		<library name="lib/hibernate-commons-annotations-3.1.0.GA.jar"/>
+		<library name="lib/hibernate-entitymanager.jar"/>
+		<library name="lib/hibernate3.jar"/>
+		<library name="lib/slf4j-api-1.5.8.jar"/>
+		<library name="lib/slf4j-log4j12.jar"/>
+		<library name="lib/xml-apis-1.0.b2.jar"/>
+		<library name="lib/log4j.jar"/>
+		<library name="lib/jta-1.1.jar"/>
+		<library name="lib/javassist-3.9.0.GA.jar"/>
+		<library name="lib/hibernate-validator.jar"/>
+		<library name="lib/handy-aspects-0.1.jar"/>
+		<library name="lib/hibernate-search-3.1.1.GA.jar"/>
+		<library name="lib/lucene-core-2.4.1.jar"/>
+		<library name="lib/lucene-analyzers-2.4.1.jar"/>
+		<library name="lib/lucene-snowball-2.4.1.jar"/>
+		<library name="lib/solr-common-1.3.0.jar"/>
+		<library name="lib/solr-core-1.3.0.jar"/>
+	</bundle>
+	<bundle bundleID="619" class="net.sf.rcpforms.tablesupport.Activator" localization="OSGI-INF/l10n/bundle" name="RCPForms Table Support" project="net.sf.rcpforms.tablesupport" provider="Marco van Meegen"/>
+	<bundle bundleID="620" class="net.sf.rcpforms.common.Activator" localization="OSGI-INF/l10n/bundle" name="RCPForms Common" project="net.sf.rcpforms.common" provider="Marco van Meegen"/>
+	<bundle bundleID="621" localization="OSGI-INF/l10n/bundle" name="RCPForms Example Plugin" project="net.sf.rcpforms.examples">
+		<library name="."/>
+		<library name="handy-aspects-0.1.jar"/>
+	</bundle>
+	<bundle bundleID="622" class="net.sf.rcpforms.form.Activator" localization="OSGI-INF/l10n/bundle" name="RCPForms Form Integration Layer" project="net.sf.rcpforms.form" provider="Marco van Meegen"/>
+	<bundle bundleID="623" localization="plugin" name="%pluginName" project="org.apache.commons.collections" provider="%providerName">
+		<library name="org.apache.commons.collections_3.2.0.v200803061811.jar"/>
+	</bundle>
+	<bundle bundleID="624" class="net.sf.rcpforms.simplesample.Activator" localization="OSGI-INF/l10n/bundle" name="Simplesample Plug-in" project="net.sf.rcpforms.simplesample" provider="rcpforms.sourceforge.net"/>
+	<bundle bundleID="625" localization="plugin" name="%PLUGIN_NAME" project="org.apache.log4j" provider="%PLUGIN_PROVIDER">
+		<library name="org.apache.log4j_1.2.13.v200806030600.jar"/>
+	</bundle>
+	<bundle bundleID="626" class="org.eclipse.ui.forms.article.FormArticlePlugin" isBundle="false" name="%pluginName" project="org.eclipse.ui.forms.article" provider="%providerName">
+		<library name="examples.jar"/>
+	</bundle>
+	<bundle bundleID="627" class="net.sf.rcpforms.bindingvalidation.Activator" localization="OSGI-INF/l10n/bundle" name="RCPForms Binding and Validation (main)" project="net.sf.rcpforms.bindingvalidation" provider="Marco van Meegen"/>
+	<bundle bundleID="628" class="net.sf.rcpforms.comparison.Activator" localization="OSGI-INF/l10n/bundle" name="Comparison Plug-in" project="net.sf.rcpforms.comparison" provider="net.sf.rcpforms"/>
+</map>

@@ -1,0 +1,151 @@
+###########################################################################
+# Releasenotes for                                                        #
+#                                                                         #
+#             _          __                  __                           #
+#  _ __   ___| |_   ___ / _| _ __ ___ _ __  / _| ___  _ __ _ __ ___  ___  #
+# | '_ \ / _ \ __| / __| |_ | '__/ __| '_ \| |_ / _ \| '__| '_ ` _ \/ __| #
+# | | | |  __/ |_ _\__ \  _|| | | (__| |_) |  _| (_) | |  | | | | | \__ \ #
+# |_| |_|\___|\__(_)___/_|(_)_|  \___| .__/|_|  \___/|_|  |_| |_| |_|___/ #
+#                                    |_|                                  #
+#                                                                         #
+# Type=Production                                                         #
+# Version=1.0.4                                                           #
+# Qualifier=20090806                                                      #
+###########################################################################
+
+#### Framework ####
+
++------------------------------------------
++ net.sf.rcpforms.bindingvalidation
++------------------------------------------
+- debug info for rcpcompounds added
+- manually un-/registration for widget decoration added
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.common
++------------------------------------------
+- no changes
+
++------------------------------------------
++ net.sf.rcpforms.emfadapter
++------------------------------------------
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.form
++------------------------------------------
+- Delegate new editor input to form
+
++------------------------------------------
++ net.sf.rcpforms.modeladapter
++------------------------------------------
+- made converter strategy non-static
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.tablesupport
++------------------------------------------
+- support primitive boolean property
+- Table or treetable sorting functionality made configurable using flag in ColumnConfiguration
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+- cleanup todos
+
++------------------------------------------
++ net.sf.rcpforms.widgetwrapper
++------------------------------------------
+- efficient layout enhanced for controls
+- problem with columns == 0 in incrementColumnConter fixed
+- Hyperlink label should not have a null label -> convert "null" to empty string ("")
+- ISE fixed if not created picker is checked with WidgetUtil.isValid(picker)
+- adds labelled controls using an "efficient" layout
+- states for readonly and mandatory are now consistent
+- empty labels ("") woun't be created anymore
+- layout improvements: -apply minimal layout spaces -use now GridData.exclude if rcpcontrol should be excluded
+- fix in mandatory state rendering
+- Workaround for inconsistent state handling in labelled controls
+- fix for bug in readonly state: SWT.MouseWheel event was not removed (fired event) 
+  -> the current selection of readonly ccombos could be changed by setting focus on textfield and use mouse wheel.
+- fix for NPE in getWrappedWidget()-Call in Pickers
+
+
+#### Features ####
++------------------------------------------
++ net.sf.rcpforms.emf.feature
++ net.sf.rcpforms.emf.sdk.feature
++ net.sf.rcpforms.feature
++ net.sf.rcpforms.nl1.feature
++ net.sf.rcpforms.sdk.feature
++------------------------------------------
+- no changes
+
+#### Samples ####
++------------------------------------------
++ net.sf.rcpforms.comparison
++------------------------------------------
+- New Added: Shows comparison of how to build binding and decoration with and without rcpforms.
+  Based on the sample of Kai Toedters Blog entry about "Eclipse Databinding + Validation + Decoration" (19.12.2008).
+  See http://www.toedter.com/blog/?p=36 
+
++------------------------------------------
++ net.sf.rcpforms.examples
++------------------------------------------
+- efficient layout enhanced for controls
+- minor fix -> IAE changed to ISE
+- RCPPickerComposite label changed -layout sample refactored
+- Samples added for: - using composites in labelled controls - using efficient layout - disable sorting functionality in tables
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.examples.emf
++------------------------------------------
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.simplesample
++------------------------------------------
+- no changes
+
+#### Tests ####
+
++------------------------------------------
++ net.sf.rcpforms.emfadapter.test
++------------------------------------------
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model
+
++------------------------------------------
++ net.sf.rcpforms.test
++------------------------------------------
+- added PropertyLabelProviderAndCellModifier tests
+- unified interface for Bean TestModel and EMFTestmodel
+- added emf PropertyLabelProviderAndCellModifier tests
+- made emf binding handle null values better
+- moved singleton converter registry to ModelAdapter, TableUtil default content provider to ModelAdapter.
+- Extended EMF example and test, removed duplicate of emf example model

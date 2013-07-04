@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174842335
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255174853475
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174865360
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255174881299
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255174886523
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255174886888
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255174887272
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255174887321
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255174889462
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255174894535
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255174903969
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255174904077
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174906853
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.ClassFileEditor",1255174906853
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255174908358
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255174922568
+opened,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255174922851
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255174922979
+executed,command,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.navigate.open.type",1255174923180
+activated,view,org.eclipse.ui.views,3.4.1.M20090826-0800,"org.eclipse.ui.views.ContentOutline",1255174927633
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255174931142
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174954992
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174955106
+activated,editor,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.internal.ui.editor.CompilationUnitEditor",1255174963074
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255174963074

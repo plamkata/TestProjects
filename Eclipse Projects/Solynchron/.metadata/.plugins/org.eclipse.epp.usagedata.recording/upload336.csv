@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Problems encountered while deleting resources.",1255033597713
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033599890
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033599907
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.refresh",1255033601930
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033608850
+error,log,,,"Internal Error",1255033612665
+error,log,,,"Problems encountered while deleting resources.",1255033612666
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033626642
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255033626677
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033633257
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033671651
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255033671682
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033673162
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033674395
+closed,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255033674858
+stopped,bundle,org.eclipse.mylyn.ide.ant,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.ide.ant",1255033679116
+stopped,bundle,org.eclipse.mylyn.pde.ui,3.2.2.v20090912-0400-e3x,"org.eclipse.mylyn.pde.ui",1255033679116
+stopped,bundle,org.eclipse.pde.api.tools.ui,1.0.101.v20090820,"org.eclipse.pde.api.tools.ui",1255033679116
+stopped,bundle,org.eclipse.pde.ds.ui,1.0.0.v20090527,"org.eclipse.pde.ds.ui",1255033679116
+stopped,bundle,org.eclipse.ajdt.mylyn.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.mylyn.ui",1255033679116
+stopped,bundle,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.ui",1255033679116
+stopped,bundle,org.eclipse.pde.runtime,3.4.100.v20090731,"org.eclipse.pde.runtime",1255033679116
+stopped,bundle,org.eclipse.pde.ua.ui,1.0.0.v20090511,"org.eclipse.pde.ua.ui",1255033679116
+stopped,bundle,org.eclipse.pde.ui.templates,3.4.100.v20090527,"org.eclipse.pde.ui.templates",1255033679116
+stopped,bundle,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui",1255033679116

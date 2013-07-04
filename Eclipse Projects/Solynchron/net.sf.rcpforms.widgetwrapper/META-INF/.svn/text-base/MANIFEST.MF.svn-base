@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rcp Forms Widget Wrapper
+Bundle-SymbolicName: net.sf.rcpforms.widgetwrapper;singleton:=true
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.widgetwrapper.Activator
+Bundle-Vendor: Marco van Meegen
+Require-Bundle: org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.ui.forms,
+ com.ibm.icu,
+ org.eclipse.swt;bundle-version="3.3.0",
+ org.eclipse.jface;bundle-version="3.3.0",
+ net.sf.rcpforms.common
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.rcpforms.widgetwrapper,
+ net.sf.rcpforms.widgetwrapper.builder,
+ net.sf.rcpforms.widgetwrapper.customwidgets,
+ net.sf.rcpforms.widgetwrapper.util,
+ net.sf.rcpforms.widgetwrapper.wrapper,
+ net.sf.rcpforms.widgetwrapper.wrapper.radio
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ClassPath: .

@@ -1,0 +1,228 @@
+/**mbTy
+ * 
+ */
+package com.startup.solynchron.forms;
+
+import net.sf.rcpforms.bindingvalidation.ValidationManager;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormFactory;
+import net.sf.rcpforms.bindingvalidation.forms.RCPFormPart;
+import net.sf.rcpforms.modeladapter.converter.MethodValidator;
+import net.sf.rcpforms.modeladapter.converter.SymmetricMultilineValidator;
+import net.sf.rcpforms.modeladapter.tables.ObservableListBeanContentProvider;
+import net.sf.rcpforms.widgetwrapper.builder.GridBuilder;
+import net.sf.rcpforms.widgetwrapper.builder.GridLayoutFactory;
+import net.sf.rcpforms.widgetwrapper.wrapper.EControlState;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSection;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleCombo;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleLabel;
+import net.sf.rcpforms.widgetwrapper.wrapper.RCPSimpleText;
+
+import org.eclipse.core.databinding.observable.list.WritableList;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+
+import com.startup.solynchron.CodeExecutor;
+import com.startup.solynchron.ExecutionManager;
+import com.startup.solynchron.Resources;
+import com.startup.solynchron.dao.LogicManager;
+import com.startup.solynchron.dao.ProblemLogic;
+import com.startup.solynchron.obj.problem.Problem;
+import com.startup.solynchron.obj.problem.ProblemType;
+
+/**
+ * This form part is responsible for displaying and editing the most important
+ * information of a problem.
+ * 
+ * @author plamKaTa
+ *
+ */
+public class ProblemFormPart extends RCPFormPart {
+
+	private RCPSection mainSection;
+	
+	private RCPSimpleCombo cmbType;
+	
+	private RCPSimpleText txtTypeName;
+
+	private RCPSimpleText txtTypeDescription;
+	
+	private RCPSimpleText txtDescription;
+
+	/**
+	 * Constructor of a form part.
+	 */
+	public ProblemFormPart() {
+	}
+	
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#createUI(org.eclipse.ui.forms.widgets.FormToolkit, org.eclipse.swt.widgets.Composite)
+	 */
+	@Override
+	public void createUI(FormToolkit toolkit, Composite parent) {
+		mainSection = new RCPSection(
+				Resources.getResource("ProblemPage.Problem.title"));
+
+		RCPSimpleLabel lblType = new RCPSimpleLabel(
+				Resources.getResource("ProblemPage.Problem.lblType"));
+		cmbType = new RCPSimpleCombo(lblType.getLabel(), false);
+		cmbType.setState(EControlState.RECOMMENDED, true);
+		txtTypeName = new RCPSimpleText(SWT.SINGLE);
+		
+		RCPSimpleLabel lblTypeDescription = new RCPSimpleLabel(
+				Resources.getResource("ProblemPage.Problem.lblTypeDescription"));
+		txtTypeDescription = new RCPSimpleText(SWT.MULTI);
+		//txtTypeDescription.setState(EControlState.RECOMMENDED, true);
+
+		RCPSimpleLabel lblDescription = new RCPSimpleLabel(
+				Resources.getResource("ProblemPage.Problem.lblDescription"));
+		txtDescription = new RCPSimpleText(SWT.MULTI);
+		txtDescription.setState(EControlState.MANDATORY, true);
+		
+		GridBuilder builder = new GridBuilder(toolkit, parent, 1);
+		GridBuilder widgetBuilder = builder.addContainer(mainSection, 4);
+		
+		widgetBuilder.add(lblType);
+		widgetBuilder.add(cmbType, gdType(widgetBuilder));
+		widgetBuilder.add(txtTypeName, gdTypeName(widgetBuilder));
+		
+		widgetBuilder.add(lblTypeDescription);
+		widgetBuilder.add(txtTypeDescription, gdTypeDescription(widgetBuilder));
+		widgetBuilder.newLine();
+
+		widgetBuilder.add(lblDescription);
+		widgetBuilder.add(txtDescription, gdDescription(widgetBuilder));
+		widgetBuilder.newLine();
+	}
+
+	/**
+	 * @param widgetBuilder
+	 * @return
+	 */
+	private GridData gdTypeName(GridBuilder widgetBuilder) {
+		GridData gd = GridLayoutFactory.createDefaultLayoutData();
+		gd.widthHint = widgetBuilder.getWidthHint(20);
+		gd.horizontalSpan = 2;
+		gd.heightHint = widgetBuilder.getHeightHint(1);
+		gd.verticalSpan = 1;
+		return gd;
+	}
+	
+	/**
+	 * @param widgetBuilder
+	 * @return
+	 */
+	private GridData gdType(GridBuilder widgetBuilder) {
+		GridData gd = GridLayoutFactory.createDefaultLayoutData();
+		gd.widthHint = widgetBuilder.getWidthHint(20);
+		gd.horizontalSpan = 1;
+		gd.heightHint = widgetBuilder.getHeightHint(1);
+		gd.verticalSpan = 1;
+		return gd;
+	}
+
+	/**
+	 * @param widgetBuilder
+	 * @return
+	 */
+	private GridData gdTypeDescription(GridBuilder widgetBuilder) {
+		GridData gd = GridLayoutFactory.createDefaultLayoutData();
+		gd.widthHint = widgetBuilder.getWidthHint(80);
+		gd.horizontalSpan = 3;
+		gd.heightHint = widgetBuilder.getHeightHint(1);
+		gd.verticalSpan = 1;
+		return gd;
+	}
+
+	/**
+	 * @param widgetBuilder
+	 * @return
+	 */
+	private GridData gdDescription(GridBuilder widgetBuilder) {
+		GridData gd = GridLayoutFactory.createDefaultLayoutData();
+		gd.widthHint = widgetBuilder.getWidthHint(80);
+		gd.horizontalSpan = 3;
+		gd.grabExcessHorizontalSpace = true;
+		gd.heightHint = widgetBuilder.getHeightHint(5);
+		gd.verticalSpan = 5;
+		gd.grabExcessVerticalSpace = true;
+		return gd;
+	}
+
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#bind(net.sf.rcpforms.bindingvalidation.ValidationManager, java.lang.Object)
+	 */
+	@Override
+	public void bind(ValidationManager bm, Object modelBean) {
+		initCmbType();
+		
+		bm.bindValue(cmbType, modelBean, Problem.TYPE);
+		bm.bindValue(txtTypeName, modelBean, Problem.TYPE, ProblemType.NAME);
+		bm.bindValue(txtTypeDescription, modelBean, Problem.TYPE, ProblemType.DESCRIPTION);
+		bm.bindValue(txtDescription, modelBean, Problem.DESCRIPTION);
+		
+		cmbType.getViewer().addSelectionChangedListener(new CmbTypeListener());
+		
+	    bm.addValidator(this, new SymmetricMultilineValidator(Problem.DESCRIPTION, 5, 80)); 
+	}
+
+	/**
+	 * 
+	 */
+	private void initCmbType() {
+		// populate cmbType with data
+		ExecutionManager.executeInTransaction(new CodeExecutor("initCmbType") {
+			public Object execute(Object[] params) throws Exception {
+				ProblemLogic logic = (ProblemLogic) LogicManager.get(LogicManager.PROBLEM_LOGIC);
+				WritableList problemTypes = logic.getProblemTypes(false);
+				cmbType.getViewer().setInput(problemTypes);
+				return problemTypes;
+			}
+		});
+	}
+
+	/* (non-Javadoc)
+	 * @see net.sf.rcpforms.bindingvalidation.forms.RCPFormPart#setState(net.sf.rcpforms.widgetwrapper.wrapper.EControlState, boolean)
+	 */
+	@Override
+	public void setState(EControlState state, boolean value) {
+        mainSection.setState(state, value);
+	}
+
+    public static void main(String[] args)
+    {
+		LogicManager.init();
+		
+		Object model = new Problem();
+		RCPFormPart part = new ProblemFormPart();
+		RCPFormFactory.getInstance().startTestShell(
+				"SandboxLayoutFormPart", part, model);
+		
+		LogicManager.dispose();
+    }
+    
+	private final class CmbTypeListener implements ISelectionChangedListener {
+		@Override
+		public void selectionChanged(SelectionChangedEvent event) {
+			IStructuredSelection selection = (IStructuredSelection) event.getSelection();
+			ProblemType element = (ProblemType) selection.getFirstElement();
+			if (selection.isEmpty() || !element.isNew()) {
+				txtTypeName.setState(EControlState.READONLY, true);
+				txtTypeName.setState(EControlState.MANDATORY, false);
+				txtTypeDescription.setState(EControlState.READONLY, true);
+				txtTypeDescription.setState(EControlState.RECOMMENDED, false);
+			} else {
+				txtTypeName.setState(EControlState.READONLY, false);
+				txtTypeName.setState(EControlState.MANDATORY, true);
+				txtTypeDescription.setState(EControlState.READONLY, false);
+				txtTypeDescription.setState(EControlState.RECOMMENDED, true);
+			}
+		}
+	}
+
+}

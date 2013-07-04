@@ -1,0 +1,129 @@
+/**
+ * 
+ */
+package com.startup.solynchron.obj;
+
+import java.beans.BeanInfo;
+import java.beans.IntrospectionException;
+import java.beans.PropertyChangeListener;
+import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+import javax.persistence.Version;
+
+import com.damnhandy.aspects.bean.JavaBean;
+import com.damnhandy.aspects.bean.Observable;
+
+/**
+ * @author plamKaTa
+ *
+ */
+@MappedSuperclass
+public abstract class ModelObject implements IModelObject {
+
+	private Long id;
+	
+	private Date createDate;
+
+	private MyUser createdBy;
+	
+	private Date updateDate;
+	
+	private MyUser updatedBy;
+	
+	private Integer version;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	public MyUser getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(MyUser createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	public MyUser getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public void setUpdatedBy(MyUser updatedBy) {
+		this.updatedBy = updatedBy;
+	}
+
+	@Version
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+	
+	@Transient
+	public boolean isNew() {
+		return id == null;
+	}
+	
+	@Transient
+	public BeanInfo getBeanInfo() {
+		BeanInfo info = null;
+		try {
+			info = ((JavaBean) this).getBeanInfo();
+		} catch (IntrospectionException e) {
+			info = null;
+		}
+		return info;
+	}
+	
+	@Transient
+	public PropertyChangeListener[] getPropertyChangeListeners() {
+		PropertyChangeListener[] listeners = null;
+		listeners = ((JavaBean) this).getPropertyChangeListeners();
+		return listeners;
+	}
+	
+	@Transient
+	public PropertyChangeListener[] getPropertyChangeListeners(String name) {
+		PropertyChangeListener[] listeners = null;
+		listeners = ((JavaBean) this).getPropertyChangeListeners(name);
+		return listeners;
+	}
+
+}

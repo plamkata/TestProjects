@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.sf.rcpforms.examples.emf/gensrc"
+    creationSubmenus="true" editDirectory="/net.sf.rcpforms.examples.emf/gensrc" editorDirectory="/net.sf.rcpforms.examples.emf/gensrc"
+    modelPluginID="net.sf.rcpforms.emf.test" modelName="Test" editPluginClass="net.sf.rcpforms.examples.emf.provider.TestEditPlugin"
+    editorPluginClass="net.sf.rcpforms.examples.emf.editor.presentation.TestEditorPlugin"
+    nonNLSMarkers="true" richClientPlatform="true" testsDirectory="/net.sf.rcpforms.emf.test/gensrc"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    providerRootExtendsClass="" editPluginID="net.sf.rcpforms.emf.test" editorPluginID="net.sf.rcpforms.emf.test">
+  <foreignModel>Test.ecore</foreignModel>
+  <genPackages prefix="Test" basePackage="net.sf.rcpforms.emf" disposableProviderFactory="true"
+      ecorePackage="Test.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Test.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="Test.ecore#//Gender/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="Test.ecore#//Gender/FEMALE"/>
+      <genEnumLiterals ecoreEnumLiteral="Test.ecore#//Gender/UNKNOWN"/>
+    </genEnums>
+    <genClasses ecoreClass="Test.ecore#//TestModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Test.ecore#//TestModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Test.ecore#//TestModel/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Test.ecore#//TestModel/birthdate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Test.ecore#//TestModel/gender"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

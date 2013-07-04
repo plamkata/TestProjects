@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;fieldName&apos; from expression &apos;f.get(chain.getModelMeta())&apos;&#x0D;&#x0A;- Original project: &apos;net.sf.rcpforms.modeladapter&apos;&#x0D;&#x0A;- Variable name: &apos;fieldName&apos;&#x0D;&#x0A;- Destination method: &apos;net.sf.rcpforms.modeladapter.configuration.BeanAdapter.getRangeAdapter()&apos;&#x0D;&#x0A;- Variable expression: &apos;f.get(chain.getModelMeta())&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;fieldName&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;net.sf.rcpforms.modeladapter.configuration{BeanAdapter.java" name="fieldName" replace="true" selection="23964 27" stamp="1254923664238" version="1.0"/>
+</session>

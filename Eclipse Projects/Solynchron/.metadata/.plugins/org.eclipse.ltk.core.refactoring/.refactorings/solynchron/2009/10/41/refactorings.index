@@ -1,0 +1,39 @@
+1254927088276	Move folder
+1254927099575	Move folder
+1254927112813	Move folder
+1254933787338	Move file
+1254987829104	Rename local variable 'validator'
+1254990827311	Move member 'equals'
+1254990840113	Move member 'equals'
+1254990854299	Move member 'equals'
+1254990868217	Move member 'equals'
+1254990876557	Move member 'equals'
+1254990897102	Move member 'SYS_PROPERTIES'
+1254990923183	Move member 'isSystemProperty'
+1254990929588	Move member 'isModified'
+1254997587405	Extract method 'init'
+1255002148892	Extract local variable 'adaptor'
+1255002544552	Extract local variable 'problemTypes'
+1255008066009	Rename type 'ProblemFormEditor'
+1255009093975	Move package
+1255014912392	Copy file
+1255016560220	Extract local variable 'input'
+1255017388930	Move compilation unit
+1255071265953	Delete element
+1255072277308	Rename local variable 'gd'
+1255073718225	Extract method 'gdTypeDescription'
+1255073746615	Extract method 'gdDescription'
+1255073782046	Extract method 'gdTypeName'
+1255075088164	Rename local variable 'gdTypeName'
+1255075099314	Rename local variable 'gdTypeDescription'
+1255075112904	Rename local variable 'gdDescription'
+1255078324986	Convert anonymous class to nested
+1255078373556	Extract method 'initCmbType'
+1255078422261	Extract local variable 'viewer'
+1255109843269	Move compilation unit
+1255156032999	Delete element
+1255157042654	Extract local variable 'problem'
+1255159609557	Rename local variable 'widgetBuilder'
+1255167599934	Extract local variable 'em'
+1255167999967	Extract local variable 'quantity'
+1255194926061	Rename local variable 'persistenceQuery'

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255187813078
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255187813256
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255187813441
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255187813594
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255187814945
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255187817455
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255187820596
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255187820685
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255187821690
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255187825420
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255187825445
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255188800542
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255188804400
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255188805412
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255188808837
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189483829
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189484506
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189487909
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255189488104
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255189498223
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189498954
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189499157
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255189503001
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255189503307
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255189503359

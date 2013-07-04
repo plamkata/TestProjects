@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+2009-09-16 07:16:08.493 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0123-c1b5-4fee-00000000002e
+on database directory E:\Misceleniouse\Projects\runtime-EclipseApplication\.metadata\.plugins\indexer\resourcesDB  
+
+Database Class Loader started - derby.database.classpath=''
+
+2009-09-16 07:17:17.602 GMT:
+Shutting down instance a816c00e-0123-c1b5-4fee-00000000002e
+----------------------------------------------------------------

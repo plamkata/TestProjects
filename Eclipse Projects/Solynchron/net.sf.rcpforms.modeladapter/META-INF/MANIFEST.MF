@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCPForms Modeladapter
+Bundle-SymbolicName: net.sf.rcpforms.modeladapter;singleton:=true
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.modeladapter.Activator
+Bundle-Vendor: Marco van Meegen
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.databinding;bundle-version="1.0.0",
+ org.eclipse.core.databinding.beans;bundle-version="1.0.0",
+ org.eclipse.jface;bundle-version="3.3.0",
+ net.sf.rcpforms.common,
+ org.eclipse.jface.databinding;bundle-version="1.2.1"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.rcpforms.modeladapter,
+ net.sf.rcpforms.modeladapter.configuration,
+ net.sf.rcpforms.modeladapter.converter,
+ net.sf.rcpforms.modeladapter.tables,
+ net.sf.rcpforms.modeladapter.util
+Bundle-ClassPath: .

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="net.sf.rcpforms.feature"
+      label="RCPForms Feature"
+      version="0.0.0"
+      provider-name="Marco van Meegen">
+
+   <description url="http://www.mvmsoft.de/content/plugins/updatesite/">
+      RCPForms is a very thin layer on top of standard eclipse APIs
+focused on offering an easy to learn API which is based a lot
+on defaults (80% case should not need any configuration parameters)
+and best practices (e.g. for list-based controls you would like
+to use a viewer instead of programming directly against the SWT
+control).
+
+The Presentation Model approach separates UI from Data. UI code
+mainly consists of creating controls, layout and binding against
+data and ui state attributes in the presentation model.
+
+* Java Beans and EMF to be used as presentation model, all model
+dependencies factored out into a model adapter
+* Wrappers around SWT Widgets to enhance with state/decoration
+rendering
+* Eclipse Data binding also used for UI state binding
+* support for automatic handling of enumerations, arbitrary enumeration
+datatypes can be used via adapter, e.g. extensible Enumerations
+where Literals might be loaded from a Database. Default support
+for java enums included.
+* Table Configuration for easy creation of editable tables and
+binding against Lists of beans.
+* Validation of field values with error markers using Eclipse
+Databinding
+* Validator concept where validators declare their field dependencies
+and validation state is managed by the framework
+* RCP Forms are designed in a way that the same form class can
+be used in all contexts with same behavior
+* Forms can be composed of FormParts, which are reusable in other
+locations
+   </description>
+
+   <copyright>
+      /*******************************************************************************
+* This program and the accompanying materials
+* are made available under the terms of the Eclipse Public License
+v1.0
+* which accompanies this distribution, and is available at
+* http://www.eclipse.org/legal/epl-v10.html
+*
+* Contributors:
+*     Marco van Meegen - initial API and implementation
+*     Remo Loetscher   - lots of improvements and enhancements
+*
+******************************************************************************
+*/
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      /*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *     Remo Loetscher   - lots of improvements and enhancements
+ *
+ ******************************************************************************
+*/
+   </license>
+
+   <url>
+      <update label="MVMSoft Update Site" url="http://www.mvmsoft.de/content/plugins/updatesite/"/>
+      <discovery label="MVMSoft Update Site" url="http://www.mvmsoft.de/content/plugins/updatesite"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.databinding" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.databinding.beans" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.forms" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="net.sf.rcpforms.modeladapter"/>
+      <import plugin="net.sf.rcpforms.tablesupport"/>
+      <import plugin="net.sf.rcpforms.widgetwrapper"/>
+      <import plugin="org.eclipse.core.databinding"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="com.ibm.icu"/>
+      <import plugin="org.eclipse.swt" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.workbench" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.databinding" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.databinding" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="net.sf.rcpforms.common"/>
+      <import plugin="net.sf.rcpforms.widgetwrapper"/>
+   </requires>
+
+   <plugin
+         id="net.sf.rcpforms.bindingvalidation"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.rcpforms.modeladapter"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.rcpforms.tablesupport"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.rcpforms.widgetwrapper"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.rcpforms.form"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.sf.rcpforms.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

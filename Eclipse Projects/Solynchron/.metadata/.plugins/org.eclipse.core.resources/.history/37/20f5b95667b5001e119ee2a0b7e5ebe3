@@ -1,0 +1,117 @@
+/**
+ * 
+ */
+package com.startup.solynchron.rcp;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.forms.editor.FormEditor;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+
+import com.startup.solynchron.Activator;
+import com.startup.solynchron.Resources;
+import com.startup.solynchron.forms.ProblemForm;
+import com.startup.solynchron.forms.ProblemFormEditorPart;
+import com.startup.solynchron.forms.SearchForm;
+import com.startup.solynchron.parts.ProblemFormPart;
+import com.startup.solynchron.parts.ProblemSearchPart;
+
+/**
+ * A simple multi-page form editor that uses Eclipse Forms support.
+ * Only single instances of form colors and images are shared across the plug-in.
+ * 
+ * @author plamKaTa
+ *
+ */
+public class ProblemFormMultipageEditor extends FormEditor {
+	
+	public static final String ID = "com.startup.solynchron.rcp.problemeditor";
+
+	/**
+	 * 
+	 */
+	public ProblemFormMultipageEditor() {
+		super();
+	}
+	
+	@Override
+	protected FormToolkit createToolkit(Display display) {
+		return new FormToolkit(
+				Activator.getDefault().getFormColors(display));
+	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.forms.editor.FormEditor#addPages()
+	 */
+	@Override
+	protected void addPages() {
+		try {
+			ProblemForm form = new ProblemForm(
+					Resources.getResource("ProblemForm.title"), 
+					new ProblemFormPart());
+			int index = addPage(new ProblemFormEditorPart(form), this.getEditorInput());
+			setPageText(index, Resources.getResource("ProblemPage.title"));
+			
+			SearchForm searchForm = new SearchForm(
+					Resources.getResource("SearchForm.title"), 
+					new ProblemSearchPart());
+			
+			index = addPage(new ProblemPage(this));
+			setPageText(index, "Test Page");
+		} catch (PartInitException e) {
+			Activator.log(e);
+		}
+	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.part.EditorPart#doSave(org.eclipse.core.runtime.IProgressMonitor)
+	 */
+	@Override
+	public void doSave(IProgressMonitor monitor) {
+		if (pages != null) {
+			for (Object obj : pages) {
+				if (obj instanceof IEditorPart) {
+					IEditorPart page = (IEditorPart) obj;
+					page.doSave(monitor);
+				}
+			}
+		}
+
+	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.part.EditorPart#doSaveAs()
+	 */
+	@Override
+	public void doSaveAs() {
+
+	}
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.part.EditorPart#isSaveAsAllowed()
+	 */
+	@Override
+	public boolean isSaveAsAllowed() {
+		return false;
+	}
+	
+	@Override
+	public boolean isDirty() {
+		boolean dirty = false;
+		if (pages != null) {
+			for (Object obj : pages) {
+				if (obj instanceof IEditorPart) {
+					IEditorPart page = (IEditorPart) obj;
+					if (page.isDirty()) {
+						dirty = true;
+						break;
+					}
+				}
+			}
+		}
+		return dirty;
+	}
+
+}

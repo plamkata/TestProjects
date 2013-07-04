@@ -1,0 +1,19 @@
+1252939065982	Extract local variable 'dbFilePath'
+1253180373186	Rename source folder 'src'
+1253180379219	Rename source folder 'ui'
+1253180421254	Delete element
+1253184877682	Delete elements
+1253184897921	Delete element
+1253184908872	Delete element
+1253184972236	Delete element
+1253185185832	Delete element
+1253185408042	Delete element
+1253185441915	Delete element
+1253190491920	Extract method 'disposeEntityManagerFactory'
+1253195948154	Delete element
+1253195979358	Move files
+1253196025064	Delete element
+1253196541562	Delete element
+1253257221176	Extract local variable 'emf'
+1253257356860	Extract method 'initEntityManagerFactory'
+1253281253303	Extract local variable 'emf'

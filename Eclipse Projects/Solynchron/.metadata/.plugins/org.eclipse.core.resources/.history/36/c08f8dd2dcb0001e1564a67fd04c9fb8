@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.impl;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class NestedIndexPropertyChangeListener extends
+		NestedPropertyChangeListener {
+
+	/**
+	 * @param parent
+	 * @param basePropertyName
+	 */
+	public NestedIndexPropertyChangeListener(JavaBean parent,
+			String basePropertyName) {
+		super(parent, basePropertyName);
+		// TODO Auto-generated constructor stub
+	}
+
+}

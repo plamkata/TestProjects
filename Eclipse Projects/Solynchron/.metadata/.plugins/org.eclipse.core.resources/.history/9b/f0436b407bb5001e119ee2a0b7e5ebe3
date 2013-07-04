@@ -1,0 +1,62 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+   version="1.0">
+   <persistence-unit name="solunit" transaction-type="RESOURCE_LOCAL">
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      
+      <class>com.startup.solynchron.obj.MyUser</class>
+      <class>com.startup.solynchron.obj.LocalUser</class>
+      <class>com.startup.solynchron.obj.Record</class>
+      <class>com.startup.solynchron.obj.domain.Tool</class>
+      <class>com.startup.solynchron.obj.domain.ToolType</class>
+      <class>com.startup.solynchron.obj.domain.ToolVersion</class>
+      <class>com.startup.solynchron.obj.domain.DomainTool</class>
+      <class>com.startup.solynchron.obj.domain.Domain</class>
+      <class>com.startup.solynchron.obj.domain.DomainCategory</class>
+      <class>com.startup.solynchron.obj.problem.Problem</class>
+      <class>com.startup.solynchron.obj.problem.Artifact</class>
+      <class>com.startup.solynchron.obj.problem.ProblemType</class>
+      <class>com.startup.solynchron.obj.problem.ArtifactType</class>
+      <class>com.startup.solynchron.obj.problem.ProblemArtifact</class>
+      <class>com.startup.solynchron.obj.solution.Solution</class>
+      <class>com.startup.solynchron.obj.solution.SolutionMethod</class>
+      <class>com.startup.solynchron.obj.solution.SolutionArtifact</class>
+      <class>com.startup.solynchron.obj.event.DBLog</class>
+      <class>com.startup.solynchron.obj.event.DBChange</class>
+      
+      <properties>         
+         <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+         <property name="hibernate.connection.url" value="jdbc:derby:SolynchronDB"/>
+         <property name="hibernate.connection.username" value=""/>
+         <property name="hibernate.connection.password" value=""/>
+         <property name="hibernate.connection.pool_size" value="1"/>
+         
+         <property name="hibernate.c3p0.max_size" value="15"/>
+         <property name="hibernate.c3p0.min_size" value="3"/>
+         <property name="hibernate.c3p0.timeout" value="2000"/>
+         <property name="hibernate.c3p0.max_statements" value="100"/>
+         <property name="hibernate.c3p0.idle_test_period" value="200"/>
+         <property name="hibernate.c3p0.acquire_increment" value="2"/>
+         
+         <property name="hibernate.search.default.directory_provider" 
+         	value="org.hibernate.search.store.FSDirectoryProvider"/> 
+
+		 <property name="hibernate.search.default.indexBase" value="/var/lucene/indexes"/>
+         
+         <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect"/>
+         <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+         <property name="hibernate.show_sql" value="true"/>
+         <property name="hibernate.max_fetch_depth" value="1"/>
+         
+         <property name="hibernate.ejb.event.pre-insert" value="org.hibernate.secure.JACCPreInsertEventListener, org.hibernate.validator.event.ValidateEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>
+         <property name="hibernate.ejb.event.pre-update" value="org.hibernate.secure.JACCPreUpdateEventListener, org.hibernate.validator.event.ValidateEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>
+         <property name="hibernate.ejb.event.post-insert" value="org.hibernate.ejb.event.EJB3PostInsertEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>
+         <property name="hibernate.ejb.event.post-update" value="org.hibernate.ejb.event.EJB3PostUpdateEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>
+         <property name="hibernate.ejb.event.pre-delete" value="org.hibernate.secure.JACCPreDeleteEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>
+         <!-- <property name="hibernate.ejb.event.post-delete" value="org.hibernate.ejb.event.EJB3PostDeleteEventListener, com.startup.solynchron.obj.event.AuditEventListener"/>  -->
+
+      </properties>
+   </persistence-unit>
+</persistence>

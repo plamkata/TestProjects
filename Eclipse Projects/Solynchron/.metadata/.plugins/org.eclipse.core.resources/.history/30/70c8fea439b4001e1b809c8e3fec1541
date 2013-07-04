@@ -1,0 +1,72 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.test;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+/**
+ * @author ryan
+ *
+ */
+public class ValueObjectListener implements PropertyChangeListener {
+
+	private int changeCount = 0;
+	
+	private Object newValue;
+	
+	private Object oldValue;
+	
+	/* (non-Javadoc)
+	 * @see java.beans.PropertyChangeListener#propertyChange(java.beans.PropertyChangeEvent)
+	 */
+	public void propertyChange(PropertyChangeEvent evt) {
+		newValue = evt.getNewValue();
+		oldValue = evt.getOldValue();
+		if (newValue == null && oldValue == null) {
+			// changeCount++;
+		} else if (newValue == null || oldValue == null) {
+			changeCount++;
+		} else {
+			if (!newValue.equals(oldValue)) {
+				changeCount++;
+			}
+		}
+		print(evt);
+	}
+
+	/**
+	 * @param evt
+	 */
+	protected void print(PropertyChangeEvent evt) {
+		System.out.println("New: "+evt.getNewValue()+ " Old: "+evt.getOldValue());
+	}
+	
+	public int getChangeCount() {
+		return changeCount;
+	}
+	
+	public Object getNewValue() {
+		return newValue;
+	}
+
+	public Object getOldValue() {
+		return oldValue;
+	}
+
+	public boolean hasChanged() {
+		return changeCount > 0;
+	}
+	
+	public boolean hasChangedOnce() {
+		return changeCount == 1;
+	}
+	
+	public void reset() {
+		changeCount = 0;
+		newValue = null;
+		oldValue = null;
+	}
+
+}

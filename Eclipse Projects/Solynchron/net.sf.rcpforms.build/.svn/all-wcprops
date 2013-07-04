@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/rcpforms/!svn/ver/509/trunk/net.sf.rcpforms.build
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/.project
+END
+build_local.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/rcpforms/!svn/ver/440/trunk/net.sf.rcpforms.build/build_local.properties
+END
+pluginbuilder.config
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/rcpforms/!svn/ver/509/trunk/net.sf.rcpforms.build/pluginbuilder.config
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/rcpforms/!svn/ver/251/trunk/net.sf.rcpforms.build/build.xml
+END

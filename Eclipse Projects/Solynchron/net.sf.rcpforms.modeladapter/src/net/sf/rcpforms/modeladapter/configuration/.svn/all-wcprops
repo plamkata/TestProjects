@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svnroot/rcpforms/!svn/ver/516/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration
+END
+ModelAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/rcpforms/!svn/ver/471/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration/ModelAdapter.java
+END
+EnumRangeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration/EnumRangeAdapter.java
+END
+BeanAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svnroot/rcpforms/!svn/ver/516/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration/BeanAdapter.java
+END
+IRangeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/rcpforms/!svn/ver/210/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration/IRangeAdapter.java
+END
+IntegerRangeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svnroot/rcpforms/!svn/ver/321/trunk/net.sf.rcpforms.modeladapter/src/net/sf/rcpforms/modeladapter/configuration/IntegerRangeAdapter.java
+END

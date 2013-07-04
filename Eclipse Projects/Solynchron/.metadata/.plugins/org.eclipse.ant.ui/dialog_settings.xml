@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="E:\Java\Eclipse\eclipse-RCP\plugins\org.apache.ant_1.7.1.v20090120-1145" key="org.eclipse.ant.ui.lastanthome"/>
+	<item value="E:\Java\Eclipse\eclipse-RCP\plugins\org.aspectj.ajde_1.6.5.20090618034232" key="org.eclipse.ant.ui.lastextjar"/>
+	<section name="RuntimeClasspathAction.VariableInputDialog">
+		<item value="324" key="DIALOG_WIDTH"/>
+		<item value="169" key="DIALOG_Y_ORIGIN"/>
+		<item value="227" key="DIALOG_X_ORIGIN"/>
+		<item value="161" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

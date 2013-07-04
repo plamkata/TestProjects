@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+java.runtime.version,sysinfo,,,"1.6.0_10-b33",1254911334428
+java.specification.name,sysinfo,,,"Java Platform API Specification",1254911334428
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1254911334428
+java.specification.version,sysinfo,,,"1.6",1254911334428
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1254911334428
+java.version,sysinfo,,,"1.6.0_10",1254911334428
+java.vm.info,sysinfo,,,"mixed mode",1254911334428
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1254911334428
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1254911334428
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1254911334428
+java.vm.specification.version,sysinfo,,,"1.0",1254911334428
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1254911334428
+java.vm.version,sysinfo,,,"11.0-b16",1254911334428
+started,bundle,org.apache.derby.ui,1.1.2,"org.apache.derby.ui",1254911334743
+started,bundle,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit",1254911334809
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254911588276
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254911748784
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.0.v20090513-2000,"org.eclipse.ltk.core.refactoring",1254911755031
+started,bundle,org.eclipse.search,3.5.1.r351_v20090708-0800,"org.eclipse.search",1254911755143
+started,bundle,org.eclipse.wst.sse.core,1.1.401.v200909172215,"org.eclipse.wst.sse.core",1254911755520
+started,bundle,org.eclipse.wst.xml.core,1.1.401.v200908242115,"org.eclipse.wst.xml.core",1254911755526
+started,bundle,org.eclipse.compare.core,3.5.0.I20090430-0408,"org.eclipse.compare.core",1254911756916
+opened,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1254911757494
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1254911757693
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254911763369

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,perspective,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.PDEPerspective",1255032146122
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255032148100
+executed,command,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit.junitShortcut.run",1255032150057
+activated,view,org.eclipse.jdt.junit,3.5.1.r351_v20090708-0800,"org.eclipse.jdt.junit.ResultView",1255032150474
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255032152086
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255032164187
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255032166322
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255032200852
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255032205377
+error,log,,,"Bad type signature: ;\n",1255032206789
+error,log,,,"Bad type signature: ;\n",1255032206790
+error,log,,,"Bad type signature: ;\n",1255032206791
+error,log,,,"Bad type signature: ;\n",1255032206792
+error,log,,,"Bad type signature: ;\n",1255032206793
+error,log,,,"Bad type signature: ;\n",1255032206794
+error,log,,,"Bad type signature: ;\n",1255032206795
+error,log,,,"Bad type signature: ;\n",1255032206796
+error,log,,,"Bad type signature: ;\n",1255032206797
+error,log,,,"Bad type signature: ;\n",1255032206799
+error,log,,,"Bad type signature: ;\n",1255032206800
+error,log,,,"Bad type signature: ;\n",1255032206801
+error,log,,,"Bad type signature: ;\n",1255032206802
+error,log,,,"Bad type signature: ;\n",1255032206803
+error,log,,,"Bad type signature: ;\n",1255032206804
+error,log,,,"Bad type signature: ;\n",1255032206820

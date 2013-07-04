@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.startup.solynchron;
+
+import java.util.ResourceBundle;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class Resources {
+	
+	// resource bundle for multi-language support
+	private static ResourceBundle resourceBundle;
+
+	/**
+	 * 
+	 */
+	public Resources() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

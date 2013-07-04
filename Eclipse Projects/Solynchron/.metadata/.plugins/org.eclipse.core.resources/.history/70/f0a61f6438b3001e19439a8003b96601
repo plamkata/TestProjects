@@ -1,0 +1,22 @@
+package net.sf.rcpforms.examples.complete;
+
+import com.damnhandy.aspects.bean.Observable;
+
+@Observable
+public class SimpleBean {
+    public static final String P_TEXT = "text";
+    
+    private String text;
+    public String getText()
+    {
+        return text;
+    }
+    
+    public void setText(String newValue)
+    {
+        String oldValue = text;
+        text = newValue;
+        propertyChangeSupport.firePropertyChange(P_TEXT, oldValue, text);
+    }
+    
+}

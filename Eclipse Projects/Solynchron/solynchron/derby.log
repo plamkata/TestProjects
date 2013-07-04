@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+2009-10-11 10:23:19.980 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0124-431f-acc3-00000000002e
+on database directory E:\Misceleniouse\Projects\runtime-EclipseApplication\.metadata\.plugins\solynchron\SolynchronDB  
+
+Database Class Loader started - derby.database.classpath=''
+
+2009-10-11 10:23:47.152 GMT:
+Shutting down instance a816c00e-0124-431f-acc3-00000000002e
+----------------------------------------------------------------

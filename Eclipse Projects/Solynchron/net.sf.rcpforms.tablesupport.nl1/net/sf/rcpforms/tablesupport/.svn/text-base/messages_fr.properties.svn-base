@@ -1,0 +1,5 @@
+DateCellEditor.DatePickerDialogTitle=Sélectionner la date
+PropertyLabelProviderAndCellModifier.CellModificationError=Error in Provider: {0}.modify() setting cell editor value into property {1}: 
+PropertyLabelProviderAndCellModifier.CellModificationErrorDetail=La nouvelle valeur {0} n''a pas pu être modifiée pour la propriété {1}
+PropertyLabelProviderAndCellModifier.CellModificationErrorTitle=Erreur lors de la saisie de la valeur
+TableUtil.SelectionHeader=Sélection

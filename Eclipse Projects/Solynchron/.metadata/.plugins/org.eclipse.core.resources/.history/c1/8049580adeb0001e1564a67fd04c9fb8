@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.impl;
+
+import java.beans.PropertyChangeEvent;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class NestedIndexPropertyChangeListener extends
+		NestedPropertyChangeListener {
+	
+	private int index;
+
+	/**
+	 * @param parent
+	 * @param basePropertyName
+	 */
+	public NestedIndexPropertyChangeListener(JavaBean parent,
+			String baseProperty, int index) {
+		super(parent, baseProperty);
+		this.index = index;
+	}
+	
+	public int getIndex() {
+		return index;
+	}
+	
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
+	@Override
+	public void propertyChange(PropertyChangeEvent event) {
+		getParent().fireIndexedPropertyChange(
+				getBasePropertyName() + "." + event.getPropertyName(), 
+				getIndex(), event.getOldValue(), event.getNewValue());
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof NestedIndexPropertyChangeListener) {
+			NestedIndexPropertyChangeListener other = 
+				(NestedIndexPropertyChangeListener) obj;
+			return super.equals(obj) && getIndex() == other.getIndex();
+		} else {
+			return false;
+		}
+	}
+
+}

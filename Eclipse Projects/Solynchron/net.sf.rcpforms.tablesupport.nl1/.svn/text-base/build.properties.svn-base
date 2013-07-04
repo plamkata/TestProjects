@@ -1,0 +1,12 @@
+bin.includes = about.html,\
+               META-INF/,\
+               net/,\
+               nl1.jar,\
+               nl_fragment.properties,\
+               .
+jars.compile.order = .,\
+                     nl1.jar
+source.nl1.jar = net/
+source.. = net/
+output.. = bin/
+source.. = net/

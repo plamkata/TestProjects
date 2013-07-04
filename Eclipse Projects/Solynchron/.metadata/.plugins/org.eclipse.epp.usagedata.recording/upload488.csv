@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167382651
+error,log,,,"There is no setting associated with the key ""x""",1255167394170
+error,log,,,"There is no setting associated with the key ""width""",1255167394171
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167394528
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167398983
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255167399045
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255167399131
+executed,command,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.ui.navigate.open.type",1255167399174
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167429789
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167433883
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167435166
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255167451031
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255167455768
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167456845
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167457053
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167463771
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255167467550
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255167467781
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167476482
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167490460
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167494064
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167502413
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255167507043
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167509947
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255167511464

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+  <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run 
+               class="net.sf.rcpforms.examples.app.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="net.sf.rcpforms.examples.app.Perspective"
+            id="net.sf.rcpforms.examples.app.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="net.sf.rcpforms.examples.app.View"
+            icon="icons/check2.gif"
+            id="net.sf.rcpforms.examples.app.view"
+            name="RCPForms Sample View">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="net.sf.rcpforms.examples.app.Editor"
+            default="false"
+            icon="icons/check2.gif"
+            id="net.sf.rcpforms.examples.app.editor"
+            name="RCPForms Sample Editor">
+      </editor>
+       <editor
+             class="net.sf.rcpforms.examples.app.multipageeditor.MultipageEditor"
+             default="false"
+             icon="icons/auftrag_erfassen.png"
+             id="net.sf.rcpforms.examples.multipageeditor"
+             name="RCPForms MultipageEditor Sample">
+      </editor>
+   </extension>
+
+    <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="net.sf.rcpforms.widgetwrapper.test.commands.category"
+            name="Test Category">
+      </category>
+      <command
+            categoryId="net.sf.rcpforms.widgetwrapper.test.commands.category"
+            id="net.sf.rcpforms.widgetwrapper.test.commands.openFormDialog"
+            name="Open Form Dialog">
+      </command>
+      <command
+            categoryId="net.sf.rcpforms.widgetwrapper.test.commands.category"
+            id="net.sf.rcpforms.widgetwrapper.test.commands.openFormWizard"
+            name="Open Form Wizard">
+      </command>
+      <command
+            categoryId="net.sf.rcpforms.widgetwrapper.test.commands.category"
+            id="net.sf.rcpforms.examples.opensampleeditor"
+            name="Open Test Editor">
+      </command>
+      <command
+            categoryId="net.sf.rcpforms.widgetwrapper.test.commands.category"
+            id="net.sf.rcpforms.examples.openmultipageeditor"
+            name="OpenMultipageEditor">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="net.sf.rcpforms.examples.handlers.OpenFormDialogHandler"
+            commandId="net.sf.rcpforms.widgetwrapper.test.commands.openFormDialog">
+      </handler>
+      <handler
+            class="net.sf.rcpforms.examples.handlers.OpenFormWizardHandler"
+            commandId="net.sf.rcpforms.widgetwrapper.test.commands.openFormWizard">
+      </handler>
+      <handler
+            class="net.sf.rcpforms.examples.handlers.OpenSampleEditorHandler"
+            commandId="net.sf.rcpforms.examples.opensampleeditor">
+      </handler>
+      <handler
+            class="net.sf.rcpforms.examples.handlers.OpenMultipageEditorHandler"
+            commandId="net.sf.rcpforms.examples.openmultipageeditor">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="net.sf.rcpforms.widgetwrapper.test.commands.openFormDialog"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="net.sf.rcpforms.widgetwrapper.test.menus.testMenu"
+               label="Test Menu"
+               mnemonic="M">
+            <command
+                  commandId="net.sf.rcpforms.widgetwrapper.test.commands.openFormDialog"
+                  id="net.sf.rcpforms.widgetwrapper.test.menus.openFormDialog"
+                  mnemonic="D">
+            </command>
+            <command
+                  commandId="net.sf.rcpforms.widgetwrapper.test.commands.openFormWizard"
+                  id="net.sf.rcpforms.widgetwrapper.test.menus.openFormWizard"
+                  mnemonic="W">
+            </command>
+            <command
+                  commandId="net.sf.rcpforms.examples.opensampleeditor"
+                  id="net.sf.rcpforms.examples.menus.opensampleeditor"
+                  mnemonic="O"
+                  style="push"
+                  tooltip="open a sample editor">
+            </command>
+             <command
+                   commandId="net.sf.rcpforms.examples.openmultipageeditor"
+                   id="net.sf.rcpforms.examples.openmutlipageeditorMenu"
+                   mnemonic="M">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

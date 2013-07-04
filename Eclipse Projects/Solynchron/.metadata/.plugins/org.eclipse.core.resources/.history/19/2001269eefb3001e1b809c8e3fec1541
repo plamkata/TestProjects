@@ -1,0 +1,38 @@
+package com.startup.solynchron.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * TODO: migrate logic instantiation to OSGI style instantiation
+ * 
+ * @author plamKaTa
+ *
+ */
+public class LogicManager<static T extends ILogic> {
+	
+	public static final String RECORD_LOGIC = "record";
+	
+	public static final String PROBLEM_LOGIC = "problem";
+	
+	private static Map<String, ILogic> logicRegistry = 
+		new HashMap<String, ILogic>();
+	
+	static {
+		register(RECORD_LOGIC, new RecordLogic());
+		
+	}
+	
+	public static void register(String key, ILogic logic) {
+		logicRegistry.put(key, logic);
+	}
+	
+	public static void deregister(String key) {
+		logicRegistry.remove(key);
+	}
+	
+	public static T get(String key) {
+		return (T) logicRegistry.get(key);
+	}
+
+}

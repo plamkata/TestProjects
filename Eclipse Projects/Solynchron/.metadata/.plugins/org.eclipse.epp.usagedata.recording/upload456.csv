@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255161116279
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255161125343
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255161126936
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255161128835
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161128835
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161141302
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161179656
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161190725
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161190790
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255161202056
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255161204966
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161204966
+opened,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255161228088
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255161228157
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161232141
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161662136
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161662216
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161662280
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1255161664579
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161670131
+error,log,,,"Unhandled event loop exception",1255161675637
+activated,view,org.eclipse.ui.views.log,1.0.100.v20090731,"org.eclipse.pde.runtime.LogView",1255161675755
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255161676754
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161676819
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255161677010

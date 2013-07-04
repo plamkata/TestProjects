@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255249036734
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249036750
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249037985
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249040035
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255249040250
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249040265
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249041193
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255249045881
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249049894
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249050059
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249050224
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249050386
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249050551
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255249050731
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249052313
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249053034
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249054108
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249054520
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249379523
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249385086
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249388268
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249397398
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255249400190
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.goto.lineEnd",1255249403144
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255249423842

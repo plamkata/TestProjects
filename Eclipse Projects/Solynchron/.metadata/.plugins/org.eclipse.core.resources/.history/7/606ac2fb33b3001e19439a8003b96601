@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCPForms Example Plugin
+Bundle-SymbolicName: net.sf.rcpforms.examples;singleton:=true
+Bundle-Version: 0.0.0
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.core.databinding,
+ org.eclipse.core.databinding.beans,
+ org.eclipse.core.databinding.property,
+ org.eclipse.core.databinding.observable,
+ org.eclipse.ui,
+ org.eclipse.ui.workbench,
+ org.eclipse.ui.forms,
+ org.eclipse.jface,
+ org.eclipse.jface.databinding,
+ org.eclipse.swt,
+ net.sf.rcpforms.form,
+ net.sf.rcpforms.common,
+ net.sf.rcpforms.bindingvalidation,
+ net.sf.rcpforms.modeladapter,
+ net.sf.rcpforms.tablesupport,
+ net.sf.rcpforms.widgetwrapper
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.sf.rcpforms.examples.app,
+ net.sf.rcpforms.examples.complete

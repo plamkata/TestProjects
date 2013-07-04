@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-Name: %nlFragmentName
+Bundle-SymbolicName: net.sf.rcpforms.bindingvalidation.nl1 ;singleton=true
+Bundle-Version: 0.0.0
+Bundle-ClassPath: nl1.jar,
+ .
+Bundle-Vendor: %nlProviderName
+Fragment-Host: net.sf.rcpforms.bindingvalidation
+Bundle-Localization: nl_fragment
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

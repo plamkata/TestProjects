@@ -1,0 +1,360 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.test;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+import junit.framework.TestCase;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class JavaBeanNestedTest extends TestCase {
+
+
+	public static void main(String[] args) {
+		junit.textui.TestRunner.run(JavaBeanNestedTest.class);
+	}
+
+	/**
+	 * @param name
+	 */
+	public JavaBeanNestedTest(String name) {
+		super(name);
+	}
+	
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+	
+	@Override
+	protected void tearDown() throws Exception {
+		super.tearDown();
+	}
+	
+	/**
+	 * Test property changes of an @Observable field or its accessor marked as @Nested.
+	 * 
+	 * @throws Exception
+	 */
+	public void testParentPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		
+		NestedObject nested = new NestedObject();
+		NestedObject nested2 = new NestedObject();
+		
+		vo.setNested(nested);
+		// 1 base + 4 nested properties
+		assertEquals(listener.getChangeCount(), 5);
+		listener.reset();
+		
+		// nested2 is silent - no change 
+		vo.setNested2(nested2);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// non-nested JavaBean field should also fire changes
+		vo.setNonNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// change from nested to nested2
+		vo.setNested(nested2);
+		// 1 base + 4 nested properties
+		assertEquals(listener.getChangeCount(), 5);
+		listener.reset();
+	}
+	
+	/**
+	 * Test if nested property changes of an @Observable field or its accessor 
+	 * marked as @Nested are fired in the base class. After removing the @Observable
+	 * instance of the field no nested property changes should be fired in the base class.
+	 * 
+	 * @throws Exception
+	 */
+	public void testNestedPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.setNested(nested);
+		// 1 base + 4 nested properties
+		assertEquals(listener.getChangeCount(), 5);
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object
+		vo.setNested(null);
+		// 1 base + 4 nested properties
+		assertEquals(listener.getChangeCount(), 5);
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occure 
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * The same test as testNestedPropertyChange() but now listeners are assigned
+	 * to the specific properties that are modified. Tests if nested property changes
+	 * are correctly fired only for the specified nested properties.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSpecificNestedPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener("nested.name", listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener("name", nestedListener);
+		
+		// listener should fire events just for "nested"
+		vo.setNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// listener should fire events for "nested.name"
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		nestedListener.reset();
+		listener.reset();
+		
+		// listener should not fire events for "nested.id"
+		nested.setId(new Integer(67));
+		assertFalse(nestedListener.hasChanged());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object
+		// listener should not fire events just for "nested"
+		vo.setNested(null);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurre
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if property changes are fired correctly for nested properties
+	 * which has been specified @Nested ata the field level.
+	 * 
+	 * @throws Exception
+	 */
+	public void testNestedPropertyDeclaration() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener(listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		// property level declaration
+		vo.setNested1(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Tests if an @Observable field or it's accessor are marked with both 
+	 * @Nested and @Silent, that no nested property changes will be fired.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSilentPropertyDeclaration() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener(listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		// silent property modification
+		vo.setNested2(nested);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Tests that non-@Nested @Observable property fields do not fire
+	 * nested property changes (since they are not marked as @Nested).
+	 * 
+	 * @throws Exception
+	 */
+	public void testNonNestedPropertyDeclaration() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener(listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		// property level declaration
+		vo.setNonNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Tests that @Observable fields or their accessors which has been marked 
+	 * as @Nested, do not fire property changes for nested properties marked as 
+	 * @Silent in the nested class.
+	 *   
+	 * @throws Exception
+	 */
+	public void testNestedSilentPropertyChange() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener(listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.setNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setType("My Nested Type");
+		assertFalse(nestedListener.hasChanged());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested object
+		vo.setNested(null);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// once a JavaBean property is removed from the base object, 
+		// no more nested property change events should occurred 
+		nested.setType("New Nested Type");
+		assertFalse(nestedListener.hasChanged());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if a nested property change listener is properly 
+	 * added/removed from the bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testNestedPropertyChangeListener() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener(listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener(nestedListener);
+		
+		vo.setNested(nested);
+		assertTrue(listener.hasChangedOnce());
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested listener
+		((JavaBean) vo).removePropertyChangeListener(listener);
+		
+		// once a listener is removed it should not fire any changes
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+	
+	/**
+	 * Test if a specific nested property change listener is properly 
+	 * added/removed from the bean.
+	 * 
+	 * @throws Exception
+	 */
+	public void testSpecificNestedPropertyChangeListener() throws Exception {
+		ValueObjectListener listener = new ValueObjectListener();
+		ValueObject vo = new ValueObject("Test 1", listener);
+		((JavaBean) vo).addPropertyChangeListener("nested.name", listener);
+
+		ValueObjectListener nestedListener = new ValueObjectListener();
+		NestedObject nested = new NestedObject();
+		((JavaBean) nested).addPropertyChangeListener("name", nestedListener);
+		
+		vo.setNested(nested);
+		assertFalse(listener.hasChanged());
+		listener.reset();
+		
+		// any change in the nested object should be fired in the parent object
+		nested.setName("My Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertTrue(listener.hasChangedOnce());
+		nestedListener.reset();
+		listener.reset();
+		
+		// remove the nested listener
+		((JavaBean) vo).removePropertyChangeListener("nested.name", listener);
+		
+		// once a listener is removed it should not fire any changes
+		nested.setName("New Nested Name");
+		assertTrue(nestedListener.hasChangedOnce());
+		assertFalse(listener.hasChanged());
+		nestedListener.reset();
+		listener.reset();
+	}
+
+}

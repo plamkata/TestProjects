@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCP Forms Test Plug-in
+Bundle-SymbolicName: net.sf.rcpforms.test;singleton:=true
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.test.Activator
+Require-Bundle: org.eclipse.core.databinding,
+ org.eclipse.core.databinding.property;bundle-version="1.2.0",
+ org.eclipse.ui,
+ org.eclipse.ui.forms;bundle-version="3.3.0",
+ org.eclipse.jface.databinding,
+ net.sf.rcpforms.common,
+ net.sf.rcpforms.modeladapter,
+ net.sf.rcpforms.tablesupport,
+ net.sf.rcpforms.widgetwrapper,
+ net.sf.rcpforms.bindingvalidation,
+ net.sf.swtbot.finder;bundle-version="1.2.0",
+ org.junit;bundle-version="3.8.2",
+ org.apache.log4j;bundle-version="1.2.13",
+ org.apache.commons.collections;bundle-version="3.2.0"
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: Marco van Meegen
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: net.sf.rcpforms.bindingvalidation,
+ net.sf.rcpforms.test,
+ net.sf.rcpforms.test.adapter,
+ net.sf.rcpforms.test.formpart,
+ net.sf.rcpforms.test.table,
+ net.sf.rcpforms.widgetwrapper.util,
+ net.sf.rcpforms.widgetwrapper.wrapper

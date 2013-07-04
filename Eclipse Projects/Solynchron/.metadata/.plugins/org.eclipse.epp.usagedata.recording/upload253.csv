@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017668494
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017717540
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017717600
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017717704
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017719827
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017721529
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017735065
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017736513
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017737585
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017738265
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255017740262
+activated,editor,org.eclipse.pde.ui,3.5.0.v20090821,"org.eclipse.pde.ui.manifestEditor",1255017742160
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017744213
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017773677
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017773695
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255017773832
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017780436
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017783497
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017784476
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017786641
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255017789368
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.cut",1255017806970
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.paste",1255017809983
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255017817353
+error,log,,,"Bad type signature: ;\n",1255017818812

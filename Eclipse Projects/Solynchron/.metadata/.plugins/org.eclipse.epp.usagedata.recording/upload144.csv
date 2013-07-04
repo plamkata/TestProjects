@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1254992173456
+error,log,,,"Bad type signature: ;\n",1254992173458
+error,log,,,"Bad type signature: ;\n",1254992173461
+error,log,,,"Bad type signature: ;\n",1254992173463
+error,log,,,"Bad type signature: ;\n",1254992173464
+error,log,,,"Bad type signature: ;\n",1254992173475
+error,log,,,"Bad type signature: ;\n",1254992173476
+error,log,,,"Bad type signature: ;\n",1254992173478
+error,log,,,"Bad type signature: ;\n",1254992173479
+error,log,,,"Bad type signature: ;\n",1254992173522
+error,log,,,"Bad type signature: ;\n",1254992173531
+error,log,,,"Bad type signature: ;\n",1254992173569
+error,log,,,"Bad type signature: ;\n",1254992173578
+error,log,,,"Bad type signature: ;\n",1254992173605
+error,log,,,"Bad type signature: ;\n",1254992173614
+error,log,,,"Bad type signature: ;\n",1254992173641
+error,log,,,"Bad type signature: ;\n",1254992173649
+error,log,,,"Bad type signature: ;\n",1254992173676
+error,log,,,"Bad type signature: ;\n",1254992173685
+error,log,,,"Bad type signature: ;\n",1254992173711
+error,log,,,"Bad type signature: ;\n",1254992173720
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254992211608
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1254992214277
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1254992229812
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254992230628

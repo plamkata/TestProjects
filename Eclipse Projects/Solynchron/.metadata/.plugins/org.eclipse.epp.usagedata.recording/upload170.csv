@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254997742029
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1254997743977
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254997744222
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254997746512
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254997746512
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1254997748039
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254997748268
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1254997750647
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254997752329
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1254997752512
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1254997755364
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254997755671
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254997758623
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254997758624
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1254997774685
+error,log,,,"Bad type signature: ;\n",1254997776094
+error,log,,,"Bad type signature: ;\n",1254997776095
+error,log,,,"Bad type signature: ;\n",1254997776096
+error,log,,,"Bad type signature: ;\n",1254997776097
+error,log,,,"Bad type signature: ;\n",1254997776099
+error,log,,,"Bad type signature: ;\n",1254997776100
+error,log,,,"Bad type signature: ;\n",1254997776101
+error,log,,,"Bad type signature: ;\n",1254997776102
+error,log,,,"Bad type signature: ;\n",1254997776103
+error,log,,,"Bad type signature: ;\n",1254997776104

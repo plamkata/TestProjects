@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            label="Solynchron Action Set"
+            visible="true"
+            id="com.startup.solynchron.actionSet">
+         <menu
+               label="Solynchron"
+               id="sampleMenu">
+            <separator
+                  name="group">
+            </separator>
+         </menu>
+         <action
+               label="&amp;New Problem"
+               icon="icons/sample.gif"
+               class="com.startup.solynchron.actions.OpenProblemFormAction"
+               tooltip="Hello, Eclipse world"
+               menubarPath="sampleMenu/sampleGroup"
+               toolbarPath="sampleGroup"
+               id="com.startup.solynchron.actions.HelloAction">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.startup.solynchron.rcp.ProblemFormMultipageEditor"
+            default="false"
+            icon="icons/sample.gif"
+            id="com.startup.solynchron.problem-editor"
+            name="Problem Form (RCP) Editor">
+      </editor>
+   </extension>
+
+</plugin>

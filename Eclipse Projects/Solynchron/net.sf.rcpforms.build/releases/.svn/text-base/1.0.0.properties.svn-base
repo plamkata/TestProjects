@@ -1,0 +1,7 @@
+#Written from Plug-in Builder Editor
+#Thu Apr 09 22:17:34 CEST 2009
+buildType=M
+version=1.0.0
+fetchTag=359
+version.qualifier=20090409
+buildTypePresentation=PRD

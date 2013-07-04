@@ -1,0 +1,124 @@
+/**
+ * 
+ */
+package com.startup.solynchron.rcp;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.forms.IManagedForm;
+import org.eclipse.ui.forms.editor.FormEditor;
+import org.eclipse.ui.forms.editor.FormPage;
+import org.eclipse.ui.forms.events.ExpansionAdapter;
+import org.eclipse.ui.forms.events.ExpansionEvent;
+import org.eclipse.ui.forms.widgets.ColumnLayout;
+import org.eclipse.ui.forms.widgets.FormToolkit;
+import org.eclipse.ui.forms.widgets.Hyperlink;
+import org.eclipse.ui.forms.widgets.ScrolledForm;
+import org.eclipse.ui.forms.widgets.Section;
+
+import com.startup.solynchron.Activator;
+import com.startup.solynchron.Resources;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class ProblemPage extends FormPage {
+
+	private static final String PAGE_ID = "problem";
+
+	/**
+	 * @param editor
+	 * @param id
+	 * @param title
+	 */
+	public ProblemPage(FormEditor editor) {
+		super(editor, PAGE_ID, Resources.getResource("ProblemPage.label"));
+	}
+	
+	@Override
+	protected void createFormContent(IManagedForm managedForm) {
+		ScrolledForm form = managedForm.getForm();
+		//FormToolkit toolkit = managedForm.getToolkit();
+		form.setText(Resources.getResource("ProblemPage.title")); //$NON-NLS-1$
+		ColumnLayout layout = new ColumnLayout();
+		layout.topMargin = 0;
+		layout.bottomMargin = 5;
+		layout.leftMargin = 10;
+		layout.rightMargin = 10;
+		layout.horizontalSpacing = 10;
+		layout.verticalSpacing = 10;
+		layout.maxNumColumns = 4;
+		layout.minNumColumns = 1;
+		form.getBody().setLayout(layout);
+		//form.getBody().setBackground(
+		//		form.getBody().getDisplay().getSystemColor(SWT.COLOR_GREEN));
+		
+		createSectionWithControls(managedForm, 
+				Resources.getResource("ProblemPage.Domain.title"), 
+				Resources.getResource("ProblemPage.Domain.description"));
+		createMixedSection(managedForm, 
+				Resources.getResource("ProblemPage.Problem.title"), 
+				Resources.getResource("ProblemPage.Problem.description"));
+	}
+	
+	private void createSectionWithControls(IManagedForm mform, String title,
+			String desc) {
+		Composite client = createSection(mform, title, desc, 1);
+		FormToolkit toolkit = mform.getToolkit();
+		toolkit.createButton(client, Resources.getResource("ThirdPage.button1"), SWT.RADIO); //$NON-NLS-1$
+		toolkit.createButton(client, Resources.getResource("ThirdPage.button2"), SWT.RADIO); //$NON-NLS-1$
+		toolkit.createButton(client, Resources.getResource("ThirdPage.button3"), //$NON-NLS-1$
+				SWT.RADIO);
+		toolkit.createButton(client, Resources.getResource("ThirdPage.checkbox"), SWT.CHECK); //$NON-NLS-1$
+	}
+	
+	private void createMixedSection(IManagedForm mform, String title, String desc) {
+		Composite client = createSection(mform, title, desc, 2);
+		FormToolkit toolkit = mform.getToolkit();
+		Hyperlink link = toolkit.createHyperlink(client,
+				Resources.getResource("ThirdPage.longlink"), SWT.WRAP); //$NON-NLS-1$
+		GridData gd = new GridData();
+		gd.horizontalSpan = 2;
+		link.setLayoutData(gd);
+		link = toolkit.createHyperlink(client, Resources.getResource("ThirdPage.link2"), //$NON-NLS-1$
+				SWT.WRAP);
+		gd = new GridData();
+		gd.horizontalSpan = 2;
+		link.setLayoutData(gd);
+		toolkit.createLabel(client, Resources.getResource("ThirdPage.textLabel")); //$NON-NLS-1$
+		Text text = toolkit.createText(client, "", SWT.SINGLE); //$NON-NLS-1$
+		gd = new GridData();
+		gd.widthHint = 150;
+		text.setLayoutData(gd);
+		//toolkit.paintBordersFor(client);
+	}
+	
+	private Composite createSection(IManagedForm mform, String title,
+			String desc, int numColumns) {
+		final ScrolledForm form = mform.getForm();
+		FormToolkit toolkit = mform.getToolkit();
+		Section section = toolkit.createSection(form.getBody(), Section.TWISTIE
+				| Section.TITLE_BAR | Section.DESCRIPTION | Section.EXPANDED);
+		section.setText(title);
+		section.setDescription(desc);
+		//toolkit.createCompositeSeparator(section);
+		Composite client = toolkit.createComposite(section);
+		GridLayout layout = new GridLayout();
+		layout.marginWidth = 0;
+		layout.marginHeight = 0;
+		layout.numColumns = numColumns;
+		client.setLayout(layout);
+		section.setClient(client);
+		section.addExpansionListener(new ExpansionAdapter() {
+			public void expansionStateChanged(ExpansionEvent e) {
+				form.reflow(false);
+			}
+		});
+		return client;
+	}
+
+}

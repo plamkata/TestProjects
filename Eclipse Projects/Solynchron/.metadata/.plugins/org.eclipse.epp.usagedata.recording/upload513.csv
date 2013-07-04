@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185287953
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255185289730
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255185289938
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185289970
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185291069
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185303096
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185310845
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185311948
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185316275
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255185319970
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255185320167
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185320262
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185321549
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185330208
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185338868
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185347255
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185349190
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185349954
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185350160
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185355854
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255185362034
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255185362255
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185362288
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255185364117
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1255185372942

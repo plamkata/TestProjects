@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RCPForms Emf Binding Example
+Bundle-SymbolicName: net.sf.rcpforms.examples.emf; singleton:=true
+Bundle-Version: 0.0.0
+Bundle-Activator: net.sf.rcpforms.examples.emf.Activator
+Bundle-Vendor: Marco van Meegen
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.ecore,
+ org.eclipse.core.databinding,
+ org.eclipse.jface.databinding,
+ net.sf.rcpforms.widgetwrapper,
+ net.sf.rcpforms.bindingvalidation,
+ net.sf.rcpforms.modeladapter,
+ net.sf.rcpforms.emfadapter,
+ net.sf.rcpforms.tablesupport,
+ org.eclipse.emf.databinding,
+ org.eclipse.ui.forms,
+ net.sf.rcpforms.test;bundle-version="0.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.rcpforms.emf.test,
+ net.sf.rcpforms.emf.test.impl,
+ net.sf.rcpforms.emf.test.util

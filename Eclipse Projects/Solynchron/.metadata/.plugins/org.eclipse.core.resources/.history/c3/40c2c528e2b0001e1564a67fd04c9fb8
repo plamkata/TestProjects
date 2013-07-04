@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.impl;
+
+import java.beans.PropertyChangeEvent;
+
+import com.damnhandy.aspects.bean.JavaBean;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class NestedPropertyChangeEvent extends PropertyChangeEvent {
+	
+	private Object nested;
+
+	/**
+	 * @param source
+	 * @param nestedProperty
+	 * @param oldValue
+	 * @param newValue
+	 */
+	public NestedPropertyChangeEvent(Object base, Object nested,
+			String nestedProperty, Object oldValue, Object newValue) {
+		super(base, nestedProperty, oldValue, newValue);
+		this.nested = nested;
+	}
+	
+	public NestedPropertyChangeEvent(Object base, String baseProperty, PropertyChangeEvent event) {
+		super(base, baseProperty + "." + event.getPropertyName(), 
+				event.getOldValue(), event.getNewValue());
+		this.nested = event.getSource();
+		this.setPropagationId(event.getPropagationId());
+	}
+
+	public Object getNested() {
+		return nested;
+	}
+
+	public void setNested(Object nested) {
+		this.nested = nested;
+	}
+
+}

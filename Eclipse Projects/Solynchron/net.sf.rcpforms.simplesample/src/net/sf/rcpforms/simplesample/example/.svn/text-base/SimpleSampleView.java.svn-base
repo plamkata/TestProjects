@@ -1,0 +1,28 @@
+/*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *
+ ******************************************************************************
+ */
+
+package net.sf.rcpforms.simplesample.example;
+
+import net.sf.rcpforms.form.RCPFormViewPart;
+
+public class SimpleSampleView extends RCPFormViewPart<SimpleSampleStackForm>
+{
+    public static final String ID = "net.sf.rcpforms.examples.simplesampleview";
+
+    public SimpleSampleView()
+    {
+        // create
+        super(new SimpleSampleStackForm());
+        // and set input
+        setInput(SimpleSampleStackForm.createModels());
+    }
+}

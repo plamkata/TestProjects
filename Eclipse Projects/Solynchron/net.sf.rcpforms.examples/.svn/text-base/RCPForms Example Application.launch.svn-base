@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value="net.sf.rcpforms.examples.application"/>
+<booleanAttribute key="askclear" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="automaticValidate" value="true"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<booleanAttribute key="clearws" value="false"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/RCPForms Example Application"/>
+<booleanAttribute key="default" value="false"/>
+<stringAttribute key="deselected_workspace_plugins" value="net.sf.rcpforms.widgetwrapper.emfadapter.test,ch.post.pf.pedas.widgetwrapper,ch.post.pf.dlam.gui.comp.ui.framework.example,ch.post.pf.dlam.gui.comp.nl1,net.sf.rcpforms.widgetwrapper.emf.test,ch.post.pf.pedas.bindingvalidation,ch.post.pf.zvis.team.core.test,org.eclipse.jface.examples.databinding,ch.post.pf.zvis.team.core,ch.post.pf.dlam.gui.comp.ui,net.sf.rcpforms.widgetwrapper.test,scratch,ch.post.pf.dlam.svr,ch.post.pf.zvis.team.platform,ch.post.pf.pedas.framework.example,ch.post.pf.pedas.modelbinding,org.apache.commons.beanutils,ch.post.pf.zvis.team.ui,ch.post.pf.dlam.gui.comp.sharedtypes,net.sf.rcpforms.widgetwrapper.emfadapter,org.apache.log4j,ch.post.pf.dlam.gui.comp.core"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="location" value="${workspace_loc}/../runtime-New_configuration"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl}"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="org.eclipse.sdk.ide"/>
+<stringAttribute key="selected_target_plugins" value="org.eclipse.ant.core,org.eclipse.core.variables,org.eclipse.core.contenttype,org.eclipse.swt,org.eclipse.core.filesystem,org.eclipse.osgi.services,org.eclipse.ui,org.eclipse.swt.win32.win32.x86,org.eclipse.jface.databinding,org.eclipse.equinox.preferences,org.eclipse.osgi,org.eclipse.equinox.registry,org.eclipse.ui.forms,javax.servlet,org.eclipse.core.resources.win32.x86,org.eclipse.equinox.app,org.eclipse.equinox.transforms.hook,org.eclipse.core.commands,org.eclipse.help,org.eclipse.core.runtime.compatibility.auth,org.eclipse.core.resources.compatibility,org.eclipse.core.resources,org.eclipse.jface,org.eclipse.core.filesystem.win32.x86,org.eclipse.core.databinding,org.eclipse.ui.workbench,org.eclipse.core.expressions,org.eclipse.core.databinding.beans,org.eclipse.equinox.common,org.eclipse.core.jobs,org.eclipse.core.runtime,com.ibm.icu,org.eclipse.core.runtime.compatibility.registry"/>
+<stringAttribute key="selected_workspace_plugins" value="net.sf.rcpforms.modeladapter,net.sf.rcpforms.examples,net.sf.rcpforms.widgetwrapper,net.sf.rcpforms.tablesupport,net.sf.rcpforms.common,net.sf.rcpforms.form,net.sf.rcpforms.bindingvalidation"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="templateConfig" value="${target_home}\configuration\config.ini"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useProduct" value="false"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

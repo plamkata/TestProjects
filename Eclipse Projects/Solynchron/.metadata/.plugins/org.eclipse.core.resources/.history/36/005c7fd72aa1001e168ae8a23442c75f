@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sample_derby
+Bundle-SymbolicName: sample_derby; singleton:=true
+Bundle-Version: 1.0.0.200909141
+Bundle-Activator: sample_derby.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Eclipse-AutoStart: true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

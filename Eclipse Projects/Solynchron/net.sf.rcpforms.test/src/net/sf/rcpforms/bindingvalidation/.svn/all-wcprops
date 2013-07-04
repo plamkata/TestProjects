@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/rcpforms/!svn/ver/514/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation
+END
+BindingBaseTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/rcpforms/!svn/ver/340/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/BindingBaseTestCase.java
+END
+NestedBinding_BotTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/rcpforms/!svn/ver/514/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/NestedBinding_BotTest.java
+END
+NestedNullObjectBinding_BotTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svnroot/rcpforms/!svn/ver/514/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/NestedNullObjectBinding_BotTest.java
+END
+DummyMessageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/rcpforms/!svn/ver/341/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/DummyMessageManager.java
+END
+Binding_BotTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svnroot/rcpforms/!svn/ver/434/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/Binding_BotTest.java
+END
+ComboBinding_BotTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svnroot/rcpforms/!svn/ver/342/trunk/net.sf.rcpforms.test/src/net/sf/rcpforms/bindingvalidation/ComboBinding_BotTest.java
+END

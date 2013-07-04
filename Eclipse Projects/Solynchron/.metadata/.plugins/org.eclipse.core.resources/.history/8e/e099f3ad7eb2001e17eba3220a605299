@@ -1,0 +1,545 @@
+package com.damnhandy.aspects.bean.impl;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeSupport;
+import java.beans.BeanInfo;
+import java.beans.IntrospectionException;
+import java.beans.Introspector;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Field;
+import java.util.Collection;
+import java.util.List;
+
+import org.aspectj.lang.Signature;
+import org.aspectj.lang.reflect.FieldSignature;
+import org.aspectj.lang.reflect.MethodSignature;
+
+import com.damnhandy.aspects.bean.JavaBean;
+import com.damnhandy.aspects.bean.Silent;
+
+/**
+ * An abstract aspect which declares an instance of PropertyChangeSupport along
+ * with a series of delegate methods. Sub-classes of this aspect must define the
+ * point cuts and the inter-type declaration.
+ * <p>
+ * Along with adding a java bean style property change support for all get/set properties 
+ * of an @Observable, there is the possibility to disable this support for particular 
+ * field/accessors by using the @Silent annotation.
+ * This class provides additional functionality for collection property change support 
+ * and for nested property change support. Collection property changes are fired as 
+ * indexed property change events whenever possible. 
+ * <p>
+ * Collection property change support is especially beneficial when the java.util.List 
+ * collections are used, otherwise indexed property changes might not be relevant. 
+ * In this case, in order to assure that indexed property change events are fired with 
+ * the correct indices users of this annotation should use only java.util.List indexed mutators 
+ * in their custom collection mutators, e.g.:
+ * <ul>
+ * <li>java.util.List.add(int, Object)
+ * <li>java.util.List.set(int, Object)
+ * <li>java.util.List.remove(int)
+ * </ul>
+ * 
+ * @author Ryan J. McDonough
+ * @since 1.0
+ * @version $Revision: 1.2 $
+ *
+ */
+public abstract aspect AbstractJavaBeanAspect {
+
+	private PropertyChangeSupport JavaBean.pcs = new PropertyChangeSupport(this);
+	private BeanInfo JavaBean.beanInfo;
+	
+	/**
+	 * A pointcut which picks out setter methods and/or the setting of a 
+	 * JavaBean properties.
+	 * 
+	 * @param bean - the target JavaBean
+	 */
+	abstract pointcut setters(JavaBean bean);
+	
+	/**
+	 * Abstract pointcut which is used to identify mutator methods which 
+	 * are responsible for modifying an underlying collection property field 
+	 * of an @Obserable.
+	 * 
+	 * @param collection - the underlying collection which is being modified
+	 * @param bean - the JavaBean instance which contains the called method
+	 */
+	abstract pointcut collectionMutator(JavaBean bean, Collection collection);
+	
+	/**
+	 * Abstract pointcut which is used to identify list add methods 
+	 * responsible for adding a new element to a list property field of 
+	 * an @Observable.
+	 *  
+	 * @param bean - the JavaBean instance which contains the called method
+	 * @param list - the underlying list which is being modified
+	 * @param index - the index which is subject of the modification
+	 */
+	abstract pointcut listAdd(JavaBean bean, List list, int index);
+	
+
+	/**
+	 * Abstract pointcut which is used to identify list remove methods 
+	 * responsible for removing elements of a list property field of 
+	 * an @Observable.
+	 * 
+	 * @param bean - the JavaBean instance which contains the called method
+	 * @param list - the underlying list which is being modified
+	 * @param index - the index which is subject of the modifications
+	 */
+	abstract pointcut listRemove(JavaBean bean, List list, int index);
+	
+	/**
+	 * The old value is extracted before executing the setter and the new value
+	 * is extracted after executing the setter. A property change event is 
+	 * fired for the modified property field with the new and old value.
+	 * 
+	 * @param bean - the JavaBean instance which contains the called method 
+	 */
+	void around(JavaBean bean) : setters(bean) {
+		FieldSignature fieldSig = (FieldSignature) thisJoinPoint.getSignature();
+		Field field = fieldSig.getField();
+		try {
+			Object oldValue = field.get(bean);
+			proceed(bean);
+			Object newValue = field.get(bean);
+			bean.firePropertyChange(field.getName(), oldValue, newValue);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Fires appropriate change events for collection property mutators. 
+	 * <ul>
+	 * <li>
+	 * If some of the Collection.*All methods is called, a thorough property
+	 * change is fired for the collection property with null old value and the 
+	 * collection itself as the new value. 
+	 * <li>
+	 * If a Collection.add* method is called, an indexed property change event
+	 * is fired with the last index of the collection, a null old value and 
+	 * the object that was added to the collection as the new value. 
+	 * <li>
+	 * If a Collection.remove* method is called, an indexed property change event
+	 * is fired with a -1 index of the collection, an object that was removed from 
+	 * the collection as an old value and a null new value.
+	 * <li> 
+	 * In any other case a thorough property change is fired.
+	 * </ul>
+	 * 
+	 * @param bean the JavaBean instance which contains the called method
+	 * @param collection the collection property that is being modified
+	 * @return true if the collection was successful mutated
+	 */
+	boolean around(JavaBean bean, Collection collection) : 
+			collectionMutator(bean, collection) {
+		Signature sig = thisJoinPoint.getSignature(); 
+		Object[] args = thisJoinPoint.getArgs();
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		try {
+			String fieldName = bean.getFieldName(collection);
+			// If the name is found, fire an event
+			if (fieldName != null && !isSilent(enclSig, fieldName)) {
+				int index = collection.size();
+				boolean result = proceed(bean, collection);
+				if (result) {
+					if (sig.getName().contains("All")) {
+						// the whole collection changed
+						bean.firePropertyChange(fieldName, null, collection);
+					} else if (sig.getName().startsWith("add")) {
+						// most probably added at the end
+						bean.fireIndexedPropertyChange(fieldName, index, null, args[0]);
+					} else if (sig.getName().startsWith("remove")) {
+						// index cannot be identified for general collections
+						index = -1;
+						bean.fireIndexedPropertyChange(fieldName, index, args[0], null);
+					} else {
+						bean.firePropertyChange(fieldName, null, collection);
+					}
+				}
+				return result;
+			} else {
+				// otherwise, proceed as usual
+				return proceed(bean, collection);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	/**
+	 * Fires appropriate indexed change events for list add property mutators. 
+	 * <ul>
+	 * <li>
+	 * If a List.add* method is called, an indexed property change event
+	 * is fired with the index argument of the add method, a null old value and 
+	 * the object that was added to the collection as the new value.
+	 * <li>
+	 * If a List.set* method is called, an indexed property change event
+	 * is fired with the index argument of the set remove, an object that was 
+	 * removed from the collection as an old value and an object that was added 
+	 * to the collection as a new value.
+	 * <li> 
+	 * In any other case a thorough property change is fired.
+	 * </ul>
+	 * 
+	 * @param bean the JavaBean instance which contains the called method
+	 * @param list the list property that is being modified
+	 * @param index the index which is altered from the list
+	 */
+	Object around(JavaBean bean, List list, int index) : 
+			listAdd(bean, list, index) {
+		Signature sig = thisJoinPoint.getSignature();
+		Object[] args = thisJoinPoint.getArgs();
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		Object result = null;
+		try {
+			String fieldName = bean.getFieldName(list);
+			// If the name is found, fire an event
+			if (fieldName != null && !isSilent(enclSig, fieldName)) {
+				Object oldValue = (index >= 0 && index < list.size()) ? list.get(index) : null;
+				result = proceed(bean, list, index);
+				if (sig.getName().startsWith("add")) {
+					bean.fireIndexedPropertyChange(fieldName, index, null, args[1]);
+				} else if (sig.getName().equals("set")) {
+					bean.fireIndexedPropertyChange(fieldName, index, oldValue, args[1]);
+				} else {
+					bean.firePropertyChange(fieldName, null, list);
+				}
+			} else {
+				// otherwise, proceed as usual
+				result = proceed(bean, list, index);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+
+	
+	/**
+	 * Fires appropriate indexed change events for list remove property mutators. 
+	 * <ul>
+	 * <li>
+	 * If a List.remove* method is called, an indexed property change event
+	 * is fired with the index argument of the add remove, an object that was 
+	 * removed from the collection as an old value and a null new value.
+	 * <li> 
+	 * In any other case a thorough property change is fired.
+	 * </ul>
+	 * 
+	 * @param bean the JavaBean instance which contains the called method
+	 * @param list the list property that is being modified
+	 * @param index the index which is altered from the list
+	 */
+	Object around(JavaBean bean, List list, int index) : 
+			listRemove(bean, list, index) {
+		Signature sig = thisJoinPoint.getSignature(); 
+		Signature enclSig = thisEnclosingJoinPointStaticPart.getSignature();
+		
+		Object oldValue = null;
+		try {
+			String fieldName = bean.getFieldName(list);
+			// If the name is found, fire an event
+			if (fieldName != null && !isSilent(enclSig, fieldName)) {
+				oldValue = proceed(bean, list, index);
+				if (sig.getName().startsWith("remove")) {
+					bean.fireIndexedPropertyChange(fieldName, index, oldValue, null);
+				} else {
+					bean.firePropertyChange(fieldName, null, list);
+				}
+			} else {
+				// otherwise, proceed as usual
+				oldValue = proceed(bean, list, index);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return oldValue;
+	}
+	
+	/**
+	 * Check whether the specified signature is a method signature annotated with {@link Silent} or 
+	 * whether the specified field of the declaring type of the signature is annotated with {@link Silent}.
+	 * 
+	 * @param sig the declaring signature to be checked
+	 * @param fieldName the field of the declaring signature to be checked
+	 * @return true if, either the accessor method, or the field has been annotated with {@link Silent}
+	 */
+	protected boolean isSilent(Signature sig, String fieldName) {
+		return isAnnotated(sig, fieldName, Silent.class);
+	}
+	
+	/**
+	 * Check whether the specified signature is a method signature annotated with the specified 
+	 * annotation class or whether the specified field of the declaring type of the signature is 
+	 * annotated with the specified annotation class.
+	 * 
+	 * @param sig the declaring signature to be checked
+	 * @param fieldName the field of the declaring signature to be checked
+	 * @param annotationClass the annotation class to check for
+	 * @return true if, either the accessor method, or the field has been annotated with 
+	 * the specified annotation class
+	 */
+	protected boolean isAnnotated(Signature sig, String fieldName, Class annotationClass) {
+		boolean annotated = false;
+		if (sig instanceof MethodSignature) {
+			MethodSignature methodSig = (MethodSignature) sig;
+			if (methodSig.getMethod().isAnnotationPresent(annotationClass)) {
+				annotated = true;
+			}
+		}
+		try {
+			Field field = sig.getDeclaringType().getDeclaredField(fieldName);
+			if (field != null && field.isAnnotationPresent(annotationClass)) {
+				annotated = true;
+			}
+		} catch (Exception e) {
+			// ignore
+		}
+		return annotated;
+	}
+
+	/**
+	 * Obtains a BeanInfo object for the class of the current object.
+	 * 
+	 * @return introspected BeanInfo for the current object's class
+	 */
+	public BeanInfo JavaBean.getBeanInfo() throws IntrospectionException {
+		if (beanInfo == null) {
+			beanInfo = Introspector.getBeanInfo(getClass());
+		}
+		return beanInfo;
+	}
+	
+	/**
+	 * Uses the BeanInfo class to get the property name of a given object. This is
+	 * achieved by reading the PropertyDescriptors from the Bean class and seeing if 
+	 * the object being called is the in fact a member of the bean.  
+	 * 
+	 * TODO: Not sure if this is the brightest way to do this. Is there a better way? 
+	 * Ideally, this should be achived in a pointcut. (may be something with the callstack)
+	 * 
+	 * @param obj - the object which we want to know the field name of
+	 * @return the field name of the object within this bean instance
+	 * @throws IntrospectionException
+	 * @throws InvocationTargetException 
+	 * @throws IllegalAccessException 
+	 * @throws IllegalArgumentException 
+	 */
+	public String JavaBean.getFieldName(Object potentialField) throws IntrospectionException,
+			IllegalArgumentException, IllegalAccessException,
+			InvocationTargetException {
+		if (potentialField != null) {
+			PropertyDescriptor[] fields = getBeanInfo().getPropertyDescriptors();
+			for (int i = 0; i < fields.length; i++) {
+				Method getter = fields[i].getReadMethod();
+				Object propertyValue = getter.invoke(this, new Object[] {});
+				if (potentialField == propertyValue) {
+					return fields[i].getName();
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Adds a new PropertyChangeListener to the JavaBean if this listener has not been 
+	 * registered so far.
+	 * 
+	 * @param listener - the property change listener to be registered with the JavaBean
+	 * @see java.beans.PropertyChangeSupport#addPropertyChangeListener(java.beans.PropertyChangeListener)
+	 */
+	public void JavaBean.addPropertyChangeListener(PropertyChangeListener listener) {
+		if (!contains(listener)) {
+			pcs.addPropertyChangeListener(listener);
+		}
+	}
+
+
+	/**
+	 * Adds a new specific PropertyChangeListener to the JavaBean for the given property name.
+	 * In the case of nested properties, the listener is wrapped in a PropertyChangeListenerWrapper
+	 * which ensures that property change events are fired only for this specific nested property. 
+	 * 
+	 * @param propertyName - a specific (nested) property name to add this listener to 
+	 * @param listener - the listener that will handle changes of the specific (nested) property
+	 * @see java.beans.PropertyChangeSupport#addPropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
+	 */
+	public void JavaBean.addPropertyChangeListener(String propertyName, PropertyChangeListener listener) {
+		if (propertyName != null) {
+			PropertyChangeListener specificListener = listener;
+			if (propertyName.contains(".")) {
+				// nested properties require a specific property change listener 
+				specificListener = new PropertyChangeListenerWrapper(propertyName, listener);
+			}
+			pcs.addPropertyChangeListener(propertyName, specificListener);
+			// this is a very strange behavior, but it seems the argument listener somehow  
+			// makes its way into the general listeners of the property change support 
+			pcs.removePropertyChangeListener(listener);
+		}
+	}
+
+	/**
+	 * Fires a property change event for specific (nested) property name
+	 * 
+	 * @param propertyName - a specific (nested) property name that is subject to the change
+	 * @param oldValue - the old value of the property
+	 * @param newValue - the new value of the property
+	 * @see java.beans.PropertyChangeSupport#firePropertyChange(java.lang.String, java.lang.Object, java.lang.Object)
+	 */
+	public void JavaBean.firePropertyChange(String propertyName, Object oldValue, Object newValue) {
+		pcs.firePropertyChange(propertyName, oldValue, newValue);
+	}
+	
+	/**
+	 * 
+	 * @param event
+	 */
+	public void JavaBean.firePropertyChange(PropertyChangeEvent event) {
+		pcs.firePropertyChange(event);
+	}
+
+	/**
+	 * Fires indexed property change event. If a new object is added at a particular index, the old value 
+	 * of the event will be null and the new value will be the new object. If an old object is removed from 
+	 * a particular index, the old value of the event will be the old object and the new value will be null.
+	 * 
+	 * @param propertyName - a specific (nested) property name that is subject to the change
+	 * @param index - the index of the element associated with the change
+	 * @param oldValue - the old value of the element at the specified index
+	 * @param newValue - the new value of the element at the specified index
+	 * @see java.beans.PropertyChangeSupport#fireIndexedPropertyChange(java.lang.String, int, java.lang.Object, java.lang.Object)
+	 */
+	public void JavaBean.fireIndexedPropertyChange(String propertyName, int index, Object oldValue, Object newValue) {
+		pcs.fireIndexedPropertyChange(propertyName, index, oldValue, newValue);
+	}
+
+	/**
+	 * Get all registered PropertyChangeListeners for this JavaBean instance.
+	 * 
+	 * @return all the registered PropertyChangeListeners
+	 * @see java.beans.PropertyChangeSupport#getPropertyChangeListeners()
+	 */
+	public PropertyChangeListener[] JavaBean$getPropertyChangeListeners() {
+		PropertyChangeListener[] listeners = pcs.getPropertyChangeListeners();
+		filterListeners(listeners);
+		return listeners;
+	}
+
+	/**
+	 * Get all registered PropertyChangeListeners for this JavaBean instance.
+	 * 
+	 * @return all the registered PropertyChangeListeners
+	 * @see java.beans.PropertyChangeSupport#getPropertyChangeListeners()
+	 */
+	public PropertyChangeListener[] JavaBean.getPropertyChangeListeners() {
+		PropertyChangeListener[] listeners = pcs.getPropertyChangeListeners();
+		filterListeners(listeners);
+		return listeners;
+	}
+
+	/**
+	 * Get all registered PropertyChangeListeners on the specific (nested) property name
+	 * for this JavaBean instance.
+	 * 
+	 * @param propertyName - a specific (nested) property name that is subject to the change
+	 * @return all the registered PropertyChangeListeners for this specific property name
+	 * @see java.beans.PropertyChangeSupport#getPropertyChangeListeners(java.lang.String)
+	 */
+	public PropertyChangeListener[] JavaBean.getPropertyChangeListeners(String propertyName) {
+		PropertyChangeListener[] listeners = pcs.getPropertyChangeListeners(propertyName);
+		filterListeners(listeners);
+		return listeners;
+	}
+
+	/**
+	 * Filters an array of PropertyChangeListeners and substitutes any occurrences of a 
+	 * WrappedPropertyChangeListener with its internal listener registered by the user.
+	 * 
+	 * @param listeners an array of PropertyChangeListeners
+	 */
+	public void JavaBean.filterListeners(PropertyChangeListener[] listeners) {
+		for (int i = 0; i < listeners.length; i++) {
+			if (listeners[i] instanceof PropertyChangeListenerWrapper) {
+				listeners[i] = ((PropertyChangeListenerWrapper)listeners[i]).getInternal();
+			}
+		}
+	}
+
+	/**
+	 * Determine if any listeners have been registered for the specific (nested) property name.
+	 * 
+	 * @param propertyName - a specific (nested) property name
+	 * @return true, if there are registered listeners for the specified (nested) property
+	 * @see java.beans.PropertyChangeSupport#hasListeners(java.lang.String)
+	 */
+	public boolean JavaBean.hasListeners(String propertyName) {
+		return pcs.hasListeners(propertyName);
+	}
+
+	/**
+	 * Remove the specified PropertyChangeListener from the JavaBean instance. Once removed
+	 * a listener will not be notified about any changes.
+	 * 
+	 * @param listener - a PropertyChangeListener to be unregistered from the JavaBean
+	 * @see java.beans.PropertyChangeSupport#removePropertyChangeListener(java.beans.PropertyChangeListener)
+	 */
+	public void JavaBean.removePropertyChangeListener(PropertyChangeListener listener) {
+		pcs.removePropertyChangeListener(listener);
+	}
+
+
+	/**
+	 * Remove the specified PropertyChangeListener from the JavaBean instance that may 
+	 * have been registered for the specific (nested) property. Once removed
+	 * a listener will not be notified about any changes of the specific (nested) property.
+	 * 
+	 * @param propertyName - a specific (nested) property name
+	 * @param listener - a PropertyChangeListener to be unregistered from the JavaBean
+	 * @see java.beans.PropertyChangeSupport#removePropertyChangeListener(java.lang.String, java.beans.PropertyChangeListener)
+	 */
+	public void JavaBean.removePropertyChangeListener(String propertyName, PropertyChangeListener listener) {
+		if (propertyName != null) {
+			PropertyChangeListener specificListener = listener;
+			if (propertyName.contains(".")) {
+				specificListener = new PropertyChangeListenerWrapper(propertyName, listener);
+			}
+			pcs.removePropertyChangeListener(propertyName, specificListener);
+			pcs.removePropertyChangeListener(listener);
+		}
+	}
+	
+	/**
+	 * Check if the current JavaBean instance contains the specified PropertyChangeListener.
+	 * 
+	 * @param listener - a PropertyChangeListener to be checked for containment
+	 * @return true, if the listener has already been registered with the JavaBean
+	 */
+	public boolean JavaBean.contains(PropertyChangeListener listener) {
+		boolean contained = false;
+		PropertyChangeListener[] listeners = pcs.getPropertyChangeListeners();
+		for (int i = 0; i < listeners.length; i++) {
+			if (listeners[i] == listener) {
+				contained = true;
+				break;
+			} else if (listeners[i] instanceof PropertyChangeListenerWrapper) {
+				PropertyChangeListenerWrapper wraper = (PropertyChangeListenerWrapper) listeners[i];
+				if (wraper.getInternal() == listener) {
+					contained = true;
+					break;
+				}
+			}
+		}
+		return contained;
+	}
+}

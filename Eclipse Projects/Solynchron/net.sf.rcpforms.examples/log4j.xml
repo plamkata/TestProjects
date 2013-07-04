@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- Log4J debugging output can be enabled/disabled with the "debug" (true/false) attribute -->
+<log4j:configuration debug="false" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+  <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%5p %d{dd.MM HH:mm:ss,SSS} %C{1} [%m] %x%n"/>
+    </layout>
+  </appender>
+
+
+  <logger name="ch.post.pf">
+    <level value="DEBUG"/>
+  </logger>
+
+  <logger name="ch.post.pf.sample">
+    <level value="DEBUG"/>
+  </logger>
+
+  <root>
+    <priority value ="DEBUG" />
+    <appender-ref ref="STDOUT" />
+  </root>
+</log4j:configuration>

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+started,bundle,org.tigris.subversion.clientadapter,1.6.4.1,"org.tigris.subversion.clientadapter",1254901231201
+started,bundle,org.tigris.subversion.subclipse.core,1.6.5,"org.tigris.subversion.subclipse.core",1254901231201
+started,bundle,org.apache.derby.ui,1.1.2,"org.apache.derby.ui",1254901231201
+started,bundle,org.aspectj.ajde,1.6.5.20090618034232,"org.aspectj.ajde",1254901231201
+started,bundle,org.eclipse.ajdt.core,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.core",1254901231201
+started,bundle,org.eclipse.ajdt.ui,2.0.0.e35x-20090624-1600,"org.eclipse.ajdt.ui",1254901231201
+started,bundle,org.eclipse.contribution.weaving.jdt,2.0.0.e35x-20090624-1600,"org.eclipse.contribution.weaving.jdt",1254901231201
+started,bundle,org.eclipse.equinox.weaving.aspectj,1.0.0.200906171200,"org.eclipse.equinox.weaving.aspectj",1254901231201
+os,sysinfo,,,"win32",1254901231205
+arch,sysinfo,,,"x86",1254901231205
+ws,sysinfo,,,"win32",1254901231205
+locale,sysinfo,,,"en_US",1254901231205
+processors,sysinfo,,,"2",1254901231205
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1254901231205
+java.runtime.version,sysinfo,,,"1.6.0_10-b33",1254901231205
+java.specification.name,sysinfo,,,"Java Platform API Specification",1254901231205
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1254901231205
+java.specification.version,sysinfo,,,"1.6",1254901231205
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1254901231205
+java.version,sysinfo,,,"1.6.0_10",1254901231205
+java.vm.info,sysinfo,,,"mixed mode",1254901231205
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1254901231205
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1254901231205
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1254901231205
+java.vm.specification.version,sysinfo,,,"1.0",1254901231205

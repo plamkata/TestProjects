@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/rcpforms/!svn/ver/503/trunk/net.sf.rcpforms.examples
+END
+RCPForms Example (SWT).launch
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/rcpforms/!svn/ver/159/trunk/net.sf.rcpforms.examples/RCPForms%20Example%20(SWT).launch
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/rcpforms/!svn/ver/53/trunk/net.sf.rcpforms.examples/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/rcpforms/!svn/ver/125/trunk/net.sf.rcpforms.examples/.project
+END
+RCPForms Example Application.launch
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svnroot/rcpforms/!svn/ver/211/trunk/net.sf.rcpforms.examples/RCPForms%20Example%20Application.launch
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/rcpforms/!svn/ver/465/trunk/net.sf.rcpforms.examples/build.properties
+END
+plugin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/rcpforms/!svn/ver/447/trunk/net.sf.rcpforms.examples/plugin.xml
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/rcpforms/!svn/ver/36/trunk/net.sf.rcpforms.examples/log4j.xml
+END

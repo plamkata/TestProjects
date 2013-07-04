@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257082915
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257082999
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257098150
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257098150
+activated,view,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.PackageExplorer",1255257102429
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257106889
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257108861
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.delete",1255257108871
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255257109305
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257109323
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257110830
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257120786
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257127413
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257127498
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.internal.ui.CompilationUnitEditor.ruler.actions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction",1255257139184
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257139794
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257139974
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255257141809
+error,log,,,"Compile error: IllegalArgumentException thrown: negative line: -1",1255257141991
+deactivated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257142007
+activated,workbench,org.eclipse.ui.workbench,3.5.1.M20090826-0800a,"",1255257143416
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257145546
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257145546
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257154521
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255257154521

@@ -1,0 +1,43 @@
+1254659314353	Rename local variable 'propertyName'
+1254660493077	Rename type 'NestedIndexPropertyChangeListener'
+1254821627880	Extract method 'isNested'
+1254821926629	Rename local variable 'enclSig'
+1254823444615	Rename local variable 'nested'
+1254828317031	Extract method 'fixListNestedListenerIndices'
+1254828526822	Rename local variable 'i'
+1254828562289	Rename local variable 'bean'
+1254828572928	Rename local variable 'b'
+1254836793118	Copy method
+1254842603753	Copy file
+1254916209018	Copy file
+1254917547180	Copy files
+1254917556452	Copy file
+1254917622091	Copy file
+1254920573408	Copy file
+1254931966713	Copy file
+1255014085469	Copy files
+1255014120782	Copy file
+1255014343557	Copy files
+1255014360109	Copy file
+1255014499870	Copy files
+1255015127620	Move file
+1255015134561	Delete element
+1255015228602	Copy file
+1255015865137	Delete element
+1255015971725	Copy files
+1255024048364	Extract local variable 'type'
+1255024158966	Extract method 'isAnnotated'
+1255024184329	Rename local variable 'annotationClass'
+1255025352326	Extract local variable 'property'
+1255025431724	Extract method 'fireNestedChanges'
+1255032714786	Copy files
+1255032761702	Copy file
+1255033111357	Rename method 'getPropertyChangeListeners'
+1255033130457	Rename method 'getPropertyChangeListeners'
+1255033419465	Copy files
+1255033771810	Copy file
+1255034484229	Copy files
+1255034499581	Copy file
+1255071343733	Copy files
+1255071360760	Copy file
+1255076133470	Copy file

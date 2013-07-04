@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.startup.solynchron;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class Resources {
+
+	/**
+	 * 
+	 */
+	public Resources() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

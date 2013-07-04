@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1254925004022
+error,log,,,"Bad type signature: ;\n",1254925004024
+error,log,,,"Bad type signature: ;\n",1254925004027
+error,log,,,"Bad type signature: ;\n",1254925004029
+error,log,,,"Bad type signature: ;\n",1254925004032
+error,log,,,"Bad type signature: ;\n",1254925004058
+error,log,,,"Bad type signature: ;\n",1254925004060
+error,log,,,"Bad type signature: ;\n",1254925004062
+error,log,,,"Bad type signature: ;\n",1254925004064
+error,log,,,"Bad type signature: ;\n",1254925004066
+error,log,,,"Bad type signature: ;\n",1254925004068
+error,log,,,"Bad type signature: ;\n",1254925004070
+error,log,,,"Bad type signature: ;\n",1254925004072
+error,log,,,"Bad type signature: ;\n",1254925004074
+error,log,,,"Bad type signature: ;\n",1254925004076
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.edit.text.contentAssist.proposals",1254925004173
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1254925086551
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254925143265
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254925157283
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1254925182943
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1254925183247
+opened,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254925191313
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254925191422
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254925215759
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1254925215760

@@ -1,0 +1,131 @@
+/*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *
+ ******************************************************************************
+ */
+
+package net.sf.rcpforms.examples.complete;
+
+import java.util.Arrays;
+import java.util.List;
+
+import com.damnhandy.aspects.bean.Observable;
+
+import net.sf.rcpforms.modeladapter.configuration.IntegerRangeAdapter.IntRange;
+
+/**
+ * Data model for IntegerRangeTestModel. Demonstrates how to set integer ranges/lists to widgets.
+ * 
+ * @author Remo Loetscher
+ */
+@Observable
+public class IntegerRangeTestModel
+{
+
+    public static final String P_Number = "number";
+
+    @IntRange(minValue = -5, maxValue = 5)
+    public static final String P_NumberAnnotated = "numberAnnotated";
+
+    @IntRange(minValue = -10, maxValue = 10, step = 2)
+    public static final String P_NumberStepAnnotatedINC = "numberStepAnnotatedINC";
+
+    @IntRange(minValue = -30, maxValue = 30, step = -5)
+    public static final String P_NumberStepAnnotatedDEC = "numberStepAnnotatedDEC";
+
+    public static final String P_NumberMin = "numberMin";
+
+    public static final String P_NumberMax = "numberMax";
+
+    private int number = 0;
+
+    private int m_NumberAnnotated = 0;
+
+    private int m_NumberStepAnnotatedINC = 0;
+
+    private int m_NumberStepAnnotatedDEC = 0;
+
+    private static final int m_NumberMin = -5;
+
+    private static final int m_NumberMax = 5;
+
+    public IntegerRangeTestModel()
+    {
+        super();
+    }
+
+    /** puts some useful data on this test model instance */
+    public void initTestData()
+    {
+        // DoNothingHere
+    }
+
+    public int getNumberMin()
+    {
+        return m_NumberMin;
+    }
+
+    public int getNumberMax()
+    {
+        return m_NumberMax;
+    }
+
+    public int getNumber()
+    {
+        return number;
+    }
+
+    public void setNumber(int value)
+    {
+        number = value;
+    }
+
+    public int getNumberAnnotated()
+    {
+        return m_NumberAnnotated;
+    }
+
+    public void setNumberAnnotated(int value)
+    {
+        m_NumberAnnotated = value;
+    }
+
+    public int getNumberStepAnnotatedINC()
+    {
+        return m_NumberStepAnnotatedINC;
+    }
+
+    public void setNumberStepAnnotatedINC(int value)
+    {
+        m_NumberStepAnnotatedINC = value;
+    }
+
+    public int getNumberStepAnnotatedDEC()
+    {
+        return m_NumberStepAnnotatedDEC;
+    }
+
+    public void setNumberStepAnnotatedDEC(int value)
+    {
+        m_NumberStepAnnotatedDEC = value;
+    }
+
+    public List<Integer> getNumbersList()
+    {
+        return Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987);
+    }
+
+    public String toString()
+    {
+        return "Number: " + number + ", NumberAnnotated: " + m_NumberAnnotated
+                + ", NumberStepAnnotatedDEC: " + m_NumberStepAnnotatedDEC
+                + ", NumberStepAnnotatedINC: " + m_NumberStepAnnotatedINC;
+    }
+
+}

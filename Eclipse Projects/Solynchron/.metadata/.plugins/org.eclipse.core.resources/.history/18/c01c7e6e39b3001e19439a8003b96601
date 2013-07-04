@@ -1,0 +1,269 @@
+/*******************************************************************************
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Marco van Meegen - initial API and implementation
+ *
+ ******************************************************************************
+ */
+
+package net.sf.rcpforms.examples.complete;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import net.sf.rcpforms.tablesupport.tables.ITableSelectable;
+
+/**
+ * Data model for Sandbox2, has one field for all supported data types
+ * 
+ * @author vanmeegenm
+ * @author Remo Loetscher
+ */
+public class TestModel implements ITableSelectable
+{
+
+    public static enum Gender {
+        MALE, FEMALE, UNKNOWN
+    };
+
+    // needed for generic tables
+    public static final String P_Name = "name";
+
+    public static final String P_BirthDate = "birthDate";
+
+    public static final String P_Age = "age";
+
+    public static final String P_OverdrawAccount = "overdrawAccount";
+
+    public static final String P_ChildCount = "childCount";
+
+    public static final String P_AccountBalance = "accountBalance";
+
+    public static final String P_Gender = "gender";
+
+    public static final String P_Address = "address";
+
+    private Gender m_Gender;
+
+    private String m_Name;
+
+    private Date m_BirthDate;
+
+    private Boolean m_OverdrawAccount;
+
+    private Integer m_ChildCount;
+
+    private Integer age;
+
+    private Double m_AccountBalance;
+
+    private Boolean isSelectable = true;
+
+    private AddressModel m_Address = new AddressModel();
+
+    public TestModel()
+    {
+        super();
+        addAddressListener();
+    }
+
+    private void addAddressListener()
+    {
+        // fake property change to support automatic update of nested attributes
+
+        m_Address.addPropertyChangeListener(new PropertyChangeListener()
+        {
+            public void propertyChange(PropertyChangeEvent evt)
+            {
+                propertyChangeSupport.firePropertyChange(P_Address + "." + evt.getPropertyName(),
+                        evt.getOldValue(), evt.getNewValue());
+            }
+        });
+
+    }
+
+    /**
+     * Constructor for TestModel
+     */
+    public TestModel(String name, Date birthDate, Boolean kontoueberzug, Integer kinderAnzahl,
+                     Double amount, Gender geschlecht, boolean isSelectable)
+    {
+        super();
+        setName(name);
+        setBirthDate(birthDate);
+        setOverdrawAccount(kontoueberzug);
+        setChildCount(kinderAnzahl);
+        setAccountBalance(amount);
+        setGender(geschlecht);
+        this.isSelectable = isSelectable;
+        addAddressListener();
+    }
+
+    /**
+     * Constructor for TestModel
+     * 
+     * @param name
+     * @param birthDate
+     * @param kontoueberzug
+     * @param kinderAnzahl
+     * @param amount
+     * @param geschlechtCodeId
+     */
+    public TestModel(String name, Date birthDate, Long waehrungCodeId, boolean kontoueberzug,
+                     int kinderAnzahl, double amount, Gender geschlecht, boolean isSelectable)
+    {
+        this(name, birthDate, kontoueberzug, kinderAnzahl, amount, geschlecht, isSelectable);
+    }
+
+    /**
+     * Constructor for TestModel
+     * 
+     * @param string
+     * @param i
+     */
+    public TestModel(String name, int age)
+    {
+        setName(name);
+        setAge(age);
+        addAddressListener();
+    }
+
+    /** puts some useful data on this test model instance */
+    public void initTestData()
+    {
+        setName("Mustermann");
+        setAge(55);
+        setGender(Gender.MALE);
+        Calendar calendar = GregorianCalendar.getInstance();
+        calendar.set(1980, 11, 24);
+        setBirthDate(calendar.getTime());
+    }
+
+    /**
+     * @return Returns the address.
+     */
+    public AddressModel getAddress()
+    {
+        return m_Address;
+    }
+
+    /**
+     * @param address The address to set.
+     */
+    public void setAddress(AddressModel value)
+    {
+        Object oldValue = this.m_Address;
+        m_Address = value;
+        propertyChangeSupport.firePropertyChange(P_Address, oldValue, value);
+    }
+
+    public Gender getGender()
+    {
+        return m_Gender;
+    }
+
+    public void setGender(Gender value)
+    {
+        Object oldValue = m_Gender;
+        m_Gender = value;
+        propertyChangeSupport.firePropertyChange(P_Gender, oldValue, value);
+    }
+
+    public Integer getChildCount()
+    {
+        return (Integer) m_ChildCount;
+    }
+
+    public void setChildCount(Integer value)
+    {
+        Object oldValue = m_ChildCount;
+        m_ChildCount = value;
+        propertyChangeSupport.firePropertyChange(P_ChildCount, oldValue, value);
+    }
+
+    public Double getAccountBalance()
+    {
+        return (Double) m_AccountBalance;
+    }
+
+    public void setAccountBalance(Double value)
+    {
+        Object oldValue = m_AccountBalance;
+        m_AccountBalance = value;
+        propertyChangeSupport.firePropertyChange(P_AccountBalance, oldValue, value);
+    }
+
+    public Integer getAge()
+    {
+        return age;
+    }
+
+    public void setAge(Integer newValue)
+    {
+        Integer oldValue = age;
+        age = newValue;
+        propertyChangeSupport.firePropertyChange(P_Age, oldValue, newValue);
+    }
+
+    public Boolean getOverdrawAccount()
+    {
+        return (Boolean) m_OverdrawAccount;
+    }
+
+    public void setOverdrawAccount(Boolean value)
+    {
+        Object oldValue = m_OverdrawAccount;
+        m_OverdrawAccount = value;
+        propertyChangeSupport.firePropertyChange(P_OverdrawAccount, oldValue, value);
+    }
+
+    public String getName()
+    {
+        return (String) m_Name;
+    }
+
+    public void setName(String value)
+    {
+        Object oldValue = m_Name;
+        m_Name = value;
+        propertyChangeSupport.firePropertyChange(P_Name, oldValue, value);
+    }
+
+    public Date getBirthDate()
+    {
+        return (Date) m_BirthDate;
+    }
+
+    public void setBirthDate(Date value)
+    {
+        Object oldValue = m_BirthDate;
+        m_BirthDate = value;
+        propertyChangeSupport.firePropertyChange(P_BirthDate, oldValue, value);
+
+    }
+
+    public Boolean getIsSelectable()
+    {
+        return isSelectable;
+    }
+
+    public void setIsSelectable(Boolean isSelectable)
+    {
+        this.isSelectable = isSelectable;
+    }
+
+    public String toString()
+    {
+        return "Name: " + m_Name + ", Birthdate: " + m_BirthDate + ", Gender: " + m_Gender
+                + ", Account Overdraw: " + m_OverdrawAccount + ", ChildCount: " + m_ChildCount
+                + ", AccountBalance: " + m_AccountBalance;
+    }
+
+}

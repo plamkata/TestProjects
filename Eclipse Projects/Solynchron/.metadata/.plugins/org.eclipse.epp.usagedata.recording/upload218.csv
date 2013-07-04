@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+error,log,,,"Bad type signature: ;\n",1255008378842
+error,log,,,"Bad type signature: ;\n",1255008378843
+error,log,,,"Bad type signature: ;\n",1255008378844
+error,log,,,"Bad type signature: ;\n",1255008378846
+error,log,,,"Bad type signature: ;\n",1255008378847
+error,log,,,"Bad type signature: ;\n",1255008378856
+error,log,,,"Bad type signature: ;\n",1255008378857
+error,log,,,"Bad type signature: ;\n",1255008378858
+error,log,,,"Bad type signature: ;\n",1255008378860
+error,log,,,"Bad type signature: ;\n",1255008378861
+error,log,,,"Bad type signature: ;\n",1255008378862
+error,log,,,"Bad type signature: ;\n",1255008378863
+error,log,,,"Bad type signature: ;\n",1255008381146
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255008385699
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255008386053
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008388692
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008392870
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255008396337
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.delete.line",1255008398629
+executed,command,org.eclipse.ui,3.5.1.M20090902-1000,"org.eclipse.ui.file.save",1255008398904
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008404341
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008404341
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008408612
+closed,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008408612
+activated,editor,org.eclipse.jdt.ui,3.5.1.r351_v20090821-0800,"org.eclipse.jdt.ui.CompilationUnitEditor",1255008410810

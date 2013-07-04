@@ -1,0 +1,71 @@
+/**
+ * 
+ */
+package com.damnhandy.aspects.bean.test;
+
+import java.beans.IndexedPropertyChangeEvent;
+import java.beans.PropertyChangeEvent;
+
+import com.damnhandy.aspects.bean.impl.NestedIndexedPropertyChangeEvent;
+import com.damnhandy.aspects.bean.impl.NestedPropertyChangeEvent;
+
+/**
+ * @author plamKaTa
+ *
+ */
+public class IndexedObjectListener extends ValueObjectListener {
+	
+	private int index;
+	
+	private Object nested;
+	
+	/**
+	 * 
+	 */
+	public IndexedObjectListener() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/* (non-Javadoc)
+	 * @see java.beans.PropertyChangeListener#propertyChange(java.beans.PropertyChangeEvent)
+	 */
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		super.propertyChange(evt);
+	}
+	
+	@Override
+	protected void print(PropertyChangeEvent evt) {
+		String evtString = "New: "+evt.getNewValue()+ " Old: "+evt.getOldValue();
+
+		if (evt instanceof NestedPropertyChangeEvent) {
+			NestedPropertyChangeEvent nestedEvt = (NestedPropertyChangeEvent) evt;
+			nested = nestedEvt.getNested();
+		} else if (evt instanceof NestedIndexedPropertyChangeEvent) {
+			NestedIndexedPropertyChangeEvent nestedEvt = (NestedIndexedPropertyChangeEvent) evt;
+			nested = nestedEvt.getNested();
+		}
+		
+		if (evt instanceof IndexedPropertyChangeEvent) {
+			IndexedPropertyChangeEvent indexedEvt = (IndexedPropertyChangeEvent) evt;
+			index = indexedEvt.getIndex();
+			evtString = "Index: " + index + " " + evtString;
+		}
+		
+		System.out.println(evtString);
+	}
+	
+	public int getIndex() {
+		return index;
+	}
+	
+	public Object getNested() {
+		return nested;
+	}
+	
+	public void reset() {
+		super.reset();
+		index = -1;
+	}
+	
+}
