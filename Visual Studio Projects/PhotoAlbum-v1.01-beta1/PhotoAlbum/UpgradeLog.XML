@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PhotoAlbum">
+</Property><Property Name="Solution File" Value="C:\Projects\Visual Studio Projects\PhotoAlbum-v1.01-beta1\PhotoAlbum\PhotoAlbum.sln">
+</Property><Property Name="Date" Value="25 Юли 2006 г.">
+</Property><Property Name="Time" Value="23:50">
+</Property></Properties><Event ErrorLevel="0" Project="PhotoAlbumDB" Source="..\PhotoAlbumDB\PhotoAlbumDB.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PhotoAlbumDB" Source="..\PhotoAlbumDB\PhotoAlbumDB.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PhotoAlbumGUI" Source="..\PhotoAlbumGUI\PhotoAlbumGUI.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PhotoAlbumGUI" Source="..\PhotoAlbumGUI\PhotoAlbumGUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="PhotoAlbum.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PhotoAlbum.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="PhotoAlbumDB" Source="..\PhotoAlbumDB\PhotoAlbumDB.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="PhotoAlbumGUI" Source="..\PhotoAlbumGUI\PhotoAlbumGUI.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

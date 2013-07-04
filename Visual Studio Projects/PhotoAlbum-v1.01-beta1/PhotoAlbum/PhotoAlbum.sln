@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "PhotoAlbumDBScript", "PhotoAlbumDBScript.dbp", "{102257FE-8884-4DDC-A4C3-ADEE21E670DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAlbumDB", "..\PhotoAlbumDB\PhotoAlbumDB.csproj", "{8C803F3E-DB96-4630-B8F2-D992BB481E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAlbumGUI", "..\PhotoAlbumGUI\PhotoAlbumGUI.csproj", "{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8C803F3E-DB96-4630-B8F2-D992BB481E38} = {8C803F3E-DB96-4630-B8F2-D992BB481E38}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C803F3E-DB96-4630-B8F2-D992BB481E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C803F3E-DB96-4630-B8F2-D992BB481E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C803F3E-DB96-4630-B8F2-D992BB481E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C803F3E-DB96-4630-B8F2-D992BB481E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

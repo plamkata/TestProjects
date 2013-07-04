@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAlbumGUI", "PhotoAlbumGUI.csproj", "{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Debug.ActiveCfg = Debug|.NET
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Debug.Build.0 = Debug|.NET
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Release.ActiveCfg = Release|.NET
+		{9CE304CC-625A-42D1-BAC1-E009EB92F7BA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

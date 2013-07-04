@@ -1,0 +1,13 @@
+# Microsoft Developer Studio Project File - Database Project
+Begin DataProject = "PhotoAlbumDBScript"
+   MSDTVersion = "80"
+   DefDBRef = "CSSU-131B9ABA75.photo.dbo"
+   Begin DBRefFolder = "Database References"
+      Begin DBRefNode = "CSSU-131B9ABA75.photo.dbo"
+         ConnectStr = "Provider=SQLOLEDB.1;Data Source=CSSU-131B9ABA75;Persist Security Info=False;Integrated Security=SSPI;Initial Catalog=photo;Use Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Application Name=PhotoAlbum;Workstation ID=CSSU-131B9ABA75;Use Encryption for Data=False;Tag with column collation when possible=False"
+         Provider = "{7F041D59-D76A-44ED-9AA2-FBF6B0548B80}"
+         Colorizer = 5
+      End
+   End
+   Script = "photo_script_all.sql"
+End

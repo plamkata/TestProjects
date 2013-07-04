@@ -1,0 +1,5 @@
+bin\Debug\PhotoAlbumDBClassLibrary.dll
+bin\Debug\PhotoAlbumDBClassLibrary.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PhotoAlbumDBClassLibrary.dll
+obj\Debug\PhotoAlbumDBClassLibrary.pdb
