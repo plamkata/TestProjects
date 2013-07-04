@@ -1,0 +1,1 @@
+java -jar ClientClassifier.jar -host=localhost -port=6733

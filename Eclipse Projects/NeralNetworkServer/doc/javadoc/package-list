@@ -1,0 +1,6 @@
+su.cs08.classifier.client
+su.cs08.classifier.server
+su.cs08.classifier.server.algorithm
+su.cs08.classifier.server.exceptions
+su.cs08.classifier.server.learning
+su.cs08.classifier.server.querying

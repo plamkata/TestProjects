@@ -1,0 +1,1 @@
+java -classpath "ServerClassifier.jar;weka.jar" su.cs08.classifier.server.NeuralNetworkServer -arff=./config/config.arff
