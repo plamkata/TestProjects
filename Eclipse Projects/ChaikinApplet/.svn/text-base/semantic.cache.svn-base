@@ -1,0 +1,21 @@
+;; Object ChaikinCurve/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ChaikinCurve/"
+  :tables (list 
+   (semanticdb-table "ChaikinCurve.html"
+    :major-mode 'html-helper-mode
+    :tags '(("Java Applet Subdivision Curve by Chaikin's algorithm
+	TA: Shin Yoshizawa  Univ. AIZU" section nil nil [15 126]) ("The University of AIZU: Computational Geometry class
+<hr>
+<center>
+<H1><font color=#483D8B>Subdivision Curve by Chaikin's
+algorithm" section (:members (("Subdivision Curve by Chaikin's
+algorithm" section (:members (("Java Sources" section nil nil [511 545]) ("go back to home..." section nil nil [545 548]))) nil [245 248]))) nil [126 132]))
+    :file "ChaikinCurve.html"
+    :pointmax 663
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

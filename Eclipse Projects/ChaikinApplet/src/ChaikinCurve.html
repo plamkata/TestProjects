@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<TITLE>Java Applet Subdivision Curve by Chaikin's algorithm
+</TITLE>
+</HEAD>
+
+<body BGCOLOR=#CCCCCC TEXT=#008080 LINK=#6495ED>
+Sofia University, Bulgaria: Computational Geometry
+<hr>
+<table>
+<tr>
+<td valign="top"><img src="./su_logo.png" /></td>
+<td>
+<center>
+<H1><font color=#597080>Chaikin's algorithm for curves</font></H1>
+</center>
+<p>
+This is an educational applet that represents Chaikin's algorithm for curve aproximation.
+Chaikin's curve is equivalent to a quadratic B-spline curve. The algorithm is applied to either
+closed or open polygonal curves and is also known as the corner cutting algorithm. 
+</p>
+<p>
+Having the initial polygonal curve, every segment is divided into three segments by two points depending on 
+the ratio of the algorithm (0,25 makes sence). The points added form another curve with 2 times 
+more points. The algorithm than repeats for the new curve. It is known that the resulting curve 
+converges to a quadratic B-spline curve.
+</p>
+<p>
+The applet itself contains of a drawing area and some controls that parametrise the algorithm.
+Control points for the initial curve can be added by clicking on the drawing area. After adding 
+some control points you can move them, eventhough you have drawn already the curve (it will 
+change as the control point is moved). After forming the initial polygonal curve you can control the 
+"Curve conditions" by opening the curve, fixing the start and end points of the resulting curve. 
+</p>
+<p>
+To "Apply" the algorithm once at a time you should use the button "Apply". After appling the algorithm a 
+few times "Init" restarts the algorithm leaving the original polygonal curve and clearing any subdivisions.
+The "Reconstruct" button creates the drawn subdivision curve again - you will not need to use this since
+every change will result in reconstruction anyway. The "Animate" button and the "Animation speed" text field
+are used to apply the algorithm periodically after a fixed period of time resulting in an animation that 
+demonstrates the convergence. 
+</p>
+<p>
+After generating the curve you can show/hide its vertices by checking "Vertices Visible" or show/hide 
+the initial polygonal curve by checking "Initial Poly Visible". You can even control the ratio of 
+the algorithm by choosing from the "Ratio" combo box, eventhough the curve have been generated. 
+To enable help information to be displayed for the controls you should check "Information".
+</p>
+<hr>
+<APPLET CODE="ChaikinCurve.class" width=700 height=500></APPLET>
+</td>
+</tr>
+</table>
+<hr>
+<a href="../src/">Java Sources</a><br/>
+<a href="./ChaikinCurve_bg.html">bg</a>
+<hr>
+Plamen Alexandrov - Computer Science, Sofia University, Bulgaria, 20.06.2007
+</BODY>
+</HTML>

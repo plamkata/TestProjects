@@ -1,0 +1,82 @@
+8
+
+dir
+52
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository/Testing/ChaikinApplet
+file:///E:/Misceleniouse/2006/WWW%20tech/project/svn_repository
+
+
+
+2007-06-26T01:27:40.703125Z
+52
+plamen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d8b99062-362d-364e-a47a-7023bac7960d
+
+.classpath
+file
+
+
+
+
+2008-08-14T18:43:36.531752Z
+faad576c953ac0f96b6adfb7e2e3bf8f
+2007-06-17T14:11:47.975744Z
+10
+plamen
+
+.project
+file
+
+
+
+
+2008-08-14T18:43:36.537752Z
+bda1075d4f3dd52f2fce8a2af800daf4
+2007-06-17T14:11:47.975744Z
+10
+plamen
+
+semantic.cache
+file
+
+
+
+
+2008-08-14T18:43:36.542752Z
+b15b46c1024fe1db78f18985176f0037
+2007-06-17T14:11:47.975744Z
+10
+plamen
+
+src
+dir
+
+MANIFEST.MF
+file
+
+
+
+
+2008-08-14T18:43:36.547752Z
+b06822bb202f282372c62e5b4cfc51e5
+2007-06-17T14:11:47.975744Z
+10
+plamen
+
+bin
+dir
+
