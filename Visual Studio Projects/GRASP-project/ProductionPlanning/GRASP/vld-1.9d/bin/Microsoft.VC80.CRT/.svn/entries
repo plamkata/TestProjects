@@ -1,0 +1,53 @@
+8
+
+dir
+207
+svn://localhost/ProductionPlanning/GRASP-stable-change/vld-1.9d/bin/Microsoft.VC80.CRT
+svn://localhost
+
+
+
+2009-06-13T17:17:39.830000Z
+155
+plamen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a095726f-0536-db49-9fad-1b2a870de310
+
+Microsoft.VC80.CRT.manifest
+file
+
+
+
+
+2011-12-02T14:49:02.290286Z
+9edf5eb3d091d4823c96a00b6b45df45
+2009-06-13T17:17:39.830000Z
+155
+plamen
+
+msvcr80.dll
+file
+
+
+
+
+2011-12-02T14:49:02.321486Z
+16d7ddf3b659f7cf1cb9f4dcff4219f0
+2009-06-13T17:17:39.830000Z
+155
+plamen
+has-props
+

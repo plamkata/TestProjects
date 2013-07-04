@@ -1,0 +1,61 @@
+8
+
+dir
+207
+svn://localhost/ProductionPlanning/GRASP-stable-change
+svn://localhost
+
+
+
+2011-11-26T17:33:20.295600Z
+207
+plamen
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a095726f-0536-db49-9fad-1b2a870de310
+
+GRASP.gpState
+file
+
+
+
+
+2011-12-02T14:49:02.555486Z
+75393987c8bd1fb5d959b7acca5b968b
+2009-03-23T00:09:25.150935Z
+5
+plamen
+
+randomc
+dir
+
+GRASP.sln
+file
+
+
+
+
+2012-01-09T20:36:36.043400Z
+02eede71fc18f4914a0fc0a88c8ad2ba
+2011-11-20T09:22:38.375000Z
+205
+plamen
+
+GRASP
+dir
+
+vld-1.9d
+dir
+

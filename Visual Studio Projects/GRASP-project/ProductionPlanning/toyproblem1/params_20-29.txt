@@ -1,0 +1,33 @@
+M = 6
+J = 50
+T = 15
+s = 1.0
+c = 0.1
+v = 0.375
+p = 2
+sigma = 2
+omega_s = 1
+omega_u = 1
+omega_k = 1
+
+omega_q = 0.1
+omega_t = 0.0
+omega_l = 0.0
+omega_m = 1.0
+
+beta_t = 1.0
+beta_v = 0.2
+alpha = 0.5
+beta = 0.4
+
+nhoodTermIter = 30
+maxNhoodSize = 30
+minNhoodSize = 10
+nhoodCoeff = 0.02
+nhoodPressure = 0.4
+
+maxGRASPIter = 200
+GRASPTermIter = 100
+
+poolSize = 8
+relinkInterval = 5

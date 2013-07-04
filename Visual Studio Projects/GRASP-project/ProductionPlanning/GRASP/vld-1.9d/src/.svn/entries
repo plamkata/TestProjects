@@ -1,0 +1,40 @@
+8
+
+dir
+207
+svn://localhost/ProductionPlanning/GRASP-stable-change/vld-1.9d/src
+svn://localhost
+
+
+
+2011-11-20T09:22:38.375000Z
+205
+plamen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+a095726f-0536-db49-9fad-1b2a870de310
+
+vld.vcproj
+file
+
+
+
+
+2011-12-02T14:49:01.510286Z
+5f737ea88e6fe8e26eaafd9f98ab20b7
+2009-06-30T08:34:23.748342Z
+176
+plamen
+
