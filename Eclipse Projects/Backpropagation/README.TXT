@@ -1,6 +1,3 @@
-Този проект съдържа реализация на алгоритъма backpropagation за обучаване на невронна мрежа.
-Реализацията е направена с помоща на framework-а WEKA - 3.4.12 (jar фаила е включен в проекта
-под директорията ./lib). Резултати от тестовете може да намерите в директорията ./examples
- за повече информация виж ./examples/README.TXT.
+This project contains the implementation of the backpropagation algorithm for training neural network. The implementation is done with the help of the framework-and WEKA - 3.4.12 (jar Failla is included in the project in directory lib). Test results can be found in the directory Examples for more information see the examples/README.TXT.
 
-Автор: Пламен Василев Александров, КН - 4курс, фн. 80050, 2 адм. група 
+Author: Plamen Vasilev Alexandrov CS - 4 course, bgl. 80050, 2 adm. group
